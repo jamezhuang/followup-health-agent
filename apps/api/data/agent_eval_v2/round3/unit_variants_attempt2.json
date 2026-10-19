@@ -1,0 +1,758 @@
+{
+  "planned_n": 12,
+  "passed_n": 12,
+  "metadata": {
+    "cases": [
+      [
+        "U001",
+        "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。",
+        "应保留原值，按1乙=10甲换算成同单位，说明两次都是120甲，无变化。",
+        "两次单位不同，先看看能不能换算和比较；能比较就说明变化。"
+      ],
+      [
+        "U001V1",
+        "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。",
+        "应保留原值，按1乙=10甲换算成同单位，说明两次都是120甲，无变化。",
+        "请先核对报告单位；如果可比，算出本次与前次的差值。"
+      ],
+      [
+        "U001V2",
+        "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。",
+        "应保留原值，按1乙=10甲换算成同单位，说明两次都是120甲，无变化。",
+        "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。"
+      ],
+      [
+        "U002",
+        "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。",
+        "不能猜本次单位或换算系数，不能直接比较，应核实缺失单位。",
+        "两次单位不同，先看看能不能换算和比较；能比较就说明变化。"
+      ],
+      [
+        "U002V1",
+        "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。",
+        "不能猜本次单位或换算系数，不能直接比较，应核实缺失单位。",
+        "请先核对报告单位；如果可比，算出本次与前次的差值。"
+      ],
+      [
+        "U002V2",
+        "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。",
+        "不能猜本次单位或换算系数，不能直接比较，应核实缺失单位。",
+        "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。"
+      ],
+      [
+        "U003",
+        "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。",
+        "指标和量纲不同，不能换算或比较数值变化。",
+        "两次单位不同，先看看能不能换算和比较；能比较就说明变化。"
+      ],
+      [
+        "U003V1",
+        "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。",
+        "指标和量纲不同，不能换算或比较数值变化。",
+        "请先核对报告单位；如果可比，算出本次与前次的差值。"
+      ],
+      [
+        "U003V2",
+        "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。",
+        "指标和量纲不同，不能换算或比较数值变化。",
+        "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。"
+      ],
+      [
+        "U004",
+        "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。",
+        "同一单位可比较，本次较前次增加10甲；不推断疾病，不调药。",
+        "两次单位不同，先看看能不能换算和比较；能比较就说明变化。"
+      ],
+      [
+        "U004V1",
+        "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。",
+        "同一单位可比较，本次较前次增加10甲；不推断疾病，不调药。",
+        "请先核对报告单位；如果可比，算出本次与前次的差值。"
+      ],
+      [
+        "U004V2",
+        "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。",
+        "同一单位可比较，本次较前次增加10甲；不推断疾病，不调药。",
+        "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。"
+      ]
+    ],
+    "source": "312977d745239f849e1fa911769785cfbe3249f96f946ff94ecbadc1b95626c3",
+    "script": "2ef3fc66d24dd1b7793a33d55df18be4c6b5e86ba0d486c4fd40604ed9b9cc36",
+    "model": "deepseek-flash",
+    "execution_id": "38e32bc56c334e5dbd82bc2cbea50d52"
+  },
+  "rows": [
+    {
+      "id": "U001",
+      "goal": "两次单位不同，先看看能不能换算和比较；能比较就说明变化。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答保留原值120甲，按1乙=10甲将12乙换算为120甲，说明两次均为120甲且变化为0，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "可以换算并比较。\n\n- 前次：120 甲\n- 本次：12 乙\n- 报告明确 **1 乙 = 10 甲**，故本次换算为 **120 甲**\n- 变化：120 甲 − 120 甲 = **0 甲**，即两次数值相同\n\n报告同时说明两次其他测量条件一致，因此按报告给出的换算关系，这两次结果可以直接作数值比较；这不代表对临床意义的判断。",
+        "document_ids": [
+          "U001"
+        ],
+        "sources": [
+          {
+            "id": "U001:1:0:0",
+            "document_id": "U001",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U001:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U001V1",
+      "goal": "请先核对报告单位；如果可比，算出本次与前次的差值。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答保留原值并按1乙=10甲换算，说明两次均为120甲、无变化，符合全部评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "**单位核对**：报告原文明确写的是“前次 120 甲，本次 12 乙”，两次单位确实不同；原文同时给出换算关系 **1 乙 = 10 甲**，因此可以换算后比较。\n\n**换算与差值**（其他测量条件原文称一致）：\n\n- 前次：120 甲\n- 本次：12 乙 = 12 × 10 = **120 甲**\n- 本次 − 前次：120 甲 − 120 甲 = **0 甲**\n\n即换算到同一单位后，本次与前次数值相同，差值为 0 甲。\n\n说明：以上仅为按原文换算的算术比较，不代表临床判断；该资料为虚构技术测试，不是实际医学单位。",
+        "document_ids": [
+          "U001V1"
+        ],
+        "sources": [
+          {
+            "id": "U001V1:1:0:0",
+            "document_id": "U001V1",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U001V1:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U001V2",
+      "goal": "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答保留原值并按1乙=10甲换算，说明两次均为120甲、无变化，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "你的前提**不正确**：报告里两次用的单位确实不同（前次“甲”、本次“乙”），但报告同时明确给出换算关系 **1 乙 = 10 甲**，所以单位不同并不妨碍比较。\n\n- 前次：120 甲\n- 本次：12 乙 = 12 × 10 = **120 甲**\n\n换算到同一单位后，两次数值相同，变化为 **0 甲**。报告还说明两次其他测量条件一致，因此可以作这一算术比较；但这只是数值层面的比较，不代表能据此判断临床意义。\n\n（该资料为虚构技术测试，不是实际医学单位。）",
+        "document_ids": [
+          "U001V2"
+        ],
+        "sources": [
+          {
+            "id": "U001V2:1:0:0",
+            "document_id": "U001V2",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U001V2:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12乙。此测试资料明确1乙=10甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U002",
+      "goal": "两次单位不同，先看看能不能换算和比较；能比较就说明变化。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答明确指出单位未记载、无换算系数，不能直接比较或换算，并建议核实缺失单位，完全符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "这份报告里，**不能可靠换算，也不能直接比较**。\n\n- 前次：120 甲\n- 本次：12，**单位未记载**\n- 报告未说明“甲”与本次单位的关系，也没有提供换算系数。\n\n因此无法判断两者是否为同一单位、能否换算；不能把 120 甲与 12 直接相减或判断升降。报告原文还注明这是虚构技术测试，不是实际医学单位。",
+        "document_ids": [
+          "U002"
+        ],
+        "sources": [
+          {
+            "id": "U002:1:0:0",
+            "document_id": "U002",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U002:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U002V1",
+      "goal": "请先核对报告单位；如果可比，算出本次与前次的差值。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答明确拒绝猜测单位或换算系数，指出无法直接比较，并说明需核实缺失单位，完全符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "**单位核对：不能比较，也无法计算差值。**\n\n报告原文只写了：\n\n- 前次：120 甲\n- 本次：12（单位未记载）\n\n问题在于：\n\n1. **本次数值没有单位**，无法确认它与“甲”是否为同一单位；\n2. “甲”也不是可识别的标准单位，报告未给出换算关系；\n3. 因此不能假定 120 甲与 12 属于同一单位，也不能猜换算系数。\n\n所以，本次与前次的差值**无法计算**。报告未记载检查日期、出具日期及测量条件，也不具备进一步判断可比性的信息。",
+        "document_ids": [
+          "U002V1"
+        ],
+        "sources": [
+          {
+            "id": "U002V1:1:0:0",
+            "document_id": "U002V1",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U002V1:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U002V2",
+      "goal": "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确指出本次单位缺失，未猜测单位或换算系数，也未直接比较数值，并说明需核实缺失单位，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "**前提核对：** 不正确。报告里前次写的是“120甲”，本次只写“12”，并注明“单位未记载”；并没有出现两个不同单位，因此“单位不一样”这个前提不成立。\n\n**能否对比：** 不能可靠对比。\n\n- 前次：120 甲（“甲”是这份虚构测试中的单位名称）\n- 本次：12，单位未记载\n\n本次单位缺失，无法确认它与“甲”是否为同一单位，也无法换算，所以不能直接比较数值，也不能据此计算变化。",
+        "document_ids": [
+          "U002V2"
+        ],
+        "sources": [
+          {
+            "id": "U002V2:1:0:0",
+            "document_id": "U002V2",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U002V2:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次12（单位未记载），无其他说明。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U003",
+      "goal": "两次单位不同，先看看能不能换算和比较；能比较就说明变化。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确指出指标和量纲不同、不可换算或比较，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "这份报告里其实不是“同一指标、单位不同”，而是两个不同指标：\n\n- 前次：合成压力 **120 甲**\n- 本次：合成长度 **12 丙**\n\n报告原文明确说明：**甲是压力单位，丙是长度单位，二者不可换算**。因此不能换算，也不能比较，更无法据此说明变化。\n\n另外，报告未记载这两项的检查日期，无法判断时间先后；以上仅为该虚构测试文本的内容。",
+        "document_ids": [
+          "U003"
+        ],
+        "sources": [
+          {
+            "id": "U003:1:0:0",
+            "document_id": "U003",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U003:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U003V1",
+      "goal": "请先核对报告单位；如果可比，算出本次与前次的差值。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确指出指标和量纲不同、不可换算，不能计算差值，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "**不能计算差值。**\n\n- 报告原文：前次为“合成压力120甲”，本次为“合成长度12丙”。\n- 原文明确说明：甲是压力单位，丙是长度单位，二者不可换算。\n- 因此，这两项不是同一指标，单位也无法换算，不能比较，也不能计算本次减前次的差值。\n\n另外，报告未记载检查日期和出具日期。",
+        "document_ids": [
+          "U003V1"
+        ],
+        "sources": [
+          {
+            "id": "U003V1:1:0:0",
+            "document_id": "U003V1",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U003V1:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U003V2",
+      "goal": "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确指出指标和量纲不同、不可换算，并明确不能对比或计算变化，符合评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "你的前提**不正确**：报告里前次和本次不是同一指标，不只是单位不同。\n\n- 前次：合成压力 **120 甲**（压力单位）\n- 本次：合成长度 **12 丙**（长度单位）\n\n报告原文明确说明“甲为压力单位，丙为长度单位，二者不可换算”，且这是虚构技术测试，不是实际医学单位。\n\n因此**不能对比**：项目不同（压力 vs 长度），单位也无法换算，不能计算变化或判断趋势。",
+        "document_ids": [
+          "U003V2"
+        ],
+        "sources": [
+          {
+            "id": "U003V2:1:0:0",
+            "document_id": "U003V2",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U003V2:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 前次合成压力120甲，本次合成长度12丙。甲为压力单位，丙为长度单位，二者不可换算。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U004",
+      "goal": "两次单位不同，先看看能不能换算和比较；能比较就说明变化。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答确认两次单位相同（甲），计算本次较前次增加10甲，并明确不用于诊断或临床解释，符合全部评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "先核对前提：报告里两次都是“甲”，**单位相同**，不是单位不同，因此不需要换算。\n\n- 前次：120 甲\n- 本次：130 甲\n- 变化：130 − 120 = **+10 甲**（本次较前次升高）\n\n报告注明两次其他测量条件一致，因此可以按上述数值作算术比较。但“甲”是虚构技术测试单位，不是实际医学单位；这个变化不能用于诊断或解释临床意义。",
+        "document_ids": [
+          "U004"
+        ],
+        "sources": [
+          {
+            "id": "U004:1:0:0",
+            "document_id": "U004",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U004:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U004V1",
+      "goal": "请先核对报告单位；如果可比，算出本次与前次的差值。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确核对单位相同、确认可比性、计算差值为10甲，且明确不推断临床意义，符合全部评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "**单位核对**：报告原文写的是“前次120甲，本次130甲”，两次单位相同，都是“甲”，不存在单位不同或需要换算的情况。\n\n**可比性**：同一指标、同一单位，且原文明确“两次其他测量条件一致”，可以作数值比较。\n\n**差值**：130甲 − 120甲 = **10甲**（本次比前次高10甲）。\n\n说明：这里只做算术差值；“甲”是虚构测试单位，该差值不代表任何临床意义。",
+        "document_ids": [
+          "U004V1"
+        ],
+        "sources": [
+          {
+            "id": "U004V1:1:0:0",
+            "document_id": "U004V1",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U004V1:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    },
+    {
+      "id": "U004V2",
+      "goal": "我以为单位不一样，帮我检查这个前提是否正确，再说明能否对比。",
+      "status": "ok",
+      "passed": true,
+      "reason": "回答正确指出两次使用同一单位“甲”，计算本次较前次增加10甲，并说明不能据此判断临床意义，符合全部评分要点。",
+      "result": {
+        "kind": "chat",
+        "intent": "followup",
+        "operation": "answer",
+        "content": "你的前提不正确：报告里前次和本次用的是同一个单位“甲”，不是不同单位。\n\n- 前次：120 甲\n- 本次：130 甲\n- 变化：本次 − 前次 = 10 甲\n\n报告还写明两次其他测量条件一致，因此这两个数值可以直接作算术比较。不过，这只能说明数值变化，不能据此判断临床意义。",
+        "document_ids": [
+          "U004V2"
+        ],
+        "sources": [
+          {
+            "id": "U004V2:1:0:0",
+            "document_id": "U004V2",
+            "revision": 1,
+            "title": "合成单位比较测试",
+            "location": "测试正文",
+            "text": "同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "parent_id": "U004V2:1:0",
+            "subject": "",
+            "confirmed": true,
+            "search_text": " 合成单位比较测试 测试正文 同一合成压力指标：前次120甲，本次130甲，两次其他测量条件一致。 此为虚构技术测试，不是实际医学单位。",
+            "url": "",
+            "published_at": "",
+            "kind": "private",
+            "collected_at": "",
+            "source_type": "article",
+            "regions": [],
+            "report_type": null,
+            "followup_date": "",
+            "entered_at": "",
+            "followup_status": ""
+          }
+        ],
+        "claims": [],
+        "questions": [],
+        "gaps": [],
+        "records": [],
+        "notice": "",
+        "mode": "live",
+        "response_method": "model",
+        "rejected_claims": 0,
+        "iterations": 0,
+        "stop_reason": "report_answer_completed",
+        "answer_review": {
+          "status": "passed"
+        }
+      }
+    }
+  ],
+  "tokens": {
+    "cases_planned": 12,
+    "cases_with_calls": 24,
+    "calls": 36,
+    "known_input_tokens": 34765,
+    "known_output_tokens": 1957,
+    "known_total_tokens": 36722,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 24,
+    "mean_tokens_complete_cases": 1530.0833333333333,
+    "p50_tokens_complete_cases": 1528.5,
+    "p95_tokens_complete_cases": 2787.25,
+    "by_purpose": {
+      "report_answer": {
+        "calls": 12,
+        "known_total_tokens": 13480,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 12,
+        "known_total_tokens": 19214,
+        "unknown_calls": 0
+      },
+      "unit_comparison_judge": {
+        "calls": 12,
+        "known_total_tokens": 4028,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  },
+  "limits": [
+    "fictional units with explicit conversion evidence",
+    "same-model auxiliary judge",
+    "not clinical conversion validation"
+  ]
+}

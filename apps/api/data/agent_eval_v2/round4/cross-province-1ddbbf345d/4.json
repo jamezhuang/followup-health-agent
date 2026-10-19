@@ -1,0 +1,308 @@
+{
+  "province": "吉林",
+  "hospital": "吉林大学中日联谊医院",
+  "goal": "吉林大学中日联谊医院地址和交通指南",
+  "lookup": {
+    "sources": [
+      {
+        "id": "WEB-f1d4d37e5100bad675c5",
+        "title": "病理科联系方式_吉林大学中日联谊医院病理科地址 - 120健康网",
+        "institution": "120.net（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://www.120.net/keshi/lianxi/826i9ca2nlwg3h08.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "医疗信息\n提问咨询\n疾病指南\n找好医生\n手机应用\n应用中心\n登录\n｜\n注册\n首页\n咨询列表\n疾病指南\n找好医生\n手机应用\n免费提问\n您的位置：\n120健康网\n>\n科室\n>\n吉林大学中日联谊医院病理科\n科室\n医生\n医院\n科室\n疾病\n症状\n药品\n赏金寻医\n分享到：\n科室首页\n科室介绍\n科室医生\n联系方式\n网友点评\n提问咨询\n完善信息\n地址：长春市仙台大街126号、长春市新民大街829号、长春市南湖新村东街1028号、长春市明斯克路1543号\n邮编：130033\n乘车路线：中心院区：轻轨4号线自由大路站东行500米；公交4、20、80、120、130、142、154、182、190、227、233、238、247、260、271、281、286、287、301、304自由大路或中日联谊医院站；102、103、115、132、181、248、254、292、318中东大市场站以西800米。\n新民院区：公交13、156、213、218、227、238、240、253、258、264、266、276、286。\n南湖院区：轻轨3号线卫光街站北行500米；公交6、162、208、230、277、292。\n北湖院区：公交3路B、北湖3号线外环。\n749\n位专家\n电话咨询医生\n就诊医生前的沟通，及就诊后的复诊，都可通过电话与医生本人联系\n与医生通话\n1856\n位专家\n快速问医生\n名医在线\n咨询我\n尚剑\n(医师)\n儿科\n擅长：\n感冒、支气管、肺炎、腹泻、手足口病、湿疹、口腔溃疡等疾病\n咨询我\n高瞻\n(副主任医师)\n泌尿外科\n擅长：\n中西医结合治疗前列腺疾病、膀胱肿瘤、男性性功能障碍、阳...\n咨询我\n刘志飞\n(主任医师)\n整形美容科\n擅长：\n颈部常见的重睑、下睑袋切除、隆鼻、隆颏除皱等美容手术\n咨询我\n张红超\n(副主任医师)\n心血管外科\n擅长：\n各种心脏手术，对高龄心脏搭桥、大血管支架重度心脏衰竭、...\n咨询我\n赵海军\n(副主任医师)\n乳腺外科\n擅长：\n乳腺外科，普通外科相关疾病乳腺肿瘤手术、腹腔镜胆囊切除...\n咨询我\n卢卫强\n(副主任医师)\n内科\n擅长：\n乙肝，糖尿病，甲亢，高血压，高血脂，痛风，尿路感染，胃炎\n关于我们\n联系方式\n服务条款\n隐私条款\n粤ICP备2023094852号\n营业执照\n医疗机构执业许可证\n×",
+        "allowed_departments": [],
+        "kind": "public",
+        "score": 0.0,
+        "authority": "unverified",
+        "document_id": "WEB-f1d4d37e5100bad675c5",
+        "location": "公开网页正文（来源身份未独立核验）"
+      },
+      {
+        "id": "WEB-fbb4bdb15591c8c627a9",
+        "title": "医院地址 - 吉林大学中日联谊医院",
+        "institution": "m.35jk.com（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://m.35jk.com/5082/address/",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "医院地址 - 吉林大学中日联谊医院\n医院地址\n吉林大学中日联谊医院\n地址\n总院:长春市仙台大街126号,新民院区:长春市新民大街829号,南湖院区:长春市朝阳区南湖新村东街1028号,开运院区:开运街1433号\n医院地图\n公交路线\n乘车路线:乘227路、4路、260路、320路、281路、272路、120路、130路、233路、301路、286路、80路公交车到吉林大学中日联谊医院下车\n联系电话\n0431-84995222(总机),0431-84995138(门诊),0431-89876666(预约)",
+        "allowed_departments": [],
+        "kind": "public",
+        "score": 0.0,
+        "authority": "unverified",
+        "document_id": "WEB-fbb4bdb15591c8c627a9",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "status": "ok",
+    "context": {
+      "kind": "named",
+      "names": [
+        "吉林大学中日联谊医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": [],
+      "listed_names": [
+        "吉林大学中日联谊医院"
+      ]
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "clarification": "",
+    "queries": [
+      "吉林大学中日联谊医院 地址 位置 院区"
+    ],
+    "covered_topics": [
+      "address",
+      "transport"
+    ],
+    "missing_topics": [],
+    "exhaustive": false,
+    "missing_hospitals": [],
+    "direct_reads": 5,
+    "browser_reads": 2,
+    "search_rounds": 1,
+    "local_source_count": 0,
+    "cached_source_count": 0,
+    "query_plan": {
+      "queries": [
+        "吉林大学中日联谊医院 地址 位置 院区",
+        "吉林大学中日联谊医院 交通 地铁 公交 停车",
+        "吉林大学中日联谊医院 官网 就诊指南 地址 交通"
+      ],
+      "subquery_count": 3
+    },
+    "link_maps": 0,
+    "entity_searches": 0,
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-fbb4bdb15591c8c627a9",
+        "WEB-f1d4d37e5100bad675c5"
+      ],
+      "missing": []
+    },
+    "retrieval_stop_reason": "coverage_satisfied",
+    "missing_regions": [],
+    "timed_out": false,
+    "search_failures": 0,
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 5,
+      "read_failures": 5,
+      "extracted_sources": 2,
+      "rejected_sources": 0,
+      "read_successes": 2,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "page_http_error": 2,
+        "text_too_short": 1,
+        "other_read_error": 2
+      },
+      "final_source_count": 2,
+      "stop_reason": "coverage_satisfied"
+    }
+  },
+  "answer": {
+    "kind": "chat",
+    "content": "以下医院在本轮相关资料中有记载，可作为进一步了解的起点：\n\n1. **吉林大学中日联谊医院**\n\n目前只保留能直接核对的医院和科室信息，具体诊疗特点仍需进一步核实，不据此作优劣排名。",
+    "claims": [],
+    "questions": [],
+    "gaps": [],
+    "search_queries": [
+      "吉林大学中日联谊医院 地址 位置 院区"
+    ],
+    "intent": "daily",
+    "consultation_type": "hospital",
+    "sources": [
+      {
+        "id": "WEB-f1d4d37e5100bad675c5",
+        "title": "病理科联系方式_吉林大学中日联谊医院病理科地址 - 120健康网",
+        "institution": "120.net（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://www.120.net/keshi/lianxi/826i9ca2nlwg3h08.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "医疗信息\n提问咨询\n疾病指南\n找好医生\n手机应用\n应用中心\n登录\n｜\n注册\n首页\n咨询列表\n疾病指南\n找好医生\n手机应用\n免费提问\n您的位置：\n120健康网\n>\n科室\n>\n吉林大学中日联谊医院病理科\n科室\n医生\n医院\n科室\n疾病\n症状\n药品\n赏金寻医\n分享到：\n科室首页\n科室介绍\n科室医生\n联系方式\n网友点评\n提问咨询\n完善信息\n地址：长春市仙台大街126号、长春市新民大街829号、长春市南湖新村东街1028号、长春市明斯克路1543号\n邮编：130033\n乘车路线：中心院区：轻轨4号线自由大路站东行500米；公交4、20、80、120、130、142、154、182、190、227、233、238、247、260、271、281、286、287、301、304自由大路或中日联谊医院站；102、103、115、132、181、248、254、292、318中东大市场站以西800米。\n新民院区：公交13、156、213、218、227、238、240、253、258、264、266、276、286。\n南湖院区：轻轨3号线卫光街站北行500米；公交6、162、208、230、277、292。\n北湖院区：公交3路B、北湖3号线外环。\n749\n位专家\n电话咨询医生\n就诊医生前的沟通，及就诊后的复诊，都可通过电话与医生本人联系\n与医生通话\n1856\n位专家\n快速问医生\n名医在线\n咨询我\n尚剑\n(医师)\n儿科\n擅长：\n感冒、支气管、肺炎、腹泻、手足口病、湿疹、口腔溃疡等疾病\n咨询我\n高瞻\n(副主任医师)\n泌尿外科\n擅长：\n中西医结合治疗前列腺疾病、膀胱肿瘤、男性性功能障碍、阳...\n咨询我\n刘志飞\n(主任医师)\n整形美容科\n擅长：\n颈部常见的重睑、下睑袋切除、隆鼻、隆颏除皱等美容手术\n咨询我\n张红超\n(副主任医师)\n心血管外科\n擅长：\n各种心脏手术，对高龄心脏搭桥、大血管支架重度心脏衰竭、...\n咨询我\n赵海军\n(副主任医师)\n乳腺外科\n擅长：\n乳腺外科，普通外科相关疾病乳腺肿瘤手术、腹腔镜胆囊切除...\n咨询我\n卢卫强\n(副主任医师)\n内科\n擅长：\n乙肝，糖尿病，甲亢，高血压，高血脂，痛风，尿路感染，胃炎\n关于我们\n联系方式\n服务条款\n隐私条款\n粤ICP备2023094852号\n营业执照\n医疗机构执业许可证\n×",
+        "allowed_departments": [],
+        "kind": "public",
+        "authority": "unverified",
+        "document_id": "WEB-f1d4d37e5100bad675c5",
+        "location": "公开网页正文（来源身份未独立核验）"
+      },
+      {
+        "id": "WEB-fbb4bdb15591c8c627a9",
+        "title": "医院地址 - 吉林大学中日联谊医院",
+        "institution": "m.35jk.com（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://m.35jk.com/5082/address/",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "医院地址 - 吉林大学中日联谊医院\n医院地址\n吉林大学中日联谊医院\n地址\n总院:长春市仙台大街126号,新民院区:长春市新民大街829号,南湖院区:长春市朝阳区南湖新村东街1028号,开运院区:开运街1433号\n医院地图\n公交路线\n乘车路线:乘227路、4路、260路、320路、281路、272路、120路、130路、233路、301路、286路、80路公交车到吉林大学中日联谊医院下车\n联系电话\n0431-84995222(总机),0431-84995138(门诊),0431-89876666(预约)",
+        "allowed_departments": [],
+        "kind": "public",
+        "authority": "unverified",
+        "document_id": "WEB-fbb4bdb15591c8c627a9",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "records": [],
+    "rejected_claims": 0,
+    "mode": "live",
+    "response_method": "model",
+    "notice": "",
+    "iterations": 0,
+    "stop_reason": "chat_completed",
+    "answer_review": {
+      "status": "supported_excerpts",
+      "issues": [
+        "unconfirmed_as_fact",
+        "wrong_date_or_number"
+      ]
+    },
+    "query_plan": {
+      "queries": [
+        "吉林大学中日联谊医院 地址 位置 院区",
+        "吉林大学中日联谊医院 交通 地铁 公交 停车",
+        "吉林大学中日联谊医院 官网 就诊指南 地址 交通"
+      ],
+      "subquery_count": 3
+    },
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-fbb4bdb15591c8c627a9",
+        "WEB-f1d4d37e5100bad675c5"
+      ],
+      "missing": []
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 5,
+      "read_failures": 5,
+      "extracted_sources": 2,
+      "rejected_sources": 0,
+      "read_successes": 2,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "page_http_error": 2,
+        "text_too_short": 1,
+        "other_read_error": 2
+      },
+      "final_source_count": 2,
+      "stop_reason": "coverage_satisfied"
+    },
+    "hospital_context": {
+      "kind": "named",
+      "names": [
+        "吉林大学中日联谊医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": [],
+      "listed_names": [
+        "吉林大学中日联谊医院"
+      ]
+    },
+    "search_status": "ok"
+  },
+  "elapsed_s": 23.281999999999243,
+  "source_count": 2,
+  "official_status": "requires_independent_source_review",
+  "tokens": {
+    "cases_planned": 1,
+    "cases_with_calls": 1,
+    "calls": 6,
+    "known_input_tokens": 16809,
+    "known_output_tokens": 861,
+    "known_total_tokens": 17670,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 1,
+    "mean_tokens_complete_cases": 17670,
+    "p50_tokens_complete_cases": 17670.0,
+    "p95_tokens_complete_cases": 17670.0,
+    "by_purpose": {
+      "hospital_query_rewrite": {
+        "calls": 1,
+        "known_total_tokens": 1122,
+        "unknown_calls": 0
+      },
+      "evidence_sufficiency": {
+        "calls": 1,
+        "known_total_tokens": 2124,
+        "unknown_calls": 0
+      },
+      "hospital_service": {
+        "calls": 1,
+        "known_total_tokens": 4681,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 1,
+        "known_total_tokens": 2444,
+        "unknown_calls": 0
+      },
+      "answer_fact_repair": {
+        "calls": 1,
+        "known_total_tokens": 4778,
+        "unknown_calls": 0
+      },
+      "answer_fact_recheck": {
+        "calls": 1,
+        "known_total_tokens": 2521,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  }
+}

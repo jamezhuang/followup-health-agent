@@ -1,0 +1,191 @@
+{
+  "version": "agent_eval_v2",
+  "status": "draft_not_human_certified",
+  "seed": 20261019,
+  "counts": {
+    "intent": 100,
+    "corpus": 39,
+    "retrieval_generation": 65,
+    "e2e": 16,
+    "robustness": 24
+  },
+  "unique_scenarios": 205,
+  "retrieval_case_types": {
+    "single_source": 39,
+    "multi_source": 16,
+    "insufficient": 10
+  },
+  "clinical_validity": "Not a clinical benchmark; artificial fixtures must never enter production knowledge.",
+  "hashes": {
+    "corpus.json": "a899074ba8f1dffa5a93184901770dbf10c3d87965a76679b329a3b94aa0d1c9",
+    "e2e.jsonl": "3d1f32c594a01c35c57894d96c4332fde1030495f5c6468e02cca3f3bec62e88",
+    "intent.jsonl": "98c1868388d13febd6932c2345f045aa94bc8cea1df01504fc2ec7affb8789fb",
+    "retrieval_generation.jsonl": "d3e249c95812e667d875acfb0cea3c3a8c80e234d7490ddef4a795276ce50153",
+    "retrieval_suite.json": "5b76050b450f882781c9ab097d298cc4f8bc23267f71f30a3b3a7d5805dd0404",
+    "robustness.jsonl": "ecfe82104f17620a0266445d1eb26111793152be6e467d52117b39f7565fd34d"
+  },
+  "measurements": {
+    "intent": {
+      "rules": {
+        "planned_n": 100,
+        "valid_n": 100,
+        "missing_n": 0,
+        "main_intent_accuracy": 0.86,
+        "route_accuracy": 0.81,
+        "strict_accuracy": 0.78,
+        "route_macro_f1_on_valid": 0.7982653193771316,
+        "confusion": {
+          "daily/general -> daily/general": 9,
+          "daily/general -> daily/hospital": 1,
+          "daily/medical_education -> daily/medical_education": 16,
+          "daily/medical_education -> daily/general": 1,
+          "daily/medical_education -> followup/general": 1,
+          "daily/medical_education -> daily/hospital": 2,
+          "daily/hospital -> daily/hospital": 29,
+          "daily/hospital -> daily/general": 1,
+          "followup/general -> daily/medical_education": 11,
+          "followup/general -> followup/general": 27,
+          "followup/general -> daily/general": 2
+        },
+        "failure_ids": [
+          "I007",
+          "I016",
+          "I022",
+          "I027",
+          "I030",
+          "I049",
+          "I061",
+          "I063",
+          "I064",
+          "I065",
+          "I066",
+          "I067",
+          "I069",
+          "I070",
+          "I074",
+          "I077",
+          "I078",
+          "I079",
+          "I080",
+          "I095",
+          "I097",
+          "I099"
+        ]
+      },
+      "pure_model": {
+        "planned_n": 100,
+        "valid_n": 100,
+        "missing_n": 0,
+        "main_intent_accuracy": 1.0,
+        "route_accuracy": 0.98,
+        "strict_accuracy": 0.94,
+        "route_macro_f1_on_valid": 0.9624999999999999,
+        "confusion": {
+          "daily/general -> daily/general": 9,
+          "daily/general -> daily/medical_education": 1,
+          "daily/medical_education -> daily/medical_education": 19,
+          "daily/medical_education -> daily/general": 1,
+          "daily/hospital -> daily/hospital": 30,
+          "followup/general -> followup/general": 40
+        },
+        "failure_ids": [
+          "I006",
+          "I030",
+          "I066",
+          "I069",
+          "I083",
+          "I090"
+        ]
+      },
+      "current": {
+        "planned_n": 100,
+        "valid_n": 100,
+        "missing_n": 0,
+        "main_intent_accuracy": 1.0,
+        "route_accuracy": 0.98,
+        "strict_accuracy": 0.94,
+        "route_macro_f1_on_valid": 0.9624999999999999,
+        "confusion": {
+          "daily/general -> daily/general": 9,
+          "daily/general -> daily/medical_education": 1,
+          "daily/medical_education -> daily/medical_education": 19,
+          "daily/medical_education -> daily/general": 1,
+          "daily/hospital -> daily/hospital": 30,
+          "followup/general -> followup/general": 40
+        },
+        "failure_ids": [
+          "I006",
+          "I030",
+          "I066",
+          "I069",
+          "I083",
+          "I090"
+        ]
+      }
+    },
+    "bm25": {
+      "answerable_n": 55,
+      "p_at_1": 0.7454545454545455,
+      "r_at_3_group_macro": 0.8333333333333334,
+      "all_groups_at_3": 0.7636363636363637,
+      "mrr_at_10": 0.8316883116883117
+    },
+    "dense": {
+      "answerable_n": 55,
+      "p_at_1": 0.9090909090909091,
+      "r_at_3_group_macro": 0.9333333333333333,
+      "all_groups_at_3": 0.8909090909090909,
+      "mrr_at_10": 0.945021645021645
+    },
+    "hybrid_rerank": {
+      "answerable_n": 55,
+      "p_at_1": 1,
+      "r_at_3_group_macro": 0.9939393939393939,
+      "all_groups_at_3": 0.9818181818181818,
+      "mrr_at_10": 1.0
+    },
+    "generation": {
+      "base": {
+        "judge": "same_model_auxiliary_paired",
+        "planned_n": 65,
+        "scored_n": 65,
+        "faithfulness_fact_micro": 1.0,
+        "hallucination_answer_rate": 0,
+        "relevance_rate": 1,
+        "completion_rate": 0.9846153846153847,
+        "unsafe_rate": 0,
+        "zero_fact_answers": 0
+      },
+      "corrected": {
+        "judge": "same_model_auxiliary_paired",
+        "planned_n": 65,
+        "scored_n": 65,
+        "faithfulness_fact_micro": 1.0,
+        "hallucination_answer_rate": 0,
+        "relevance_rate": 1,
+        "completion_rate": 0.9846153846153847,
+        "unsafe_rate": 0,
+        "zero_fact_answers": 0
+      }
+    },
+    "e2e": {
+      "n": 16,
+      "completed": 16,
+      "strict_pass_rate": 0.75
+    },
+    "hybrid": {
+      "answerable_n": 55,
+      "p_at_1": 0.7636363636363637,
+      "r_at_3_group_macro": 0.906060606060606,
+      "all_groups_at_3": 0.8545454545454545,
+      "mrr_at_10": 0.8687878787878788
+    },
+    "robustness": {
+      "n": 24,
+      "passed": 24,
+      "pass_rate": 1.0
+    }
+  },
+  "latest_experiment_report": "EXPERIMENT_REPORT.md",
+  "remaining_experiment_report": "REMAINING_EXPERIMENTS.md"
+}

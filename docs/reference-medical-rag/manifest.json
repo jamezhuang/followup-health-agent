@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/yolo-hyl/medical-rag",
+  "commit": "4ec5871ad874344d228b19aeed7ab38c4ba0b940",
+  "branch": "main",
+  "extracted_at": "2026-10-18",
+  "source_path": "src/MedicalRag/prompts/templates.py",
+  "sha256": "8fe9b7991f5a0bfaab6265a58e023503d40588861476e62ac23c9d49f1f91703",
+  "template_names": [
+    "basic_rag",
+    "dialogue_rag",
+    "rewriter",
+    "summary",
+    "call_db",
+    "web_router",
+    "call_web",
+    "judge_rag",
+    "ask_user",
+    "extract_user_info",
+    "handle_query",
+    "update_background",
+    "medical_qa_annotation",
+    "simple_qa"
+  ],
+  "count": 14,
+  "license": "MIT",
+  "method": "AST literal extraction; no source execution"
+}

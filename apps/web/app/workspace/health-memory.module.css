@@ -1,0 +1,24 @@
+.panel { max-width: 980px; display: grid; gap: 24px; }
+.panel h2 { margin: 0 0 8px; font-size: 19px; }
+.panel p { line-height: 1.7; margin: 8px 0; }
+.heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.heading p, .meta, .form small { color: #63757e; font-size: 13px; }
+.section { padding: 20px; border: 1px solid #dce5e7; border-radius: 14px; background: #fff; }
+.form { display: grid; gap: 18px; padding: 20px; background: #fff; border-radius: 14px; border: 1px solid #dce5e7; }
+.form label { display: grid; gap: 8px; font-weight: 600; }
+.form textarea { resize: vertical; min-height: 68px; width: 100%; box-sizing: border-box; }
+.form small { font-weight: 400; }
+.panel button { padding: 9px 14px; cursor: pointer; }
+.panel button:disabled { opacity: .55; cursor: not-allowed; }
+.panel select { width: 100%; max-width: 620px; padding: 10px; }
+.check { display: flex; gap: 8px; align-items: flex-start; margin: 14px 0; }
+.check input { margin-top: 5px; }
+.scroll { max-height: 520px; overflow-y: auto; overscroll-behavior: contain; margin-top: 12px; }
+.candidate { padding: 16px 0; border-top: 1px solid #e3e9eb; }
+.tag, .conflict { font-size: 12px; padding: 4px 8px; border-radius: 6px; background: #edf4f5; }
+.conflict { color: #8a431d; background: #fff0df; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.record { padding: 12px 0; border-top: 1px solid #e3e9eb; }
+.panel blockquote { white-space: pre-wrap; overflow-wrap: anywhere; margin: 10px 0; padding: 12px; background: #f4f7f8; border-left: 3px solid #a6bdc4; }
+.panel summary { cursor: pointer; }
+@container workspace (max-width: 640px) { .section, .form { padding: 14px; } .actions button { flex: 1 1 140px; } }

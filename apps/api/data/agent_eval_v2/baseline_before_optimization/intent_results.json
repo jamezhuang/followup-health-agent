@@ -1,0 +1,5612 @@
+{
+  "metadata": {
+    "dataset": "734db81275fcc26f293084b12d19ef31b290727e539cd227fa8c0602cd8eab55",
+    "source": "3b8aad19ab587bc6e5c267d3d3ec4a072fee244dda9c44347558bb561f63efcf",
+    "model": "deepseek-flash",
+    "temperature": 0,
+    "workers": 4
+  },
+  "metrics": {
+    "rules": {
+      "planned_n": 100,
+      "valid_n": 100,
+      "missing_n": 0,
+      "main_intent_accuracy": 0.86,
+      "route_accuracy": 0.81,
+      "strict_accuracy": 0.78,
+      "route_macro_f1_on_valid": 0.7982653193771316,
+      "confusion": {
+        "daily/general -> daily/general": 9,
+        "daily/general -> daily/hospital": 1,
+        "daily/medical_education -> daily/medical_education": 16,
+        "daily/medical_education -> daily/general": 1,
+        "daily/medical_education -> followup/general": 1,
+        "daily/medical_education -> daily/hospital": 2,
+        "daily/hospital -> daily/hospital": 29,
+        "daily/hospital -> daily/general": 1,
+        "followup/general -> daily/medical_education": 11,
+        "followup/general -> followup/general": 27,
+        "followup/general -> daily/general": 2
+      },
+      "failure_ids": [
+        "I007",
+        "I016",
+        "I022",
+        "I027",
+        "I030",
+        "I049",
+        "I061",
+        "I063",
+        "I064",
+        "I065",
+        "I066",
+        "I067",
+        "I069",
+        "I070",
+        "I074",
+        "I077",
+        "I078",
+        "I079",
+        "I080",
+        "I095",
+        "I097",
+        "I099"
+      ]
+    },
+    "pure_model": {
+      "planned_n": 100,
+      "valid_n": 100,
+      "missing_n": 0,
+      "main_intent_accuracy": 1.0,
+      "route_accuracy": 0.98,
+      "strict_accuracy": 0.94,
+      "route_macro_f1_on_valid": 0.9624999999999999,
+      "confusion": {
+        "daily/general -> daily/general": 9,
+        "daily/general -> daily/medical_education": 1,
+        "daily/medical_education -> daily/medical_education": 19,
+        "daily/medical_education -> daily/general": 1,
+        "daily/hospital -> daily/hospital": 30,
+        "followup/general -> followup/general": 40
+      },
+      "failure_ids": [
+        "I006",
+        "I030",
+        "I066",
+        "I069",
+        "I083",
+        "I090"
+      ]
+    },
+    "current": {
+      "planned_n": 100,
+      "valid_n": 100,
+      "missing_n": 0,
+      "main_intent_accuracy": 1.0,
+      "route_accuracy": 0.98,
+      "strict_accuracy": 0.94,
+      "route_macro_f1_on_valid": 0.9624999999999999,
+      "confusion": {
+        "daily/general -> daily/general": 9,
+        "daily/general -> daily/medical_education": 1,
+        "daily/medical_education -> daily/medical_education": 19,
+        "daily/medical_education -> daily/general": 1,
+        "daily/hospital -> daily/hospital": 30,
+        "followup/general -> followup/general": 40
+      },
+      "failure_ids": [
+        "I006",
+        "I030",
+        "I066",
+        "I069",
+        "I083",
+        "I090"
+      ]
+    }
+  },
+  "tokens": {
+    "actual_routing": {
+      "planned_n": 100,
+      "observed_case_n": 96,
+      "calls": 96,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 161266,
+      "known_output_tokens": 7666,
+      "known_total_tokens": 168932,
+      "complete_usage_n": 100,
+      "mean_complete_case_tokens": 1689.32,
+      "p50_complete_case_tokens": 1738.5,
+      "p95_complete_case_tokens": 1820.15,
+      "total_is_complete": true,
+      "shared_embedding_excluded_and_reported_separately": true,
+      "includes_retries": true,
+      "zero_model_call_n": 4
+    },
+    "pure_model_reconstructed": {
+      "planned_n": 100,
+      "observed_case_n": 100,
+      "calls": 100,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 167960,
+      "known_output_tokens": 7890,
+      "known_total_tokens": 175850,
+      "complete_usage_n": 100,
+      "mean_complete_case_tokens": 1758.5,
+      "p50_complete_case_tokens": 1738.5,
+      "p95_complete_case_tokens": 1820.15,
+      "total_is_complete": true,
+      "shared_embedding_excluded_and_reported_separately": true,
+      "includes_retries": true,
+      "zero_model_call_n": 0
+    }
+  },
+  "latency_pipeline_plus_extra_pure_calls": {
+    "p50_s": 2.680000000000291,
+    "p95_s": 3.484999999998763
+  },
+  "limits": [
+    "draft expected labels, not human-adjudicated",
+    "pure model reuses raw classifier output, local fast paths filled separately",
+    "Token count includes actual retries; local fast-path no-call cases consume zero model tokens"
+  ],
+  "rows": [
+    {
+      "id": "I001",
+      "input": "你好",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.311999999999898
+    },
+    {
+      "id": "I002",
+      "input": "你是谁",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7340000000003783
+    },
+    {
+      "id": "I003",
+      "input": "你能帮我做什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.7029999999995198
+    },
+    {
+      "id": "I004",
+      "input": "谢谢你",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.6880000000001019
+    },
+    {
+      "id": "I005",
+      "input": "帮我把这段话写得简洁一点",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "ambiguous",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "ambiguous",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.640000000001237
+    },
+    {
+      "id": "I006",
+      "input": "解释一下RAG是什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.6569999999992433
+    },
+    {
+      "id": "I007",
+      "input": "今天先聊聊天，不查任何医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "greeting",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.6569999999992433
+    },
+    {
+      "id": "I008",
+      "input": "帮我列一个普通文件整理步骤",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.6569999999992433
+    },
+    {
+      "id": "I009",
+      "input": "不要读取我的档案，介绍你的功能",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7189999999991414
+    },
+    {
+      "id": "I010",
+      "input": "解释一下为什么搜索结果不一定可靠",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.2340000000003783
+    },
+    {
+      "id": "I011",
+      "input": "抗生素能随便吃吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.2340000000003783
+    },
+    {
+      "id": "I012",
+      "input": "抗生素和消炎药是一回事吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7180000000007567
+    },
+    {
+      "id": "I013",
+      "input": "CT检查是什么意思",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.29700000000048
+    },
+    {
+      "id": "I014",
+      "input": "MRI检查和CT有什么区别",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7819999999992433
+    },
+    {
+      "id": "I015",
+      "input": "什么是血压",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.75
+    },
+    {
+      "id": "I016",
+      "input": "糖化血红蛋白是什么意思",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.25
+    },
+    {
+      "id": "I017",
+      "input": "普通感冒为什么不一定要吃抗生素",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.2340000000003783
+    },
+    {
+      "id": "I018",
+      "input": "什么是药物不良反应",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.20299999999952
+    },
+    {
+      "id": "I019",
+      "input": "疫苗接种后发热是什么概念",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7180000000007567
+    },
+    {
+      "id": "I020",
+      "input": "三甲医院是什么意思",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.70299999999952
+    },
+    {
+      "id": "I021",
+      "input": "我有档案，但这次只想了解糖尿病是什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "糖尿病",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "糖尿病",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.0
+    },
+    {
+      "id": "I022",
+      "input": "我妈在吃药，先解释处方药是什么意思，不看她的报告",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.484999999998763
+    },
+    {
+      "id": "I023",
+      "input": "医院说的检查互认是什么意思",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.484999999998763
+    },
+    {
+      "id": "I024",
+      "input": "解释一下药品说明书里的禁忌和慎用",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.0
+    },
+    {
+      "id": "I025",
+      "input": "单纯介绍超声检查原理，不分析个人结果",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.2180000000007567
+    },
+    {
+      "id": "I026",
+      "input": "我没有复诊档案，也能问高血压科普吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7180000000007567
+    },
+    {
+      "id": "I027",
+      "input": "不要帮我列医院，解释耐药是什么意思",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.2030000000013388
+    },
+    {
+      "id": "I028",
+      "input": "不要整理复诊清单，说明检验参考范围是什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.7030000000013388
+    },
+    {
+      "id": "I029",
+      "input": "公共指南能直接决定个人怎么调药吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.6719999999986612
+    },
+    {
+      "id": "I030",
+      "input": "为什么网友的就诊经验不能当医院官方规定",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.67200000000048
+    },
+    {
+      "id": "I031",
+      "input": "南方医科大学珠江医院官网是什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询南方医科大学珠江医院的官方网站",
+          "original_name": "南方医科大学珠江医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "南方医科大学珠江医院的官网是什么？",
+              "topic": "website",
+              "query": "南方医科大学珠江医院 官网",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询南方医科大学珠江医院的官方网站",
+          "original_name": "南方医科大学珠江医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "南方医科大学珠江医院的官网是什么？",
+              "topic": "website",
+              "query": "南方医科大学珠江医院 官网",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.67200000000048
+    },
+    {
+      "id": "I032",
+      "input": "给我他的官网网址南方医科大学珠江医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询南方医科大学珠江医院的官网网址",
+          "original_name": "南方医科大学珠江医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "南方医科大学珠江医院的官网网址是什么？",
+              "topic": "website",
+              "query": "南方医科大学珠江医院 官网网址",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询南方医科大学珠江医院的官网网址",
+          "original_name": "南方医科大学珠江医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "南方医科大学珠江医院的官网网址是什么？",
+              "topic": "website",
+              "query": "南方医科大学珠江医院 官网网址",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.186999999999898
+    },
+    {
+      "id": "I033",
+      "input": "三水人名医院院地址在哪？有几个院区？怎么坐车/地铁过来？",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询三水人名医院（疑为三水人民医院）的地址、院区数量及公交地铁交通方式",
+          "original_name": "三水人名医院",
+          "search_names": [
+            "三水人民医院",
+            "佛山市三水区人民医院"
+          ],
+          "region": "三水",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "address",
+              "question": "三水人名医院的地址在哪里？",
+              "topic": "address",
+              "query": "三水人民医院 地址",
+              "depends_on": []
+            },
+            {
+              "id": "campuses",
+              "question": "三水人名医院有几个院区？",
+              "topic": "campuses",
+              "query": "三水人民医院 院区 数量",
+              "depends_on": []
+            },
+            {
+              "id": "transport",
+              "question": "到三水人名医院怎么坐公交或地铁？",
+              "topic": "transport",
+              "query": "三水人民医院 公交 地铁 交通",
+              "depends_on": [
+                "address"
+              ]
+            }
+          ],
+          "missing_information": [
+            "出发地点（仅影响全程路线规划）"
+          ]
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询三水人名医院（疑为三水人民医院）的地址、院区数量及公交地铁交通方式",
+          "original_name": "三水人名医院",
+          "search_names": [
+            "三水人民医院",
+            "佛山市三水区人民医院"
+          ],
+          "region": "三水",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "address",
+              "question": "三水人名医院的地址在哪里？",
+              "topic": "address",
+              "query": "三水人民医院 地址",
+              "depends_on": []
+            },
+            {
+              "id": "campuses",
+              "question": "三水人名医院有几个院区？",
+              "topic": "campuses",
+              "query": "三水人民医院 院区 数量",
+              "depends_on": []
+            },
+            {
+              "id": "transport",
+              "question": "到三水人名医院怎么坐公交或地铁？",
+              "topic": "transport",
+              "query": "三水人民医院 公交 地铁 交通",
+              "depends_on": [
+                "address"
+              ]
+            }
+          ],
+          "missing_information": [
+            "出发地点（仅影响全程路线规划）"
+          ]
+        }
+      },
+      "elapsed_s": 4.5
+    },
+    {
+      "id": "I034",
+      "input": "清禾医院几个院区，分别在哪",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的院区数量及各院区地址",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "campus_count",
+              "question": "清禾医院有几个院区？",
+              "topic": "campuses",
+              "query": "清禾医院 院区数量",
+              "depends_on": []
+            },
+            {
+              "id": "campus_addresses",
+              "question": "清禾医院各院区分别在哪里？",
+              "topic": "address",
+              "query": "清禾医院 各院区地址",
+              "depends_on": [
+                "campus_count"
+              ]
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的院区数量及各院区地址",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "campus_count",
+              "question": "清禾医院有几个院区？",
+              "topic": "campuses",
+              "query": "清禾医院 院区数量",
+              "depends_on": []
+            },
+            {
+              "id": "campus_addresses",
+              "question": "清禾医院各院区分别在哪里？",
+              "topic": "address",
+              "query": "清禾医院 各院区地址",
+              "depends_on": [
+                "campus_count"
+              ]
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.984999999998763
+    },
+    {
+      "id": "I035",
+      "input": "清禾医院怎么挂号",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户询问清禾医院如何挂号",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院怎么挂号？",
+              "topic": "appointment",
+              "query": "清禾医院 挂号 方式",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户询问清禾医院如何挂号",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院怎么挂号？",
+              "topic": "appointment",
+              "query": "清禾医院 挂号 方式",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.484999999998763
+    },
+    {
+      "id": "I036",
+      "input": "清禾医院咨询电话是多少",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的咨询电话",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院的咨询电话是多少？",
+              "topic": "contact",
+              "query": "清禾医院 咨询电话",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的咨询电话",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院的咨询电话是多少？",
+              "topic": "contact",
+              "query": "清禾医院 咨询电话",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 1.9689999999991414
+    },
+    {
+      "id": "I037",
+      "input": "清禾医院怎么坐地铁过去",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的地铁出行方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院怎么坐地铁过去？",
+              "topic": "transport",
+              "query": "清禾医院 地铁 交通",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "出发地"
+          ]
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的地铁出行方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院怎么坐地铁过去？",
+              "topic": "transport",
+              "query": "清禾医院 地铁 交通",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "出发地"
+          ]
+        }
+      },
+      "elapsed_s": 3.4680000000007567
+    },
+    {
+      "id": "I038",
+      "input": "清禾医院轮椅押金多少",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院轮椅押金金额",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院轮椅押金多少",
+              "topic": "cost",
+              "query": "清禾医院 轮椅 押金",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院轮椅押金金额",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院轮椅押金多少",
+              "topic": "cost",
+              "query": "清禾医院 轮椅 押金",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.9680000000007567
+    },
+    {
+      "id": "I039",
+      "input": "清禾医院病历怎么复印",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院病历复印的办理方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院病历怎么复印？",
+              "topic": "medical_record_copy",
+              "query": "清禾医院 病历复印 办理流程",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院病历复印的办理方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院病历怎么复印？",
+              "topic": "medical_record_copy",
+              "query": "清禾医院 病历复印 办理流程",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.9840000000003783
+    },
+    {
+      "id": "I040",
+      "input": "清禾医院周末门诊开吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院周末门诊是否开诊",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院周末门诊开诊吗？",
+              "topic": "appointment",
+              "query": "清禾医院 周末门诊 开诊时间",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院周末门诊是否开诊",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院周末门诊开诊吗？",
+              "topic": "appointment",
+              "query": "清禾医院 周末门诊 开诊时间",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 1.4369999999998981
+    },
+    {
+      "id": "I041",
+      "input": "广州有哪些医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询广州有哪些医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "广州",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广州有哪些医院？",
+              "topic": "hospital_list",
+              "query": "广州 医院 列表",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询广州有哪些医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "广州",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广州有哪些医院？",
+              "topic": "hospital_list",
+              "query": "广州 医院 列表",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.8910000000014406
+    },
+    {
+      "id": "I042",
+      "input": "佛山有哪些公立三甲医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询佛山有哪些公立三甲医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "佛山",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "佛山有哪些公立三甲医院？",
+              "topic": "hospital_list",
+              "query": "佛山 公立三甲医院 名单",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询佛山有哪些公立三甲医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "佛山",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "佛山有哪些公立三甲医院？",
+              "topic": "hospital_list",
+              "query": "佛山 公立三甲医院 名单",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.875
+    },
+    {
+      "id": "I043",
+      "input": "推荐两家广州的医院，不要民营",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "推荐广州两家非民营医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "广州",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广州有哪些非民营医院可以推荐？",
+              "topic": "hospital_recommendation",
+              "query": "广州 公立医院 推荐",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "推荐广州两家非民营医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "广州",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广州有哪些非民营医院可以推荐？",
+              "topic": "hospital_recommendation",
+              "query": "广州 公立医院 推荐",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.875
+    },
+    {
+      "id": "I044",
+      "input": "珠三角地区有哪些医院擅长处理韧带断裂手术",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "韧带断裂手术",
+        "public_task_plan": {
+          "understood_request": "查找珠三角地区擅长韧带断裂手术的医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "珠三角",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "珠三角地区有哪些医院擅长韧带断裂手术？",
+              "topic": "departments",
+              "query": "珠三角 韧带断裂手术 擅长 医院",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "韧带断裂手术",
+        "public_task_plan": {
+          "understood_request": "查找珠三角地区擅长韧带断裂手术的医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "珠三角",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "珠三角地区有哪些医院擅长韧带断裂手术？",
+              "topic": "departments",
+              "query": "珠三角 韧带断裂手术 擅长 医院",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.375
+    },
+    {
+      "id": "I045",
+      "input": "深圳哪些医院有呼吸内科",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "呼吸内科",
+        "public_task_plan": {
+          "understood_request": "查询深圳哪些医院设有呼吸内科",
+          "original_name": "",
+          "search_names": [],
+          "region": "深圳",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "深圳哪些医院有呼吸内科？",
+              "topic": "departments",
+              "query": "深圳 医院 呼吸内科",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "呼吸内科",
+        "public_task_plan": {
+          "understood_request": "查询深圳哪些医院设有呼吸内科",
+          "original_name": "",
+          "search_names": [],
+          "region": "深圳",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "深圳哪些医院有呼吸内科？",
+              "topic": "departments",
+              "query": "深圳 医院 呼吸内科",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 3.5
+    },
+    {
+      "id": "I046",
+      "input": "比较杭州和东莞的骨科医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "骨科",
+        "public_task_plan": {
+          "understood_request": "比较杭州和东莞的骨科医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "杭州、东莞",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "hz-ortho",
+              "question": "杭州有哪些骨科医院？",
+              "topic": "departments",
+              "query": "杭州 骨科医院",
+              "depends_on": []
+            },
+            {
+              "id": "dg-ortho",
+              "question": "东莞有哪些骨科医院？",
+              "topic": "departments",
+              "query": "东莞 骨科医院",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "骨科",
+        "public_task_plan": {
+          "understood_request": "比较杭州和东莞的骨科医院",
+          "original_name": "",
+          "search_names": [],
+          "region": "杭州、东莞",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "hz-ortho",
+              "question": "杭州有哪些骨科医院？",
+              "topic": "departments",
+              "query": "杭州 骨科医院",
+              "depends_on": []
+            },
+            {
+              "id": "dg-ortho",
+              "question": "东莞有哪些骨科医院？",
+              "topic": "departments",
+              "query": "东莞 骨科医院",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.985000000000582
+    },
+    {
+      "id": "I047",
+      "input": "广东省一共有多少家医院，要统计口径",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询广东省医院总数及统计口径",
+          "original_name": "",
+          "search_names": [],
+          "region": "广东省",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广东省一共有多少家医院，统计口径是什么？",
+              "topic": "statistics",
+              "query": "广东省 医院数量 统计口径",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询广东省医院总数及统计口径",
+          "original_name": "",
+          "search_names": [],
+          "region": "广东省",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "广东省一共有多少家医院，统计口径是什么？",
+              "topic": "statistics",
+              "query": "广东省 医院数量 统计口径",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.45299999999952
+    },
+    {
+      "id": "I048",
+      "input": "有没有能看儿童的医院，先不限定城市",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户想找能看儿童的医院，暂不限定城市",
+          "original_name": "",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "有哪些能看儿童的医院？",
+              "topic": "hospital_selection",
+              "query": "儿童医院 儿科医院 推荐",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "所在城市或地区"
+          ]
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户想找能看儿童的医院，暂不限定城市",
+          "original_name": "",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "有哪些能看儿童的医院？",
+              "topic": "hospital_selection",
+              "query": "儿童医院 儿科医院 推荐",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "所在城市或地区"
+          ]
+        }
+      },
+      "elapsed_s": 1.9380000000001019
+    },
+    {
+      "id": "I049",
+      "input": "只看佛山市，不要扩展到广州",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": true,
+        "reason_code": "ambiguous",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": true,
+        "reason_code": "ambiguous",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.4690000000009604
+    },
+    {
+      "id": "I050",
+      "input": "列出佛山公立医院，数量不够也不要加民营医院",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户想了解佛山地区的公立医院名单，明确排除民营医院。",
+          "original_name": "",
+          "search_names": [],
+          "region": "佛山",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "佛山有哪些公立医院？",
+              "topic": "hospital_list",
+              "query": "佛山 公立医院 名单",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户想了解佛山地区的公立医院名单，明确排除民营医院。",
+          "original_name": "",
+          "search_names": [],
+          "region": "佛山",
+          "region_origin": "user",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "佛山有哪些公立医院？",
+              "topic": "hospital_list",
+              "query": "佛山 公立医院 名单",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.95299999999952
+    },
+    {
+      "id": "I051",
+      "input": "清禾医院异地医保怎么备案",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院异地医保备案的办理方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院异地医保备案怎么办理？",
+              "topic": "医保备案",
+              "query": "清禾医院 异地医保备案 办理流程",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "参保地",
+            "是否为跨省异地就医"
+          ]
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院异地医保备案的办理方式",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院异地医保备案怎么办理？",
+              "topic": "医保备案",
+              "query": "清禾医院 异地医保备案 办理流程",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "参保地",
+            "是否为跨省异地就医"
+          ]
+        }
+      },
+      "elapsed_s": 2.9689999999991414
+    },
+    {
+      "id": "I052",
+      "input": "清禾医院检查报告在哪里领取",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院检查报告的领取地点",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院检查报告在哪里领取？",
+              "topic": "report_collection",
+              "query": "清禾医院 检查报告 领取地点",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院检查报告的领取地点",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院检查报告在哪里领取？",
+              "topic": "report_collection",
+              "query": "清禾医院 检查报告 领取地点",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.436999999999898
+    },
+    {
+      "id": "I053",
+      "input": "清禾医院住院需要带什么证件",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院住院需要携带的证件",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院住院需要带什么证件？",
+              "topic": "admission",
+              "query": "清禾医院 住院 需要带什么证件",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院住院需要携带的证件",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院住院需要带什么证件？",
+              "topic": "admission",
+              "query": "清禾医院 住院 需要带什么证件",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 3.484999999998763
+    },
+    {
+      "id": "I054",
+      "input": "清禾医院探视时间是什么",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的探视时间",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院的探视时间是什么？",
+              "topic": "visiting_hours",
+              "query": "清禾医院 探视时间",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院的探视时间",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院的探视时间是什么？",
+              "topic": "visiting_hours",
+              "query": "清禾医院 探视时间",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.95299999999952
+    },
+    {
+      "id": "I055",
+      "input": "清禾医院有轮椅租借吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "询问清禾医院是否提供轮椅租借服务",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院有轮椅租借吗？",
+              "topic": "services",
+              "query": "清禾医院 轮椅租借",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "询问清禾医院是否提供轮椅租借服务",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院有轮椅租借吗？",
+              "topic": "services",
+              "query": "清禾医院 轮椅租借",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.95299999999952
+    },
+    {
+      "id": "I056",
+      "input": "清禾医院充电宝怎么收费",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院充电宝的收费标准",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院充电宝怎么收费？",
+              "topic": "services",
+              "query": "清禾医院 充电宝 收费标准",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "咨询清禾医院充电宝的收费标准",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院充电宝怎么收费？",
+              "topic": "services",
+              "query": "清禾医院 充电宝 收费标准",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.4210000000002765
+    },
+    {
+      "id": "I057",
+      "input": "清禾医院失物招领在哪里",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院失物招领的位置",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院失物招领在哪里？",
+              "topic": "lost_and_found",
+              "query": "清禾医院 失物招领 位置",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院失物招领的位置",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院失物招领在哪里？",
+              "topic": "lost_and_found",
+              "query": "清禾医院 失物招领 位置",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 3.563000000000102
+    },
+    {
+      "id": "I058",
+      "input": "清禾医院医生明天还有号吗",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院医生明天是否还有号源",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院医生明天还有号吗",
+              "topic": "appointment",
+              "query": "清禾医院 明天 医生 号源 预约",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "就诊科室或医生姓名",
+            "医院所在城市"
+          ]
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院医生明天是否还有号源",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院医生明天还有号吗",
+              "topic": "appointment",
+              "query": "清禾医院 明天 医生 号源 预约",
+              "depends_on": []
+            }
+          ],
+          "missing_information": [
+            "就诊科室或医生姓名",
+            "医院所在城市"
+          ]
+        }
+      },
+      "elapsed_s": 3.0159999999996217
+    },
+    {
+      "id": "I059",
+      "input": "清禾医院预约平台打不开，有什么官方核实渠道",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户反映清禾医院预约平台打不开，想了解官方核实渠道。",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院预约平台的官方核实渠道有哪些？",
+              "topic": "appointment",
+              "query": "清禾医院 预约平台 官方核实渠道",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "用户反映清禾医院预约平台打不开，想了解官方核实渠道。",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院预约平台的官方核实渠道有哪些？",
+              "topic": "appointment",
+              "query": "清禾医院 预约平台 官方核实渠道",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 2.484999999998763
+    },
+    {
+      "id": "I060",
+      "input": "清禾医院南院区停车入口在哪",
+      "expected": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院南院区停车入口位置",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院南院区停车入口在哪",
+              "topic": "transport",
+              "query": "清禾医院南院区 停车入口 位置",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "current": {
+        "intent": "daily",
+        "consultation_type": "hospital",
+        "needs_clarification": false,
+        "reason_code": "hospital_service",
+        "operation": "answer",
+        "requested_services": [
+          "hospital"
+        ],
+        "public_care_topic": "",
+        "public_task_plan": {
+          "understood_request": "查询清禾医院南院区停车入口位置",
+          "original_name": "清禾医院",
+          "search_names": [],
+          "region": "",
+          "region_origin": "unknown",
+          "tasks": [
+            {
+              "id": "t1",
+              "question": "清禾医院南院区停车入口在哪",
+              "topic": "transport",
+              "query": "清禾医院南院区 停车入口 位置",
+              "depends_on": []
+            }
+          ],
+          "missing_information": []
+        }
+      },
+      "elapsed_s": 3.0159999999996217
+    },
+    {
+      "id": "I061",
+      "input": "解释我刚上传的这份报告",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.3439999999991414
+    },
+    {
+      "id": "I062",
+      "input": "帮我看这张化验单里已经核对的指标",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.311999999999898
+    },
+    {
+      "id": "I063",
+      "input": "这份报告原文建议复查是什么意思",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.82799999999952
+    },
+    {
+      "id": "I064",
+      "input": "根据我保存的报告回答这个项目数值是多少",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.32799999999952
+    },
+    {
+      "id": "I065",
+      "input": "我这份检查的参考范围在哪里",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.9539999999997235
+    },
+    {
+      "id": "I066",
+      "input": "我没有建档，先解释本轮上传报告",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "upload",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "upload",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.438000000000102
+    },
+    {
+      "id": "I067",
+      "input": "这份报告的检查日期和上传日期为什么不同",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.938000000000102
+    },
+    {
+      "id": "I068",
+      "input": "只读爸爸已确认的报告回答，不读取妈妈档案",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.438000000000102
+    },
+    {
+      "id": "I069",
+      "input": "我的报告缺了单位，还能直接比较吗",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.0
+    },
+    {
+      "id": "I070",
+      "input": "请解释我档案里这份处方写了什么，不帮我调药",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.0160000000014406
+    },
+    {
+      "id": "I071",
+      "input": "比较我最近两次血糖记录",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.5
+    },
+    {
+      "id": "I072",
+      "input": "对比爸爸两次CT报告的原文描述",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.514999999999418
+    },
+    {
+      "id": "I073",
+      "input": "比较我今年和去年已经确认的检查记录",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.3910000000014406
+    },
+    {
+      "id": "I074",
+      "input": "两次血压单位不同，先看看能不能对比",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.8589999999985594
+    },
+    {
+      "id": "I075",
+      "input": "比较这两份报告，但不要推断病因",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.3439999999991414
+    },
+    {
+      "id": "I076",
+      "input": "对比同一天两条相互冲突的记录",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.875
+    },
+    {
+      "id": "I077",
+      "input": "比较最近30天的血压，不要用录入日期",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.1560000000008586
+    },
+    {
+      "id": "I078",
+      "input": "比较当前对象的两次检查，不查其他家人",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.125
+    },
+    {
+      "id": "I079",
+      "input": "把这次和上次的指标变化列出来",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.625
+    },
+    {
+      "id": "I080",
+      "input": "只比较同项目同单位的两次结果",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "compare"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "compare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.1410000000014406
+    },
+    {
+      "id": "I081",
+      "input": "帮我准备复诊资料清单",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.375
+    },
+    {
+      "id": "I082",
+      "input": "复诊需要带什么资料",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.3589999999985594
+    },
+    {
+      "id": "I083",
+      "input": "按这份报告整理复诊材料",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.360000000000582
+    },
+    {
+      "id": "I084",
+      "input": "列出复诊时重点问医生的问题和需要准备的资料",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.360000000000582
+    },
+    {
+      "id": "I085",
+      "input": "整理妈妈复诊材料，带上档案备注",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.485000000000582
+    },
+    {
+      "id": "I086",
+      "input": "我没有报告也没有建档，复诊先准备什么",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.514999999999418
+    },
+    {
+      "id": "I087",
+      "input": "准备复诊，影像报告照片是不是就够了",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.014999999999418
+    },
+    {
+      "id": "I088",
+      "input": "根据已经确认的报告和实际用药记录准备复诊",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.014999999999418
+    },
+    {
+      "id": "I089",
+      "input": "准备复诊，不要把历史处方说成现在正在吃",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.2340000000003783
+    },
+    {
+      "id": "I090",
+      "input": "整理复诊材料，把我以前备注的头晕问题加进去",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "prepare"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "prepare",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.688000000000102
+    },
+    {
+      "id": "I091",
+      "input": "把这份报告保存到复诊档案",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "archive"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.688000000000102
+    },
+    {
+      "id": "I092",
+      "input": "核对后把这个报告归档",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "archive"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.17200000000048
+    },
+    {
+      "id": "I093",
+      "input": "帮我把已上传材料存入档案",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "archive"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 3.0939999999991414
+    },
+    {
+      "id": "I094",
+      "input": "查看上次复诊信息",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "retrieve"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.07799999999952
+    },
+    {
+      "id": "I095",
+      "input": "调出爸爸已经保存的报告",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "retrieve"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "archive",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.5939999999991414
+    },
+    {
+      "id": "I096",
+      "input": "给我看当前对象的复诊档案",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "retrieve"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "retrieve",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 1.609999999998763
+    },
+    {
+      "id": "I097",
+      "input": "更新我档案里的备注",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "update"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "general_task",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.7190000000009604
+    },
+    {
+      "id": "I098",
+      "input": "修改当前复诊信息",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "update"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "update",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.2180000000007567
+    },
+    {
+      "id": "I099",
+      "input": "不要归档，只解释这份报告",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "daily",
+        "consultation_type": "medical_education",
+        "needs_clarification": false,
+        "reason_code": "general_medical",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": true,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.515000000001237
+    },
+    {
+      "id": "I100",
+      "input": "不用准备清单，只回答我这份报告的问题",
+      "expected": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "operation": "answer"
+      },
+      "rules": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "pure_model": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "current": {
+        "intent": "followup",
+        "consultation_type": "general",
+        "needs_clarification": false,
+        "reason_code": "personal_followup",
+        "operation": "answer",
+        "requested_services": [],
+        "public_care_topic": "",
+        "public_task_plan": null
+      },
+      "elapsed_s": 2.3430000000007567
+    }
+  ],
+  "artifacts": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\.cache\\agent_intent_experiment\\8535d56cd317",
+  "task_plan_validation": {
+    "n": 30,
+    "valid_n": 26,
+    "rows": [
+      {
+        "id": "I031",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I032",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I033",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I034",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I035",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I036",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I037",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I038",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I039",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I040",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I041",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I042",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I043",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I044",
+        "valid": false,
+        "diagnostics": [
+          {
+            "status": "rejected",
+            "reason": "conflicting_explicit_region"
+          }
+        ]
+      },
+      {
+        "id": "I045",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I046",
+        "valid": false,
+        "diagnostics": [
+          {
+            "status": "repaired",
+            "reason": "inferred_region_removed"
+          },
+          {
+            "status": "rejected",
+            "reason": "no_safe_anchored_tasks"
+          }
+        ]
+      },
+      {
+        "id": "I047",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I048",
+        "valid": false,
+        "diagnostics": [
+          {
+            "status": "rejected",
+            "reason": "no_safe_anchored_tasks"
+          }
+        ]
+      },
+      {
+        "id": "I049",
+        "valid": false,
+        "diagnostics": [
+          {
+            "status": "rejected",
+            "reason": "missing_plan"
+          }
+        ]
+      },
+      {
+        "id": "I050",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I051",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I052",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I053",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I054",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I055",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I056",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I057",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I058",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I059",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      },
+      {
+        "id": "I060",
+        "valid": true,
+        "diagnostics": [
+          {
+            "status": "accepted",
+            "reason": "shared_task_plan"
+          }
+        ]
+      }
+    ],
+    "note": "Schema/scope validity only, not annotated subtask completeness"
+  },
+  "label_review_needed": [
+    "I030：信息来源可信性问题被标为医疗科普，需人工仲裁。",
+    "I069：询问能否比较，被标为answer；compare是否可接受需人工仲裁。"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-19",
+  "intent": {
+    "metrics": {
+      "planned_n": 100,
+      "valid_n": 100,
+      "missing_n": 0,
+      "main_intent_accuracy": 1.0,
+      "route_accuracy": 1.0,
+      "strict_accuracy": 0.99,
+      "route_macro_f1_on_valid": 1.0,
+      "confusion": {
+        "daily/general -> daily/general": 11,
+        "daily/medical_education -> daily/medical_education": 19,
+        "daily/hospital -> daily/hospital": 30,
+        "followup/general -> followup/general": 40
+      },
+      "failure_ids": [
+        "I068"
+      ]
+    },
+    "usage": {
+      "planned_n": 100,
+      "observed_case_n": 96,
+      "calls": 96,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 142738,
+      "known_output_tokens": 7300,
+      "known_total_tokens": 150038,
+      "complete_usage_n": 100,
+      "mean_complete_case_tokens": 1500.38,
+      "p50_complete_case_tokens": 1538.5,
+      "p95_complete_case_tokens": 1624.4,
+      "total_is_complete": true,
+      "shared_embedding_excluded_and_reported_separately": true,
+      "includes_retries": true,
+      "zero_model_call_n": 4
+    },
+    "previous_tokens": 182854
+  },
+  "e2e": {
+    "pass_n": 15,
+    "n": 16,
+    "failures": [
+      "E002"
+    ],
+    "pipeline_tokens": 133209,
+    "unknown_usage_calls": 0
+  },
+  "units": {
+    "passed_n": 4,
+    "n": 4
+  },
+  "retrieval_baseline": {
+    "answerable_n": 55,
+    "p_at_1": 1,
+    "r_at_3_group_macro": 0.9939393939393939,
+    "all_groups_at_3": 0.9818181818181818,
+    "mrr_at_10": 1.0
+  },
+  "selection_only": {
+    "completed_n": 65,
+    "retrieval": {
+      "answerable_n": 55,
+      "p_at_1": 0.9272727272727272,
+      "r_at_3_group_macro": 0.9818181818181818,
+      "all_groups_at_3": 0.9636363636363636,
+      "mrr_at_10": 0.9606060606060606
+    },
+    "judge_completion_n": 65,
+    "gold_missing_cases": [
+      "R050",
+      "R051"
+    ],
+    "unsupported_answer_n": 0,
+    "tokens": {
+      "generation": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 32705,
+        "known_output_tokens": 2944,
+        "known_total_tokens": 35649,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 548.4461538461538,
+        "p50_tokens_complete_cases": 546.0,
+        "p95_tokens_complete_cases": 635.1999999999999,
+        "by_purpose": {
+          "optimized_generation": {
+            "calls": 65,
+            "known_total_tokens": 35649,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      },
+      "verification": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 83108,
+        "known_output_tokens": 1040,
+        "known_total_tokens": 84148,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 1294.5846153846153,
+        "p50_tokens_complete_cases": 1293.0,
+        "p95_tokens_complete_cases": 1338.4,
+        "by_purpose": {
+          "answer_fact_review": {
+            "calls": 65,
+            "known_total_tokens": 84148,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      },
+      "judge": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 67694,
+        "known_output_tokens": 4979,
+        "known_total_tokens": 72673,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 1118.0461538461539,
+        "p50_tokens_complete_cases": 1098.0,
+        "p95_tokens_complete_cases": 1335.3999999999999,
+        "by_purpose": {
+          "optimized_judge": {
+            "calls": 65,
+            "known_total_tokens": 72673,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      }
+    },
+    "artifacts": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\.cache\\evidence_optimization\\caf651408f61"
+  },
+  "split_query_candidates": {
+    "completed_n": 65,
+    "retrieval": {
+      "answerable_n": 55,
+      "p_at_1": 0.9272727272727272,
+      "r_at_3_group_macro": 0.9878787878787879,
+      "all_groups_at_3": 0.9818181818181818,
+      "mrr_at_10": 0.9606060606060606
+    },
+    "judge_completion_n": 65,
+    "gold_missing_cases": [
+      "R050"
+    ],
+    "unsupported_answer_n": 0,
+    "tokens": {
+      "generation": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 32735,
+        "known_output_tokens": 2925,
+        "known_total_tokens": 35660,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 548.6153846153846,
+        "p50_tokens_complete_cases": 538.0,
+        "p95_tokens_complete_cases": 638.4,
+        "by_purpose": {
+          "optimized_generation": {
+            "calls": 65,
+            "known_total_tokens": 35660,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      },
+      "verification": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 83085,
+        "known_output_tokens": 1040,
+        "known_total_tokens": 84125,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 1294.2307692307693,
+        "p50_tokens_complete_cases": 1290.0,
+        "p95_tokens_complete_cases": 1331.0,
+        "by_purpose": {
+          "answer_fact_review": {
+            "calls": 65,
+            "known_total_tokens": 84125,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      },
+      "judge": {
+        "cases_planned": 65,
+        "cases_with_calls": 65,
+        "calls": 65,
+        "known_input_tokens": 67708,
+        "known_output_tokens": 4917,
+        "known_total_tokens": 72625,
+        "unknown_usage_calls": 0,
+        "complete_usage_case_n": 65,
+        "mean_tokens_complete_cases": 1117.3076923076924,
+        "p50_tokens_complete_cases": 1091.0,
+        "p95_tokens_complete_cases": 1320.0,
+        "by_purpose": {
+          "optimized_judge": {
+            "calls": 65,
+            "known_total_tokens": 72625,
+            "unknown_calls": 0
+          }
+        },
+        "includes_retries_and_failed_attempts": true
+      }
+    },
+    "artifacts": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\.cache\\evidence_optimization\\fe13378ea340"
+  },
+  "limits": [
+    "All questions visible in development; no independent holdout",
+    "Same-model auxiliary judge misses evidence omissions",
+    "E2E external search disabled; cannot validate live hospital facts",
+    "65-case ablations reuse cached rerank; rerank cost excluded from incremental token totals",
+    "Unit conversion uses fictional units and explicit evidence, not clinical validation"
+  ]
+}

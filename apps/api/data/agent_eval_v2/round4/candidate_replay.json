@@ -1,0 +1,35 @@
+[
+  {
+    "hospital": "云南省第一人民医院",
+    "after_ranks": [
+      14
+    ]
+  },
+  {
+    "hospital": "甘肃省人民医院",
+    "after_ranks": [
+      11,
+      12
+    ]
+  },
+  {
+    "hospital": "福建省立医院",
+    "after_ranks": [
+      12
+    ]
+  },
+  {
+    "hospital": "海南省人民医院",
+    "after_ranks": [
+      5
+    ]
+  },
+  {
+    "hospital": "吉林大学中日联谊医院",
+    "after_ranks": []
+  },
+  {
+    "hospital": "新疆医科大学第一附属医院",
+    "after_ranks": []
+  }
+]

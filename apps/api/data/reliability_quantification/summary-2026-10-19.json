@@ -1,0 +1,456 @@
+{
+  "scope": "isolated deterministic injections; only checkpoint component cost uses live model; not production reliability or clinical evaluation",
+  "groups": {
+    "tracing": {
+      "passed": 7,
+      "scenarios": 7,
+      "rows": [
+        {
+          "id": "known",
+          "passed": true,
+          "injected_http_attempts": 1,
+          "logged_attempts": 1,
+          "unknown_usage_calls": 0
+        },
+        {
+          "id": "unknown",
+          "passed": true,
+          "injected_http_attempts": 1,
+          "logged_attempts": 1,
+          "unknown_usage_calls": 1
+        },
+        {
+          "id": "retry429",
+          "passed": true,
+          "injected_http_attempts": 2,
+          "logged_attempts": 2,
+          "unknown_usage_calls": 1
+        },
+        {
+          "id": "http401",
+          "passed": true,
+          "injected_http_attempts": 1,
+          "logged_attempts": 1,
+          "unknown_usage_calls": 1
+        },
+        {
+          "id": "timeout",
+          "passed": true,
+          "injected_http_attempts": 2,
+          "logged_attempts": 2,
+          "unknown_usage_calls": 2
+        },
+        {
+          "id": "cancel",
+          "passed": true,
+          "injected_http_attempts": 1,
+          "logged_attempts": 1,
+          "unknown_usage_calls": 1
+        },
+        {
+          "id": "restart",
+          "passed": true
+        }
+      ],
+      "http_attempts_expected": 8,
+      "http_attempts_logged": 8,
+      "mode": "mock HTTP transport; reported token values are synthetic, not billed tokens",
+      "stage_scope": "explicitly instrumented stages only; not all workflow nodes or distributed spans"
+    },
+    "recovery": {
+      "passed": 3,
+      "scenarios": 3,
+      "rows": [
+        {
+          "id": "completed_stages_reused",
+          "passed": true,
+          "arms": {
+            "restart": {
+              "model_http_attempts": 5,
+              "stage_factory_invocations": [
+                2,
+                2,
+                2
+              ],
+              "unknown_usage_calls": 0,
+              "input_tokens": 130,
+              "output_tokens": 65,
+              "total_tokens": 195,
+              "wall_ms": 6328,
+              "checkpoint_reuse_events": 0
+            },
+            "checkpoint": {
+              "model_http_attempts": 3,
+              "stage_factory_invocations": [
+                1,
+                1,
+                2
+              ],
+              "unknown_usage_calls": 0,
+              "input_tokens": 77,
+              "output_tokens": 38,
+              "total_tokens": 115,
+              "wall_ms": 4015,
+              "checkpoint_reuse_events": 2
+            }
+          }
+        },
+        {
+          "id": "baseline_reexecutes_completed_stages",
+          "passed": true
+        },
+        {
+          "id": "request_reduction",
+          "passed": true
+        }
+      ],
+      "arms": {
+        "restart": {
+          "model_http_attempts": 5,
+          "stage_factory_invocations": [
+            2,
+            2,
+            2
+          ],
+          "unknown_usage_calls": 0,
+          "input_tokens": 130,
+          "output_tokens": 65,
+          "total_tokens": 195,
+          "wall_ms": 6328,
+          "checkpoint_reuse_events": 0
+        },
+        "checkpoint": {
+          "model_http_attempts": 3,
+          "stage_factory_invocations": [
+            1,
+            1,
+            2
+          ],
+          "unknown_usage_calls": 0,
+          "input_tokens": 77,
+          "output_tokens": 38,
+          "total_tokens": 115,
+          "wall_ms": 4015,
+          "checkpoint_reuse_events": 2
+        }
+      },
+      "model": "deepseek-flash",
+      "request_saving_fraction": 0.4,
+      "token_saving_fraction": 0.41025641025641024,
+      "scope": "single 3-stage checkpoint component trial; injected failure before stage3 HTTP request; real complete() calls but not full production hospital workflow; wall times non-comparable to production latency"
+    },
+    "versions": {
+      "passed": 7,
+      "scenarios": 7,
+      "rows": [
+        {
+          "id": "edit",
+          "passed": true,
+          "task_status": "failed",
+          "document_status": "draft"
+        },
+        {
+          "id": "withdraw",
+          "passed": true,
+          "task_status": "failed",
+          "document_status": "withdrawn"
+        },
+        {
+          "id": "delete",
+          "passed": true,
+          "task_status": "failed",
+          "document_status": "deleted"
+        },
+        {
+          "id": "embedding_failure",
+          "passed": true,
+          "task_status": "failed",
+          "document_status": "draft"
+        },
+        {
+          "id": "commit_failure",
+          "passed": true,
+          "task_status": "failed",
+          "document_status": "draft"
+        },
+        {
+          "id": "success",
+          "passed": true,
+          "task_status": "completed",
+          "document_status": "published"
+        },
+        {
+          "id": "stale_optimistic_write",
+          "passed": true
+        }
+      ],
+      "scope": "SQLite single-process controlled interleaving and commit-trigger failure; no distributed race claim"
+    },
+    "permissions": {
+      "passed": 31,
+      "scenarios": 31,
+      "rows": [
+        {
+          "id": "anonymous-records",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-documents",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-conversation",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-run",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_document",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_record",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_subject",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-cancel_run",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-dashboard",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-trace",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-knowledge",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-inspections",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "other-records",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-documents",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-conversation",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-run",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_document",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_record",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_subject",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-cancel_run",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-dashboard",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-trace",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-knowledge",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-inspections",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-dashboard",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-trace",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-knowledge",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-inspections",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "same_owner_wrong_subject_attachment",
+          "passed": true,
+          "status": 404
+        },
+        {
+          "id": "authorized_positive_control",
+          "passed": true
+        },
+        {
+          "id": "unauthorized_mutations_left_data_intact",
+          "passed": true
+        }
+      ],
+      "scope": "HTTP ownership/admin/subject matrix; includes authorized control; not all endpoints or prompt-injection proof"
+    },
+    "monitoring": {
+      "passed": 12,
+      "scenarios": 12,
+      "rows": [
+        {
+          "id": "first_capture_baseline",
+          "passed": true
+        },
+        {
+          "id": "same_text",
+          "passed": true
+        },
+        {
+          "id": "whitespace_only",
+          "passed": true
+        },
+        {
+          "id": "actual_text_change",
+          "passed": true
+        },
+        {
+          "id": "no_automatic_overwrite",
+          "passed": true
+        },
+        {
+          "id": "failed_read_preserves_baseline",
+          "passed": true
+        },
+        {
+          "id": "failed_read_retry",
+          "passed": true
+        },
+        {
+          "id": "dismiss_keeps_publication",
+          "passed": true
+        },
+        {
+          "id": "adopt_pauses_publication",
+          "passed": true
+        },
+        {
+          "id": "old_content_archived",
+          "passed": true
+        },
+        {
+          "id": "stale_snapshot_blocked",
+          "passed": true
+        },
+        {
+          "id": "explicit_republication",
+          "passed": true
+        }
+      ],
+      "text_comparison_samples": 4,
+      "text_comparison_correct": 4,
+      "scope": "injected webpage text; measures literal normalized-text changes and state transitions, not semantic change or real hospital crawl accuracy; republish uses injected prepare"
+    }
+  },
+  "provenance": {
+    "tracing_recovery_versions_monitoring": "data\\reliability_quantification\\run-20261019T124615Z",
+    "permissions": "data\\reliability_quantification\\run-20261019T124734Z",
+    "invalid_initial_permissions": "login fixture invalid; 13/31 initial checks are not evidence of access-control behavior; raw retained",
+    "live_model_http_attempts": 8,
+    "live_model_known_total_tokens": 310,
+    "production_code_changed": false
+  },
+  "regression": {
+    "testcases": 47,
+    "failures": 0,
+    "errors": 0,
+    "by_module": {
+      "tests.test_run_checkpoints": 13,
+      "tests.test_task_lookup": 4,
+      "tests.test_knowledge_observability": 3,
+      "tests.test_knowledge_publications": 7,
+      "tests.test_knowledge_monitor": 12,
+      "tests.test_v2_followup": 8
+    }
+  }
+}

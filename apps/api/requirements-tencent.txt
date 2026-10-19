@@ -1,0 +1,3 @@
+# Optional: install only when enabling the Tencent recognition provider.
+tencentcloud-sdk-python-ocr>=3.0,<4
+tencentcloud-sdk-python-asr>=3.0,<4

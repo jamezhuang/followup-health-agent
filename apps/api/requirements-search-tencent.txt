@@ -1,0 +1,2 @@
+# Optional WSA SearchPro adapter; isolated from OCR / ASR installation.
+tencentcloud-sdk-python-wsa>=3.0,<4

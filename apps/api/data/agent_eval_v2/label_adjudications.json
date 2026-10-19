@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-19",
+  "authority": "user_explicit_confirmation",
+  "original_dataset_preserved": true,
+  "labels": {
+    "I030": {
+      "expected": {"intent": "daily", "consultation_type": "general", "operation": "answer"},
+      "reason": "用户确认：普通信息可信性解释"
+    },
+    "I074": {
+      "expected": {"intent": "followup", "consultation_type": "general", "operation": "answer"},
+      "reason": "用户确认：先判断单位能否换算；可换算则统一单位后判断可比性，不能换算则不能直接比较。"
+    },
+    "I069": {
+      "expected": {"intent": "followup", "consultation_type": "general", "operation": "answer"},
+      "reason": "用户确认：个人报告问答，先判断比较条件；原标签保持"
+    }
+  }
+}

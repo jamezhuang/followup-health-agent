@@ -1,0 +1,37 @@
+[
+  {
+    "id": "PUMCH-COUGH-01",
+    "title": "感染后咳嗽：就诊提示（整理摘要）",
+    "institution": "北京协和医院",
+    "url": "https://www.pumch.cn/detail/44634.html",
+    "published_at": "2026-01-29",
+    "collected_at": "2026-10-05",
+    "text": "咳嗽持续不缓解，或同时出现胸闷、气喘、发热、较多痰、咯血、心悸等情况时，应到医院进一步评估。该科普不能用于确定个人咳嗽的病因。",
+    "allowed_departments": [],
+    "kind": "official_summary"
+  },
+  {
+    "id": "PUMCH-DEPT-01",
+    "title": "呼吸与危重症医学科：专业组信息（整理摘要）",
+    "institution": "北京协和医院",
+    "url": "https://www.pumch.cn/department_huxnk/introduction.html",
+    "published_at": null,
+    "collected_at": "2026-10-05",
+    "text": "该科室设置哮喘、慢性阻塞性肺疾病、感染等专业组，覆盖多类呼吸系统相关问题。这是科室服务范围信息，不能据此判断个人患有其中某种疾病。",
+    "allowed_departments": [
+      "呼吸与危重症医学科（可向当地医院导诊核实）"
+    ],
+    "kind": "official_summary"
+  },
+  {
+    "id": "PUMCH-VISIT-01",
+    "title": "门诊就诊准备（整理摘要）",
+    "institution": "北京协和医院",
+    "url": "https://www.pumch.cn/medical_notice.html",
+    "published_at": null,
+    "collected_at": "2026-10-05",
+    "text": "初次就诊需按医院要求注册建档；来院时准备有效身份证明，按预约信息完成报到和候诊。具体流程以就诊医院当前公布的说明为准。",
+    "allowed_departments": [],
+    "kind": "official_summary"
+  }
+]

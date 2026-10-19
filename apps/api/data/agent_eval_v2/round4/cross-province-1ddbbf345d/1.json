@@ -1,0 +1,263 @@
+{
+  "province": "甘肃",
+  "hospital": "甘肃省人民医院",
+  "goal": "甘肃省人民医院地址和交通指南",
+  "lookup": {
+    "sources": [
+      {
+        "id": "WEB-5457cd71cc0e1e4af07d",
+        "title": "甘肃省人民医院联系电话_甘肃省人民医院怎么走-快速问医生",
+        "institution": "data.120ask.com（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://data.120ask.com/yiyuan/ditu/02civdxc47ivbon8.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "首页\n疾病库\n症状库\n找医生\n按疾病\n按科室\n按地区\n找医院\n按疾病\n按科室\n按地区\n查药品\n当前位置：\n有问必答网信息库\n>\n找医院\n>\n甘肃省人民医院\n> 就诊指南\n甘肃省人民医院\n医院首页\n医院介绍\n专家出诊\n推荐专家\n就诊指南\n科室列表\n》\n内科\n内科\n消化科\n心内科\n呼吸科\n神经内科\n内分泌糖尿病科\n血液病科\n肾病科\n风湿科\n心血管内科\n老年病防治中心\n哮喘防治中心\n血液净化中心\n消化内镜中心\n》\n外科\n外科\n普外科\n烧伤整形\n胸心外科\n腔内泌尿外科\n肛肠科\n脑外科\n乳腺科\n神经外科\n腹腔镜诊疗中心\n血管外科\n心血管外科\n》\n儿科\n儿科\n小儿科\n儿童保健门诊\n小儿外科\n》\n妇产科\n妇产科\n妇产科\n》\n精神心理科\n精神心理科\n心理咨询科\n精神心理科\n》\n皮肤性病科\n皮肤性病科\n皮肤科\n》\n中医科\n中医科\n中医科\n中医妇产科\n中医风湿免疫内科\n》\n肿瘤科\n肿瘤科\n放疗科\n肿瘤外科\n肿瘤内科\n骨肿瘤科\n》\n骨科\n骨科\n骨科\n》\n康复医学科\n康复医学科\n理疗科\n康复科\n》\n麻醉医学科\n麻醉医学科\n麻醉科\n疼痛门诊\n》\n介入医学科\n介入医学科\n介入放射科\n》\n其他科室\n其他科室\n职业病科\n检验中心\n急诊中心\n病理科\n手术室\n中心实验室\n药剂科\n输血科\n设备科\n预防保健科\n体检中心\n干部诊疗科\n重症监护室\n》\n五官科\n五官科\n眼科\n口腔内科\n耳鼻咽喉-头颈外科\n口腔矫形科\n口腔颌面外科\n口腔正畸科\n口腔修复科\n》\n医学影像学\n医学影像学\n超声科\n核医学科\n放射科\n影像诊疗中心\n甘肃省人民医院\n地址：兰州市东岗西路204号\n邮编：730000\n乘车路线：行车路线(外地患者)：火车站路线：从火车站路口出发，步行至化工厂坐55路在西固北站下车，换乘102路在南关什字下车，换乘115路在渭源路南口下车，步行至医院; 行车路线(本地患者)：乘坐公交4路、58路、81路、106路、110路、117路、301路至甘肃省人民医院。\n公司简介\n|\n服务声明\n|\n招聘求贤\n|\n联系方式\n|\n帮助中心\n|\n投诉建议\n|\n在线医院开通\n|| 快速问医生，让天下人都拥有自己的私人医生 ||",
+        "allowed_departments": [],
+        "kind": "public",
+        "score": 0.0,
+        "authority": "unverified",
+        "document_id": "WEB-5457cd71cc0e1e4af07d",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "status": "ok",
+    "context": {
+      "kind": "named",
+      "names": [
+        "甘肃省人民医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": [],
+      "listed_names": [
+        "甘肃省人民医院"
+      ]
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "clarification": "",
+    "queries": [
+      "甘肃省人民医院 地址 位置 院区"
+    ],
+    "covered_topics": [
+      "address",
+      "transport"
+    ],
+    "missing_topics": [],
+    "exhaustive": false,
+    "missing_hospitals": [],
+    "direct_reads": 5,
+    "browser_reads": 2,
+    "search_rounds": 1,
+    "local_source_count": 0,
+    "cached_source_count": 0,
+    "query_plan": {
+      "queries": [
+        "甘肃省人民医院 地址 位置 院区",
+        "甘肃省人民医院 交通 地铁 公交 停车",
+        "甘肃省人民医院 官方网站 就诊指南"
+      ],
+      "subquery_count": 3
+    },
+    "link_maps": 0,
+    "entity_searches": 0,
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-5457cd71cc0e1e4af07d"
+      ],
+      "missing": []
+    },
+    "retrieval_stop_reason": "coverage_satisfied",
+    "missing_regions": [],
+    "timed_out": false,
+    "search_failures": 0,
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 5,
+      "read_failures": 6,
+      "extracted_sources": 1,
+      "rejected_sources": 0,
+      "read_successes": 1,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "dns_failed": 1,
+        "page_timeout": 3,
+        "other_read_error": 2
+      },
+      "final_source_count": 1,
+      "stop_reason": "coverage_satisfied"
+    }
+  },
+  "answer": {
+    "kind": "chat",
+    "content": "根据第三方就诊目录的记载，**甘肃省人民医院**的地址和交通信息如下：\n\n### 地址\n- **地址**：兰州市东岗西路204号\n- **邮编**：730000\n\n### 交通参考\n- **本地患者**：可乘坐公交4路、58路、81路、106路、110路、117路、301路至甘肃省人民医院。\n- **外地患者（火车站方向）**：从火车站路口步行至化工厂，乘55路在西固北站下车，换乘102路在南关什字下车，再换乘115路在渭源路南口下车，步行至医院。\n\n以上信息来自第三方目录，未与医院官方渠道核对，公交线路和换乘方式可能已有调整，出行前建议通过地图软件或医院官方渠道再确认。",
+    "claims": [],
+    "questions": [],
+    "gaps": [],
+    "search_queries": [
+      "甘肃省人民医院 地址 位置 院区"
+    ],
+    "intent": "daily",
+    "consultation_type": "hospital",
+    "sources": [
+      {
+        "id": "WEB-5457cd71cc0e1e4af07d",
+        "title": "甘肃省人民医院联系电话_甘肃省人民医院怎么走-快速问医生",
+        "institution": "data.120ask.com（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://data.120ask.com/yiyuan/ditu/02civdxc47ivbon8.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "首页\n疾病库\n症状库\n找医生\n按疾病\n按科室\n按地区\n找医院\n按疾病\n按科室\n按地区\n查药品\n当前位置：\n有问必答网信息库\n>\n找医院\n>\n甘肃省人民医院\n> 就诊指南\n甘肃省人民医院\n医院首页\n医院介绍\n专家出诊\n推荐专家\n就诊指南\n科室列表\n》\n内科\n内科\n消化科\n心内科\n呼吸科\n神经内科\n内分泌糖尿病科\n血液病科\n肾病科\n风湿科\n心血管内科\n老年病防治中心\n哮喘防治中心\n血液净化中心\n消化内镜中心\n》\n外科\n外科\n普外科\n烧伤整形\n胸心外科\n腔内泌尿外科\n肛肠科\n脑外科\n乳腺科\n神经外科\n腹腔镜诊疗中心\n血管外科\n心血管外科\n》\n儿科\n儿科\n小儿科\n儿童保健门诊\n小儿外科\n》\n妇产科\n妇产科\n妇产科\n》\n精神心理科\n精神心理科\n心理咨询科\n精神心理科\n》\n皮肤性病科\n皮肤性病科\n皮肤科\n》\n中医科\n中医科\n中医科\n中医妇产科\n中医风湿免疫内科\n》\n肿瘤科\n肿瘤科\n放疗科\n肿瘤外科\n肿瘤内科\n骨肿瘤科\n》\n骨科\n骨科\n骨科\n》\n康复医学科\n康复医学科\n理疗科\n康复科\n》\n麻醉医学科\n麻醉医学科\n麻醉科\n疼痛门诊\n》\n介入医学科\n介入医学科\n介入放射科\n》\n其他科室\n其他科室\n职业病科\n检验中心\n急诊中心\n病理科\n手术室\n中心实验室\n药剂科\n输血科\n设备科\n预防保健科\n体检中心\n干部诊疗科\n重症监护室\n》\n五官科\n五官科\n眼科\n口腔内科\n耳鼻咽喉-头颈外科\n口腔矫形科\n口腔颌面外科\n口腔正畸科\n口腔修复科\n》\n医学影像学\n医学影像学\n超声科\n核医学科\n放射科\n影像诊疗中心\n甘肃省人民医院\n地址：兰州市东岗西路204号\n邮编：730000\n乘车路线：行车路线(外地患者)：火车站路线：从火车站路口出发，步行至化工厂坐55路在西固北站下车，换乘102路在南关什字下车，换乘115路在渭源路南口下车，步行至医院; 行车路线(本地患者)：乘坐公交4路、58路、81路、106路、110路、117路、301路至甘肃省人民医院。\n公司简介\n|\n服务声明\n|\n招聘求贤\n|\n联系方式\n|\n帮助中心\n|\n投诉建议\n|\n在线医院开通\n|| 快速问医生，让天下人都拥有自己的私人医生 ||",
+        "allowed_departments": [],
+        "kind": "public",
+        "authority": "unverified",
+        "document_id": "WEB-5457cd71cc0e1e4af07d",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "records": [],
+    "rejected_claims": 0,
+    "mode": "live",
+    "response_method": "model",
+    "notice": "",
+    "iterations": 0,
+    "stop_reason": "chat_completed",
+    "answer_review": {
+      "status": "passed"
+    },
+    "query_plan": {
+      "queries": [
+        "甘肃省人民医院 地址 位置 院区",
+        "甘肃省人民医院 交通 地铁 公交 停车",
+        "甘肃省人民医院 官方网站 就诊指南"
+      ],
+      "subquery_count": 3
+    },
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-5457cd71cc0e1e4af07d"
+      ],
+      "missing": []
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 5,
+      "read_failures": 6,
+      "extracted_sources": 1,
+      "rejected_sources": 0,
+      "read_successes": 1,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "dns_failed": 1,
+        "page_timeout": 3,
+        "other_read_error": 2
+      },
+      "final_source_count": 1,
+      "stop_reason": "coverage_satisfied"
+    },
+    "hospital_context": {
+      "kind": "named",
+      "names": [
+        "甘肃省人民医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": [],
+      "listed_names": [
+        "甘肃省人民医院"
+      ]
+    },
+    "search_status": "ok"
+  },
+  "elapsed_s": 17.79700000000048,
+  "source_count": 1,
+  "official_status": "requires_independent_source_review",
+  "tokens": {
+    "cases_planned": 1,
+    "cases_with_calls": 1,
+    "calls": 4,
+    "known_input_tokens": 9008,
+    "known_output_tokens": 271,
+    "known_total_tokens": 9279,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 1,
+    "mean_tokens_complete_cases": 9279,
+    "p50_tokens_complete_cases": 9279.0,
+    "p95_tokens_complete_cases": 9279.0,
+    "by_purpose": {
+      "hospital_query_rewrite": {
+        "calls": 1,
+        "known_total_tokens": 1097,
+        "unknown_calls": 0
+      },
+      "evidence_sufficiency": {
+        "calls": 1,
+        "known_total_tokens": 1817,
+        "unknown_calls": 0
+      },
+      "hospital_service": {
+        "calls": 1,
+        "known_total_tokens": 4364,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 1,
+        "known_total_tokens": 2001,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  }
+}

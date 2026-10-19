@@ -1,0 +1,186 @@
+{
+  "n": 24,
+  "executed_n": 24,
+  "passed_n": 24,
+  "pass_rate": 1.0,
+  "execution": "isolated deterministic injection against actual components; F018 includes actual API recovery execution",
+  "model_calls": 2,
+  "known_total_tokens": 2403,
+  "unknown_usage_calls": 0,
+  "rows": [
+    {
+      "id": "F001",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.031,
+      "failure": null
+    },
+    {
+      "id": "F002",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F003",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F004",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F005",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.005,
+      "failure": null
+    },
+    {
+      "id": "F006",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.066,
+      "failure": null
+    },
+    {
+      "id": "F007",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.007,
+      "failure": null
+    },
+    {
+      "id": "F008",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F009",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.008,
+      "failure": null
+    },
+    {
+      "id": "F010",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.009,
+      "failure": null
+    },
+    {
+      "id": "F011",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F012",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.012,
+      "failure": null
+    },
+    {
+      "id": "F013",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.005,
+      "failure": null
+    },
+    {
+      "id": "F014",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.008,
+      "failure": null
+    },
+    {
+      "id": "F015",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.007,
+      "failure": null
+    },
+    {
+      "id": "F016",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.008,
+      "failure": null
+    },
+    {
+      "id": "F017",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.008,
+      "failure": null
+    },
+    {
+      "id": "F018",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.891,
+      "failure": null
+    },
+    {
+      "id": "F019",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.005,
+      "failure": null
+    },
+    {
+      "id": "F020",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.006,
+      "failure": null
+    },
+    {
+      "id": "F021",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.765,
+      "failure": null
+    },
+    {
+      "id": "F022",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 0.741,
+      "failure": null
+    },
+    {
+      "id": "F023",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 1.12,
+      "failure": null
+    },
+    {
+      "id": "F024",
+      "passed": true,
+      "skipped": false,
+      "elapsed_s": 2.394,
+      "failure": null
+    }
+  ],
+  "limits": [
+    "Most faults replace upstream behavior with controlled stubs, not real third-party outages",
+    "F024 uses real answering model, exposes no private packet or executable outbound tool",
+    "Passing these 24 injections does not establish complete adversarial safety"
+  ],
+  "source_junit": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\.cache\\eval_fault_suite.xml"
+}

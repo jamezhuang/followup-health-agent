@@ -1,0 +1,14 @@
+.inputBox{display:block;min-width:0;width:100%;box-sizing:border-box;border:0;border-radius:0;background:transparent;overflow:hidden}
+.inputBox.inputBox textarea{display:block;width:100%;box-sizing:border-box;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;padding:12px 4px;min-height:160px;height:160px;max-height:320px;resize:vertical;font-size:16px;line-height:1.75}
+.inputBox.inputBox textarea:focus{border:0;box-shadow:none}
+.panel{padding:12px 12px 0;margin:0;border:0;min-width:0;max-height:150px;overflow-y:auto}
+.heading{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-size:13px;color:#315f53;font-weight:600}
+.heading span{font-size:11px;color:#6b8177;font-weight:400}
+.files{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.chip{display:inline-flex;align-items:center;gap:7px;max-width:100%;padding:4px 8px;background:#eaf5ef;color:#245447;border:1px solid #c8dfd3;border-radius:10px;font-size:13px;min-width:0}
+.chip>span:first-child{display:grid;place-items:center;width:20px;height:22px;flex-shrink:0;font-size:11px;border:1px solid #abcbbb;border-radius:4px;background:#fff}
+.name{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.chip.chip button{background:transparent;color:#406c5a;padding:0 3px;border:0;min-height:26px;width:26px;flex-shrink:0;border-radius:6px;font-size:20px;line-height:1;cursor:pointer}
+.chip.chip button:hover{background:#d9eadf}
+.chip.chip button:focus-visible{outline:2px solid #126759;outline-offset:2px}
+@container workspace (max-width:600px){.name{max-width:180px}.heading span{width:100%}}

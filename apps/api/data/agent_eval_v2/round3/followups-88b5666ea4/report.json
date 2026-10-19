@@ -1,0 +1,743 @@
+{
+  "intent": {
+    "n": 8,
+    "passed_n": 8,
+    "rows": [
+      {
+        "goal": "只读爸爸已确认的报告回答，不读取妈妈档案",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "请根据父亲的报告解释结果，不要展示整个档案",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "读取这份报告来回答我的问题，不要归档",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "从我选中的报告里找依据解释这个结果",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "展示爸爸上次保存的复诊资料",
+        "expected_operation": "retrieve",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "retrieve",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "把已归档的复诊信息调出来给我看",
+        "expected_operation": "retrieve",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "retrieve",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "准备复诊清单，把之前备注的问题加入清单",
+        "expected_operation": "prepare",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "prepare",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "比较两次报告的结果变化",
+        "expected_operation": "compare",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "compare",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      }
+    ]
+  },
+  "controlled_hospital": {
+    "n": 2,
+    "passed_n": 2,
+    "rows": [
+      {
+        "goal": "佛山有哪些公立医院？",
+        "context": {
+          "kind": "directory",
+          "names": [],
+          "region": "佛山",
+          "topics": [
+            "level"
+          ],
+          "department": "",
+          "public_terms": "",
+          "qualifiers": [
+            "公立"
+          ],
+          "care_topic": "",
+          "regions": [
+            "佛山"
+          ],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": [],
+          "listed_names": [
+            "佛山合成甲医院"
+          ]
+        },
+        "source_fixtures": [
+          "FS_PUBLIC"
+        ],
+        "result": {
+          "kind": "chat",
+          "content": "本轮可核实的佛山公立医院资料有限，仅查到以下一家：\n\n### 可以了解的医院\n\n1. **佛山合成甲医院**\n   - **位置**：佛山市合成路1号\n\n这是本次取得的部分资料，不代表佛山只有这一家公立医院，也不构成完整名单。你更关注佛山哪个区，或想看哪类科室的医院？",
+          "claims": [],
+          "questions": [],
+          "gaps": [],
+          "search_queries": [],
+          "intent": "daily",
+          "consultation_type": "hospital",
+          "sources": [
+            {
+              "id": "5d7c36618fb045388d2e03e44aa0f040:1:0:0",
+              "document_id": "5d7c36618fb045388d2e03e44aa0f040",
+              "revision": 1,
+              "title": "佛山合成甲医院",
+              "location": "本地已发布公共资料 · 测试正文",
+              "text": "佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "parent_id": "5d7c36618fb045388d2e03e44aa0f040:1:0",
+              "subject": "",
+              "confirmed": true,
+              "search_text": " 佛山合成甲医院 测试正文 佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "url": "https://fixture.example/FS_PUBLIC",
+              "published_at": "",
+              "kind": "public",
+              "collected_at": "",
+              "source_type": "article",
+              "regions": [],
+              "report_type": null,
+              "followup_date": "",
+              "entered_at": "2026-10-19T04:42:10.123583+00:00",
+              "followup_status": "",
+              "authority": "published_local",
+              "retrieval_origin": "local"
+            }
+          ],
+          "records": [],
+          "rejected_claims": 0,
+          "mode": "live",
+          "response_method": "model",
+          "notice": "",
+          "iterations": 0,
+          "stop_reason": "chat_completed",
+          "answer_review": {
+            "status": "passed"
+          },
+          "plan_validation": [
+            {
+              "status": "rejected",
+              "reason": "missing_plan"
+            }
+          ],
+          "retrieval_diagnostics": {
+            "page_errors": {},
+            "final_source_count": 1,
+            "stop_reason": "partial"
+          },
+          "hospital_context": {
+            "kind": "directory",
+            "names": [],
+            "region": "佛山",
+            "topics": [
+              "level"
+            ],
+            "department": "",
+            "public_terms": "",
+            "qualifiers": [
+              "公立"
+            ],
+            "care_topic": "",
+            "regions": [
+              "佛山"
+            ],
+            "treatment": "",
+            "related_departments": [],
+            "focus_variants": [],
+            "service_categories": [],
+            "tasks": [],
+            "understood_request": "",
+            "original_name": "",
+            "entity_status": "unresolved",
+            "missing_information": [],
+            "listed_names": [
+              "佛山合成甲医院"
+            ]
+          },
+          "answer_policy": {
+            "task": "list",
+            "scope": "city",
+            "minimum": 4,
+            "target_min": 5,
+            "target_max": 8,
+            "explicit_count": null,
+            "diversify_regions": false,
+            "allow_scope_relaxation": false
+          },
+          "directory_answer_count": 1,
+          "directory_answer_below_minimum": true,
+          "search_status": "partial"
+        },
+        "passed": true
+      },
+      {
+        "goal": "改成佛山，仍然只看公立医院",
+        "context": {
+          "kind": "directory",
+          "names": [],
+          "region": "佛山",
+          "topics": [
+            "level"
+          ],
+          "department": "",
+          "public_terms": "",
+          "qualifiers": [
+            "公立"
+          ],
+          "care_topic": "",
+          "regions": [
+            "佛山"
+          ],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": [],
+          "listed_names": [
+            "佛山合成甲医院"
+          ]
+        },
+        "source_fixtures": [
+          "FS_PUBLIC"
+        ],
+        "result": {
+          "kind": "chat",
+          "content": "按本轮查到的公开资料，佛山能核实的公立医院目前只有这一家，先列出来：\n\n### 可以了解的医院\n\n1. **佛山合成甲医院**\n   - **位置**：佛山市合成路1号\n   - **性质**：公立医院\n\n这次只取得部分资料，未能覆盖佛山全部公立医院，因此不能当作完整名单。如果你能补充想看的区或科室方向，我可以再帮你缩小范围。",
+          "claims": [],
+          "questions": [],
+          "gaps": [],
+          "search_queries": [],
+          "intent": "daily",
+          "consultation_type": "hospital",
+          "sources": [
+            {
+              "id": "5d7c36618fb045388d2e03e44aa0f040:1:0:0",
+              "document_id": "5d7c36618fb045388d2e03e44aa0f040",
+              "revision": 1,
+              "title": "佛山合成甲医院",
+              "location": "本地已发布公共资料 · 测试正文",
+              "text": "佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "parent_id": "5d7c36618fb045388d2e03e44aa0f040:1:0",
+              "subject": "",
+              "confirmed": true,
+              "search_text": " 佛山合成甲医院 测试正文 佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "url": "https://fixture.example/FS_PUBLIC",
+              "published_at": "",
+              "kind": "public",
+              "collected_at": "",
+              "source_type": "article",
+              "regions": [],
+              "report_type": null,
+              "followup_date": "",
+              "entered_at": "2026-10-19T04:42:10.123583+00:00",
+              "followup_status": "",
+              "authority": "published_local",
+              "retrieval_origin": "local"
+            }
+          ],
+          "records": [],
+          "rejected_claims": 0,
+          "mode": "live",
+          "response_method": "model",
+          "notice": "",
+          "iterations": 0,
+          "stop_reason": "chat_completed",
+          "answer_review": {
+            "status": "passed"
+          },
+          "plan_validation": [
+            {
+              "status": "rejected",
+              "reason": "missing_plan"
+            }
+          ],
+          "retrieval_diagnostics": {
+            "page_errors": {},
+            "final_source_count": 1,
+            "stop_reason": "partial"
+          },
+          "hospital_context": {
+            "kind": "directory",
+            "names": [],
+            "region": "佛山",
+            "topics": [
+              "level"
+            ],
+            "department": "",
+            "public_terms": "",
+            "qualifiers": [
+              "公立"
+            ],
+            "care_topic": "",
+            "regions": [
+              "佛山"
+            ],
+            "treatment": "",
+            "related_departments": [],
+            "focus_variants": [],
+            "service_categories": [],
+            "tasks": [],
+            "understood_request": "",
+            "original_name": "",
+            "entity_status": "unresolved",
+            "missing_information": [],
+            "listed_names": [
+              "佛山合成甲医院"
+            ]
+          },
+          "answer_policy": {
+            "task": "list",
+            "scope": "city",
+            "minimum": 4,
+            "target_min": 5,
+            "target_max": 8,
+            "explicit_count": null,
+            "diversify_regions": false,
+            "allow_scope_relaxation": false
+          },
+          "directory_answer_count": 1,
+          "directory_answer_below_minimum": true,
+          "search_status": "partial"
+        },
+        "passed": true
+      }
+    ]
+  },
+  "real_web": [
+    {
+      "goal": "佛山市三水区人民医院地址、院区和附近地铁怎么查？",
+      "elapsed_s": 39.14099999999962,
+      "official_body_retrieved": false,
+      "lookup": {
+        "sources": [
+          {
+            "id": "WEB-20b48814119844da419f",
+            "title": "佛山三水区人民医院怎么走- 佛山本地宝",
+            "institution": "fs.bendibao.com（来源身份未独立核验；引用为该页面记载）",
+            "url": "http://fs.bendibao.com/live/2016125/89615.shtm",
+            "published_at": "2016-12-05",
+            "collected_at": "2026-10-19",
+            "text": "资讯\n办事\n社保\n公积金\n补贴\n教育\n旅游\n休闲\n交通\n招聘\n特惠\n房产\n佛山\n下载app\n办事指南\nAI办事\nAI教程\n办事信息搜索\n佛山本地宝\n>\n办事指南\n>\n佛山医疗健康\n>\n预约挂号\n> 佛山三水区人民医院怎么走\n佛山三水区人民医院怎么走\n2016-12-05 17:24\n【我要纠错】\n下载指南\n分享至\n【导语】：\n三水区人民医院营业时间为24小时营业，那么可以乘坐的线路有哪些，途经的最近站点有什么？详细信息小编已经为各位整理好了。\n地址\n：三水区西南广海大道西16号(近三水汽车站)\n电话\n：(0757)87813033\n附近公交站点\n：\n人民医院(汽车站)站(最近)、人民医院(汽车站)b站、人民医院站\n可乘线路有\n：\n1、人民医院(汽车站)站站途经线路\n：233路;271路;601路;602路;602路短线;602路夜班;603路;607路;608路;612路;612路班车;614路;615路;619路;630路;632路;634路;635路;636路;638路;639路;639路班车;640路;641路;643路;644路;644路班车;645路;645路班车;647路;658路;660路;661路;662路;667路;668路;668路班车;681路;k651路;佛山城巴广佛路口-三水线;佛山城巴三水-顺德容桂b线;广佛城巴4线\n2、澜石站途经线路\n：607路;608路;611路;630路;632路;634路;645路;645路班车;647路;658路;660路;667路;668路;668路班车;广佛城巴4线\n周边停车场\n1、佛山市三水区人民医院-职工停车场\n2、三水车站停车场(贤兴路)\n3、明秀渔村-停车场\n推荐阅读\n： 【\n佛山医院预约挂号专题\n】\n猜您需要\n佛山三水区人民医院网上预约挂号指南\n手机访问\n佛山本地宝首页\n相关推荐\n佛山三水区人民医院怎么走\n佛山三水区人民医院在哪里\n佛山基本医疗保险临时异地就医备案指南（条件+材料+办理入口）\n佛山参保人临时异地就医需办理备案，线上2个工作日办结、线下即时办结，备案后可在备案地直接结算。\n佛山医保临时异地就医备案常见问题解答\n佛山参保人跨省临时异地就医备案时，备案类型选“临时异地人员备案”，就医地选外省地市。可办理多个地市备案，转诊备案支付比例降10个百分点。\n佛山医保临时异地就医备案办理入口+流程\n佛山医保临时异地就医备案可线上或线下办理，线上通过粤医保、粤省事、国家医保服务平台APP或广东政务服务网申请，线上2个工作日办结，线下即时办结。\n佛山医保临时异地就医备案报销比例+结算办法\n佛山临时异地就医备案后，异地转诊报销比例在市内标准基础上降低10个百分点，异地急诊抢救按市内标准执行，非急诊未转诊降低20个百分点。\n佛山医保临时异地就医备案需要什么材料\n佛山医保临时异地就医备案分异地转诊和其他临时外出就医两类，均需有效身份凭证和《广东省异地就医登记备案表》，转诊类还需转诊转院证明材料。\n佛山医保临时异地就医备案受理范围及条件\n佛山医保临时异地就医备案分异地转诊人员和其他临时外出就医人员两类，转诊指定定点医疗机构为市内三级综合甲等（乙等）医院等。\n2026佛山异地就医备案个人承诺书怎么办理\n佛山异地长期居住备案暂无居住或工作证明可凭承诺书办理，30日内补齐可在备案地和佛山双向享受待遇，逾期自动失效。\n2026佛山异地就医零星报销怎么办理\n佛山异地就医备案后异地未直接结算的，就诊之日起180日内、住院自出院之日起，到参保所属医保经办机构申请零星报销。\n2026佛山异地长期居住备案有效期多久\n异地长期居住备案长期有效，更换就医地市、省份按首次申请重新办理，可在粤医保或窗口变更取消，承诺制30日内不能取消。\n2026佛山异地长期居住备案需要什么材料\n佛山异地长期居住备案：有效身份凭证+广东省备案表，按安置退休、长期居住、常驻工作三类提供证明，暂缺可凭承诺书办理。\n2026佛山异地长期居住医保报销比例及门诊选点\n佛山异地长期居住备案后住院按市内同级医院比例报销；普通门诊和门特须先在粤医保选定不超3家定点机构，至少1家为基层。\n佛山医保年限是25还是20年？\n2030年以后，参保人达到法定退休年龄，医保累计缴费年限为男职工30年，女职工25年。\n上一篇文章：\n佛山市第四人民医院怎么走\n下一篇文章：\n佛山高明区妇幼保健院怎么走\n热门推荐\n2026顺德容桂老人免费体检攻略（时间+项目+站点）\n2026-10-16 11:12\n2026南海桂城65岁以上老人免费体检时间+地点+电话\n2026-10-16 11:10\n来源：南海桂城\n佛山医保临时异地就医备案常见问题解答\n2026-10-16 10:53\n来源：佛山市人民政府\n佛山医保临时异地就医备案报销比例+结算办法\n2026-10-16 10:47\n来源：佛山市人民政府\n佛山医保临时异地就医备案办理入口+流程\n2026-10-16 10:48\n来源：佛山市人民政府\n佛山医保临时异地就医备案需要什么材料\n2026-10-16 10:16\n来源：佛山市人民政府\n佛山医保临时异地就医备案受理范围及条件\n2026-10-16 10:04\n来源：佛山市人民政府\n佛山基本医疗保险临时异地就医备案指南（条件+材料+办理入口）\n2026-10-16 15:26\n来源：佛山市人民政府\n2026云东海街道老人免费体检时间+地点+项目\n2026-10-16 09:27\n来源：云东海街道\n2026佛山医保异地长期居住备案办理指南（条件+材料+流程）\n2026-10-15 16:06\n来源：佛山市人民政府\n本地宝app下载\nIOS\nAndroid\n精彩推荐\n2026佛山国庆节免费活动汇总（持续更新\n2026佛山国庆节景区活动汇总（持续更新\n2026佛山中秋灯会汇总（持续更新）\n佛山中秋节好玩的活动推荐(附攻略)\n特别推荐\n2026顺德容桂老人免费体检攻略（时间+项\n2026南海桂城65岁以上老人免费体检时间\n佛山医保临时异地就医备案常见问题解答\n佛山医保临时异地就医备案报销比例+结算\n佛山医保临时异地就医备案办理入口+流程\n佛山医保临时异地就医备案需要什么材料\n佛山医保临时异地就医备案受理范围及条\n佛山基本医疗保险临时异地就医备案指南\n2026云东海街道老人免费体检时间+地点+\n2026佛山医保异地长期居住备案办理指南\n大家都爱看\n2026顺德容桂老人免费体检攻略（时间+项目+站点）\n2026南海桂城65岁以上老人免费体检时间+地点+电话\n佛山医保临时异地就医备案常见问题解答\n佛山医保临时异地就医备案报销比例+结算办法\n佛山医保临时异地就医备案办理入口+流程\n佛山医保临时异地就医备案需要什么材料\n佛山医保临时异地就医备案受理范围及条件\n佛山基本医疗保险临时异地就医备案指南（条件+材料+办\n赏花\n发票抽奖\n赏银杏\n春节全攻略\n赏红叶攻略\n五一旅游攻略\n教师节\n国庆旅游攻略\n采摘\n考研\n春节民俗活动大全\n观日出攻略\n亲子游\n展会\n露营\n购房首付\n房贷利率\n婴幼儿照护\n养老保险缴费\n迎春花市\n电动车上牌\n学校课后服务\n端午节\n养老金领取\n清明节\n云招聘\n免费流量\n免费景点\n人口普查\n学校放假安排\n生育福利大全\n省考\n机场大巴\n房屋限购\n助企纾困政策/企业补贴\n养老保险买断\n产假\n育儿假\n买房攻略\n中高考生福利\n中考录取分数线\n中考\n最低工资\n高考\n教师资格证\n流感疫苗\n寒假放假时间\n台风\n身份证异地\n消费券\n学区划分\n开学\n限行\n公积金贷款\n公务员\n本地宝郑重声明：本文仅代表作者个人观点，与本地宝无关。其原创性及文中陈述内容未经本站证实，本地宝对本文及其中全部或者部分内容的真实性、完整性、及时性不作任何保证和承诺，请网友自行核实相关内容。\n佛山三水区人民医院怎么走 - 佛山本地宝\n【导语】：\n三水区人民医院营业时间为24小时营业，那么可以乘坐的线路有哪些，途经的最近站点有什么？详细信息小编已经为各位整理好了。\n地址\n：三水区西南广海大道西16号(近三水汽车站)\n电话\n：(0757)87813033\n附近公交站点\n：\n人民医院(汽车站)站(最近)、人民医院(汽车站)b站、人民医院站\n可乘线路有\n：\n1、人民医院(汽车站)站站途经线路\n：233路;271路;601路;602路;602路短线;602路夜班;603路;607路;608路;612路;612路班车;614路;615路;619路;630路;632路;634路;635路;636路;638路;639路;639路班车;640路;641路;643路;644路;644路班车;645路;645路班车;647路;658路;660路;661路;662路;667路;668路;668路班车;681路;k651路;佛山城巴广佛路口-三水线;佛山城巴三水-顺德容桂b线;广佛城巴4线\n2、澜石站途经线路\n：607路;608路;611路;630路;632路;634路;645路;645路班车;647路;658路;660路;667路;668路;668路班车;广佛城巴4线\n周边停车场\n1、佛山市三水区人民医院-职工停车场\n2、三水车站停车场(贤兴路)\n3、明秀渔村-停车场\n推荐阅读\n： 【\n佛山医院预约挂号专题\n】\n猜您需要\n佛山三水区人民医院网上预约挂号指南\n国内资讯\n本地宝产品\n办事首页\n户籍身份\n五险一金\n城市热点\n办事入口\n土地房产\n车辆交通\n出入境\n结婚生育\n医疗健康\n补贴大全\n日常生活\n劳动就业\n征兵退伍\n企业办事\n企业文化\n|\n广告服务\n|\n关于我们\n|\n联系我们\n|\n诚聘英才\n|\n意见建议\n|\n本地宝APP\nCopyright © 2006-\r\n        2026 All rights reserved. 本地宝\n|\n粤ICP备17055554号\n违法和不良信息举报电话：",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "unverified",
+            "document_id": "WEB-20b48814119844da419f",
+            "location": "公开网页正文（来源身份未独立核验）"
+          },
+          {
+            "id": "WEB-7691f47554887bcdd0ef",
+            "title": "佛山市三水区人民医院地址-电话-位置 - 大众养生网",
+            "institution": "cndzys.com（来源身份未独立核验；引用为该页面记载）",
+            "url": "https://www.cndzys.com/hospital_detail/contact/1691.html",
+            "published_at": null,
+            "collected_at": "2026-10-19",
+            "text": "医院地址：\n广东省佛山市三水区西南广海大道西16号\n咨询电话：0757-87813080(咨询电话)0757-87813210(院办)\n到佛山市三水区人民医院乘车方式比较多，可选择乘坐公交，到佛山市三水区人民医院后下车。",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "unverified",
+            "document_id": "WEB-7691f47554887bcdd0ef",
+            "location": "公开网页正文（来源身份未独立核验）"
+          },
+          {
+            "id": "WEB-52f940f1f045fdc33c70",
+            "title": "佛山市三水区人民医院地址_佛山市三水区人民医院电话_佛山市三水区人民医院位置_有来医生",
+            "institution": "youlai.cn（来源身份未独立核验；引用为该页面记载）",
+            "url": "https://www.youlai.cn/yyk/hospmap/2266/",
+            "published_at": null,
+            "collected_at": "2026-10-19",
+            "text": "首页\n科普\n知识\n疾病\n用药\n看图识病\n急救\n检查\n饮食指导\n健康百科\n医典百科\n疾病知识 “医典”就通\n急救指南\n人人可学 救在身边\n安全用药\n免受药物二次伤害\n检查解读\n读懂报告 秒懂健康\n指标知道\n身体信号 指标先知\n产检助手\n守护新生 健康每天\n知识图谱\n饮食指导\n为生命合理充电\n器官详解\n小小器官 大大作为\n人体穴位\n任督六脉全知道\n孕期指南\n陪伴孕育每一天\n药食功效\n药食同源疗百病\n看图识病\n对症找图 一看便知\n生活常识\n专家辟谣\n击破谣言 发现真相\n健康实操\n易学易用小帮手\n医生\n服务\n找医院\n找医生\n预约挂号\n图文问诊\n电话问诊\n极速咨询\n医生登录\n手机版更便捷\n3850\n佛山市三水区人民医院\n三级甲等\n特色：\n综合\n电话：\n咨询服务专线（08:00-12:00，14:30-17:30）：0757-87813080 / 0757-87813033\n地址：\n广东省佛山市三水区广海大道西16号\n查看地图\n简介：\n佛山市三水区人民医院位于佛山市三水区广海大道西16号，是一所集医疗、科研、教学、预防保健于一体的现代化综合性三级甲等医院，是广东医科大学非直...\n更多>>\n院内搜索\n全院收录科室数\n36个\n全院收录医生数\n299人\n医院首页\n科室列表\n疾病推荐专家\n专家文章\n医院地图\n医院电话：\n咨询服务专线（08:00-12:00，14:30-17:30）：0757-87813080 / 0757-87813033\n官网网址：\n医院地址：\n广东省佛山市三水区广海大道西16号\n患者行车路线：\n其它线路查询：\n终点：佛山市三水区人民医院\n公交\n驾驶\n有来简介\n|\n服务条款\n|\n招贤纳士\n|\n联系我们\n|\n意见反馈\n|\n网站地图\n特别声明：本站内容仅供参考，不作为诊断及医疗依据。 举报电话：4006678535\n广播电视节目制作经营许可证：(京)字第09345号\n互联网药品信息服务资格证书：（京）-经营性-2020-0006\n京ICP备16049935号-8 Copyright ©2020 北京纵横无双科技有限公司 All rights reserved\n返回顶部",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "unverified",
+            "document_id": "WEB-52f940f1f045fdc33c70",
+            "location": "公开网页正文（来源身份未独立核验）"
+          },
+          {
+            "id": "WEB-2e6feb119fbb5b94d077",
+            "title": "「佛山市三水区人民医院」怎么样-网上预约挂号-佛山市三水区人民医院地址电话-家庭医生在线",
+            "institution": "yyk.familydoctor.com.cn（来源身份未独立核验；引用为该页面记载）",
+            "url": "https://yyk.familydoctor.com.cn/1322/",
+            "published_at": null,
+            "collected_at": "2026-10-19",
+            "text": "首页\n新闻\n整形\n儿科\n妇科\n男科\n中医\n养生\n营养\n两性\n肿瘤\n肝病\n心血管\n皮肤\n糖尿病\n眼科\n用药\n医院库\n更多\n登录\n注册\n移动客户端\n触屏版\n疾病诊疗\n妇科\n男科\n肝病\n糖尿病\n皮肤科\n心血管\n骨科\n眼科\n肿瘤\n肾病\n白癜风\n消化科\n影像\n耳鼻喉\n不孕不育\n失眠\n牙科\n口腔\n肛肠科\n前列腺炎\n消化科\n疼痛科\n卵巢囊肿\n健康视频\n健康生活\n养生\n营养\n两性\n精神心理\n中医\n育儿\n减肥\n女人\n美容\n整形\n健康资讯\n健康课堂\n家医互动\n即问即答\n专家答疑\n医生圈\n数据中心\n疾病库\n医生库\n医院库\n药品库\n整形库\n器械库\n食材食谱\n母婴产品\n新闻\n视频\n养生\n育儿\n营养\n中医\n女人\n减肥\n整形\n两性\n妇科\n男科\n肿瘤\n眼科\n影像\n肝病\n骨科\n糖尿病\n心血管\n即问即答\n找医院\n找医生\n查疾病症状\n找药品\n找医疗器械\n整形项目\n找保健品\n杭州白癜风医院\n|\n南宁白癜风医院\n|\n广州白癜风医院\n|\n南宁白癜风医院\n|\n山东济南白癜风\n|\n合肥白癜风医院\n|\n成都白癜风医院\n|\n武汉白癜风医院\n|\n武汉白癜风医院\n|\n昆明白癜风医院\n|\n上海白癜风医院\n|\n兰州白癜风医院\n|\n深圳白癜风医院\n|\n兰州白癜风医院\n|\n合肥白癜风医院\n宁波白癜风医院\n|\n南昌白癜风医院\n|\n南京白癜风医院\n|\n北京白癜风医院\n|\n济南白癜风医院\n|\n长沙白癜风医院\n|\n宁波白癜风医院\n|\n潍坊白癜风医院\n|\n青岛白癜风医院\n|\n南昌白癜风医院\n|\n山东济南白癜风\n|\n长沙白癜风医院\n|\n长沙白癜风医院\n|\n杭州白癜风医院\n|\n杭州白癜风医院\n当前位置 :\n家庭医生在首页\n>\n就医通\n>\n医院\n>\n佛山市三水区人民医院\n佛山市三水区人民医院\n8/10分\n等级：\n三级甲等\n类型：\n综合医院\n性质：\n公立\n电话：\n0757-87813033，急救：120 或 0757-87837333\n地址：\n广东省佛山市三水区西南广海大道西16号\n纠正或补充信息\n分享到：\n医院主页\n医院简介\n医院科室\n医院专家\n就医指南\n医院环境\n就诊评价\n医院资讯\n纠正或补充信息\n×\n*\n链接地址：\n*\n问题描述：\n参考已更新的官网网站：\n*\n您的姓名：\n*\n您的联系方式：\n*\n您与医院的关系：\n*\n验证码：\n医院介绍：\n广东省佛山市三水区人民医院始建于1941年，现已成为一所集医疗、科研、教学、预防保健于一体的现代化综合性三级甲等医院，是广东医学院非直属附属医...\n[详细介绍]\n医院地址：\n广东省佛山市三水区西南广海大道西16号\n[就医指南]\n医院电话：\n0757-87813033，急救：120 或 0757-87837333\n预约挂号\n广告\n出诊查询\n医院医生\n（383位医生）\n更多\n何志明\n主任医师\n佛山市三水区人民医院\n/\n创伤骨科\n擅长：熟练掌握骨科常见病、多发病的诊断、治疗，对骨关节创......\n查看详情\n胡朝晖\n主任医师\n佛山市三水区人民医院\n/\n医务科\n擅长：神经外科疾病诊治如颅脑损伤、脑血管病和颅内肿瘤的手......\n查看详情\n黄跃清\n主任医师\n佛山市三水区人民医院\n/\n重症医学科（ICU）\n擅长：各种危急重症疾病的救治及神经内科各种疾病的诊治。\n...\n查看详情\n刘金玉\n主任医师\n佛山市三水区人民医院\n/\n肿瘤科\n擅长：擅长肺癌、乳腺癌、结直肠癌、妇科肿瘤的综合治疗，一......\n查看详情\n陈思念\n主任医师\n佛山市三水区人民医院\n/\n肾脏风湿免疫科\n擅长：擅长诊治各种肾脏、风湿、免疫疾病诊治，血液净化治疗......\n查看详情\n陆贯芬\n主任医师\n佛山市三水区人民医院\n/\n妇科门诊\n擅长：擅长妇科肿瘤微创治疗（腹腔镜、宫腔镜、经阴道手术治......\n查看详情\n刘小华\n副主任医师\n佛山市三水区人民医院\n/\n血液科\n擅长：从事内科临床临床工作28年，擅长血液内科/老年医学......\n查看详情\n元少鹏\n主任医师\n佛山市三水区人民医院\n/\n神经外科\n擅长：擅长脑血管病介入治疗及脑肿瘤、脑外伤等神经系统疾病......\n查看详情\n樊华\n副主任医师\n佛山市三水区人民医院\n/\n口腔科\n擅长：口腔正畸、牙体牙髓、口腔美学修复等\n...\n查看详情\n医院科室\n（86个科室）\n更多\n内科：\n呼吸-心血管科\n0位医生\n重点\n心血管内科\n13位医生\n重点\n神经内科\n9位医生\n重点\n呼吸内科\n7位医生\n消化内科\n12位医生\n脑科中心\n0位医生\n胃肠镜室\n0位医生\n内分泌科\n7位医生\n肾脏风湿免疫科\n1位医生\n血液透析室\n0位医生\n肾脏内科\n5位医生\n查看更多\n外科：\n颅脑外科\n0位医生\n重点\n泌尿外科\n12位医生\n重点\n骨外科\n0位医生\n重点\n脊柱关节外科\n14位医生\n重点\n神经-消化内科\n0位医生\n神经外科\n9位医生\n心胸外科\n5位医生\n胸外科\n1位医生\n创伤骨科\n13位医生\n手足整形外科\n9位医生\n普通外科-烧伤科\n0位医生\n查看更多\n更多科室：\n妇科门诊\n6位医生\n妇科病房\n0位医生\n妇科\n7位医生\n产科\n13位医生\n温馨区\n2位医生\n待产区\n0位医生\n产前区\n4位医生\n儿科\n16位医生\n眼科门诊\n6位医生\n眼科\n1位医生\n耳鼻喉科\n2位医生\n耳鼻咽喉科\n8位医生\n就诊评价\n（50条评价）\n更多\n匿名\n就诊医生：\n翁玲珺\n/ 主治医师\n治疗疾病：\n未知\n诊疗效果：\n非常满意\n医生对病人态度好医术好\n2023-12-12 16:13:44\n匿名\n就诊医生：\n刘玉华\n/ 主管检验师\n治疗疾病：\n未知\n诊疗效果：\n非常满意\n医生，妙手回春，华佗再世。\n2023-12-12 16:13:45\n匿名\n就诊医生：\n刘名峰\n/ 医师\n治疗疾病：\n未知\n诊疗效果：\n非常满意\n谢谢医生，带着微笑为病人解除病痛。\n2023-12-12 16:13:45\n匿名\n就诊医生：\n张红艳\n/ 主治医师\n治疗疾病：\n未知\n诊疗效果：\n非常满意\n主要是技术**，几个朋友都来了\n2023-12-12 16:13:45\n匿名\n就诊医生：\n朱沛劲\n/\n治疗疾病：\n未知\n诊疗效果：\n非常满意\n发现及时，手术效果好，医生态度好，术后恢复快。\n2023-12-12 16:13:45\n如果医院下的相关信息未能满足您的需求,建议您查看本市的医院及医生排行榜\n[佛山]医院排行榜\n共有\n92\n家医院\n查看详情\n[佛山]医生排行榜\n共有\n6046\n位医生\n查看详情\n推荐优质医生\n同城医院\n佛山市第一人民医院\n三级甲等\n公立\n广东省佛山市禅城区岭南大道北81号\n佛山市中医院\n三级甲等\n中医医院\n公立\n广东省佛山市亲仁路6号\n佛山市妇幼保健院\n三级甲等\n妇幼保健院\n公立\n广东省佛山市禅城区人民西路11号\n佛山市第二人民医院\n三级甲等\n公立\n广东省佛山市卫国路78号\n广东医科大学顺德妇女儿童医院\n三级甲等\n公立\n广东省佛山市顺德区大良街道保健路3号\n文章资讯\n医院资讯\n热门资讯\n更多\n1\n高龄产妇剖腹产伤口，比年轻妈妈多多久才能长好不疼\n2\n喝酒后第二天头疼不重视 未来可能引发大问题\n3\n新冠后心脏有压迫感，该如何应对\n4\n职场人士易患三叉神经痛，应对策略全解析\n5\n热点：明星跟骨粉碎性骨折后康复经验，助你早日正常走路！\n6\n老年女性妊高症，还能期待足月分娩吗\n7\n老年人分泌物发腥臭味但不痒，暗藏哪些健康风险\n8\n怀孕期间能否食用虫草花煲汤？\n9\n神经性嗝逆的有效治疗方法有哪些\n10\n冠心病怎样治疗效果佳\n更多\n1\n今日看点：宁波哪家医院可以治疗严重抑郁症的“公开榜”治疗抑郁症宁波哪个医院好点呢女性\n2\n新闻热点：宁波抑郁症医院哪家看好“新排名公开”宁波鄞州区市治疗抑郁症哪里专业医院好点\n3\n本地热点：宁波抑郁症医院哪里看好“健康指南”宁波鄞州区哪个医院治疗抑郁症好一点\n4\n推送：宁波治疗抑郁症的医院哪里比较好些“详细排名”宁波市治疗抑郁症哪里看好点的医院\n5\n推荐报道：宁波看抑郁症的医院哪里正规点“实力公布”宁波治抑郁症正规的医院有哪些地方\n6\n新排名：大连哪个医院看抑郁症好些“排名总榜公开”大连沙河口区好一点的抑郁症医院是哪家医院\n7\n公布推荐：大连心理医院哪里比较好一点“今日排名”西岗精神心理科哪家看好些呢\n8\n公开选评：大连哪家医院看抑郁症看的好“健康指南”大连哪家医院治疗抑郁症比较好一点的\n9\n本月新公布：大连哪里可以治疗严重抑郁症的医院啊“口碑揭秘”大连沙河口区哪家医院可以治疗抑郁症的\n10\n近期报道：大连好一点的精神科是哪家好“排名透露”大连心理科医院哪家看好一点\n推荐优质医院\n全国治疗医院\n周边城市相关医院\n同城专科医院\n北京治疗医院\n上海治疗医院\n天津治疗医院\n重庆治疗医院\n广东治疗医院\n广西治疗医院\n海南治疗医院\n河北治疗医院\n山西治疗医院\n内蒙古治疗医院\n江苏治疗医院\n浙江治疗医院\n安徽治疗医院\n福建治疗医院\n江西治疗医院\n山东治疗医院\n河南治疗医院\n湖北治疗医院\n湖南治疗医院\n辽宁治疗医院\n吉林治疗医院\n黑龙江省治疗医院\n陕西治疗医院\n甘肃治疗医院\n青海治疗医院\n宁夏治疗医院\n新疆治疗医院\n四川治疗医院\n贵州治疗医院\n云南治疗医院\n西藏治疗医院\n广州治疗医院\n深圳治疗医院\n珠海治疗医院\n东莞治疗医院\n肇庆治疗医院\n阳江治疗医院\n湛江治疗医院\n韶关治疗医院\n梅州治疗医院\n河源治疗医院\n惠州治疗医院\n汕尾治疗医院\n中山治疗医院\n云浮治疗医院\n江门治疗医院\n茂名治疗医院\n清远治疗医院\n潮州治疗医院\n汕头治疗医院\n揭阳治疗医院\n顺德和平外科医院\n广州新世纪白癜风防治研究院\n广州附医华南医院\n广州中研白癜风研究院\n深圳益尚白癜风\n惠城友禾医院\n东莞南城肤康皮肤病门诊部\n东莞莞医医院\n顺德男科医院\n佛山妇科医院\n珠海甲状腺医院\n珠海癫痫病医院\n佛山眼科医院\n佛山皮肤病医院\n珠海性病医院\n佛山肝病医院\n珠海皮肤病医院\n佛山不孕不育医院\n佛山远大医院\n佛山牛皮癣医院\n珠海妇科医院\n佛山白癜风医院\n佛山早泄医院\n佛山私密整形医院\n佛山割包皮医院\n佛山精神病医院\n佛山名仕医院\n佛山儿科医院\n佛山性病医院\n东莞性病医院\n揭阳白癜风医院\n汕头牛皮癣医院\n荆州妇科医院\n肇庆男科医院\n深圳不孕不育医院\n深圳性病医院\n广州皮肤病医院\n广州中研白癜风研究院\n广州东方医院\n云浮妇科医院\n家庭医生在线订阅号\n提供专业的健康信息服务\n微信扫一扫 关注官方微信\n互联网医院服务号\n提供预约挂号、在线问诊服务\n微信扫一扫 关注官方微信\n公司简介\n广告服务\n健康信息增值服务\n健康管理服务\n业务合作\n加入我们\n网站声明\n联系我们\n网站地图\n帮助\nCopyright © 1998 - 2021 familydoctor.com.cn All Rights Reserved 家庭医生在线版权所有\n经营许可证编号：粤B2-20050069号\n本网站敬告网民：网站资讯仅供参考，身体若有不适，请及时到医院就诊。",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "unverified",
+            "document_id": "WEB-2e6feb119fbb5b94d077",
+            "location": "公开网页正文（来源身份未独立核验）"
+          },
+          {
+            "id": "WEB-3dc46409909b426287a9",
+            "title": "佛山市三水区人民医院地址_专家门诊_等级划分_网友点评_快速问医生",
+            "institution": "m.120ask.com（来源身份未独立核验；引用为该页面记载）",
+            "url": "https://m.120ask.com/data/yiyuan/4cjtgl8fojm047g7.html",
+            "published_at": null,
+            "collected_at": "2026-10-19",
+            "text": "下拉刷新...\n信息库\n> 佛山市三水区人民医院\n首页\n简介\n科室\n医生\n地址\n佛山市三水区人民医院\n医院别名:\n三水人民医院\n医院地址：佛山市三水区西南广海大道西16号\n医院简介\n广东省佛山市三水区人民医院始建于1941年，现已成为一所集医疗、科研、教学、预防保健于一体的现代化综合性三级甲等医院，是广东医学院非直属附属医院、广东省创伤救治科研中心三水创伤救治基地、三水区医疗技术指导中心和全区120\n...\n查看更多>>\n*信息来自医院官网公示信息或医生本人提供，平台受限于更新时效，可能出现信息更新不及时的情况\n信息纠错\n科室列表\n内科\n消化内科\n呼吸、心血管科\n感染、肿瘤科\n内三科\n血液净化中心\n血液透析室\n外科\n普通外科\n颅脑外科\n泌尿外科\n胸外科\n普通外科、烧伤科\n乳腺科\n查看全部科室>>\n医生列表\n杨水泉\n神经内科\n主任医师\n擅长：脑血管病，头痛头晕症、面瘫、癫痫、脑膜炎、帕金森病、失眠...\n秦福杰\n妇科\n副主任医师\n擅长：妇科良恶性肿瘤、妇科内分泌、妇科疑难病例\n陈伟雄\n骨关节科\n主治医师\n擅长：\n精彩问答\n[0个回答]\n癫痫病不能喝汽水吗\n[0个回答]\n老是心里不舒服难受，也不要用什么药\n[0个回答]\n看看怎么调节可以吗都是什么问题\n[0个回答]\n父亲是出海船员，这种疙瘩四个月了\n[0个回答]\n脑萎缩是西医诊断吗\n[0个回答]\n脑萎缩会导致说话磕巴吗\n[0个回答]\n氨磺必利能治癫痫吗\n[0个回答]\n癫痫的表现形式有哭闹吗\n[0个回答]\n求医生帮忙看看我是什么类型的甲亢\n[0个回答]\n癫痫病会引起语言障碍吗\n意见反馈\n私人医生\n联系我们\n下载APP",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "unverified",
+            "document_id": "WEB-3dc46409909b426287a9",
+            "location": "公开网页正文（来源身份未独立核验）"
+          }
+        ],
+        "status": "partial",
+        "context": {
+          "kind": "named",
+          "names": [
+            "佛山市三水区人民医院"
+          ],
+          "region": "",
+          "topics": [
+            "campuses",
+            "address",
+            "transport"
+          ],
+          "department": "",
+          "public_terms": "地址院区和附近地铁怎么查",
+          "qualifiers": [],
+          "care_topic": "",
+          "regions": [],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [
+            "before_visit"
+          ],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": []
+        },
+        "plan_validation": [
+          {
+            "status": "rejected",
+            "reason": "missing_plan"
+          }
+        ],
+        "clarification": "",
+        "queries": [
+          "佛山市三水区人民医院 地址 院区 交通 地铁 公交 停车 官方网站",
+          "佛山市三水区人民医院  院区数量 已启用院区 官方网站",
+          "佛山市三水区人民医院  院区数量 已启用院区 医院介绍"
+        ],
+        "covered_topics": [
+          "address",
+          "transport"
+        ],
+        "missing_topics": [
+          "campuses"
+        ],
+        "exhaustive": false,
+        "missing_hospitals": [],
+        "direct_reads": 8,
+        "browser_reads": 2,
+        "search_rounds": 3,
+        "local_source_count": 0,
+        "cached_source_count": 0,
+        "query_plan": {
+          "queries": [
+            "佛山市三水区人民医院 地址 院区 交通 地铁 公交 停车 官方网站",
+            "佛山市三水区人民医院 院区 位置 就诊指南",
+            "佛山市三水区人民医院 地址院区和附近地铁怎么查 官方网站"
+          ],
+          "subquery_count": 3
+        },
+        "link_maps": 3,
+        "entity_searches": 0,
+        "evidence_review": {
+          "sufficient": false,
+          "source_ids": [
+            "WEB-20b48814119844da419f",
+            "WEB-7691f47554887bcdd0ef",
+            "WEB-52f940f1f045fdc33c70",
+            "WEB-2e6feb119fbb5b94d077"
+          ],
+          "missing": [
+            "current_official_information",
+            "service"
+          ]
+        },
+        "missing_regions": [],
+        "timed_out": false,
+        "retrieval_stop_reason": "page_budget_exhausted",
+        "search_failures": 0,
+        "retrieval_diagnostics": {
+          "returned_candidates": 36,
+          "rejected_candidates": 12,
+          "duplicate_candidates": 2,
+          "direct_read_attempts": 8,
+          "read_successes": 6,
+          "extracted_sources": 6,
+          "rejected_sources": 1,
+          "read_failures": 4,
+          "browser_read_attempts": 2,
+          "page_errors": {
+            "other_read_error": 2,
+            "page_timeout": 2
+          },
+          "final_source_count": 5,
+          "stop_reason": "page_budget_exhausted"
+        }
+      }
+    },
+    {
+      "goal": "南方医科大学珠江医院地址和交通指南",
+      "elapsed_s": 12.609000000000378,
+      "official_body_retrieved": true,
+      "lookup": {
+        "sources": [
+          {
+            "id": "WEB-ca7dc6cb79d5501b422e",
+            "title": "南方医科大学珠江医院",
+            "institution": "zjyy.com.cn",
+            "url": "https://www.zjyy.com.cn/template/hostpital/hostpital_Intro.html?fd_branchId=1",
+            "published_at": null,
+            "collected_at": "2026-10-19",
+            "text": "医院介绍\n历史沿革\n医院领导\n医院文化\n医院荣誉\n医院地址\n历史沿革\n医院领导\n医院文化\n医院荣誉\n医院位置\n×\n医院地址：广东省广州市工业大道中253号\n总机:020-61643888 预约挂号：020-62782020 邮编：510280\n交通工具：【地铁】(1)8号线宝岗大道站D出口 (2)广佛线燕岗站D出口\n【公共汽车】珠江医院总站：186、192、44 ，途经珠江医院站：220、288、79、75、59、9、31(夜班)",
+            "allowed_departments": [],
+            "kind": "public",
+            "score": 0.0,
+            "authority": "registered",
+            "document_id": "WEB-ca7dc6cb79d5501b422e",
+            "location": "已核验机构网站正文"
+          }
+        ],
+        "status": "ok",
+        "context": {
+          "kind": "named",
+          "names": [
+            "南方医科大学珠江医院"
+          ],
+          "region": "",
+          "topics": [
+            "address",
+            "transport"
+          ],
+          "department": "",
+          "public_terms": "地址和交通指南",
+          "qualifiers": [],
+          "care_topic": "",
+          "regions": [],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [
+            "before_visit"
+          ],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": []
+        },
+        "plan_validation": [
+          {
+            "status": "rejected",
+            "reason": "missing_plan"
+          }
+        ],
+        "clarification": "",
+        "queries": [
+          "南方医科大学珠江医院 地址 位置 院区"
+        ],
+        "covered_topics": [
+          "address",
+          "transport"
+        ],
+        "missing_topics": [],
+        "exhaustive": false,
+        "missing_hospitals": [],
+        "direct_reads": 5,
+        "browser_reads": 2,
+        "search_rounds": 1,
+        "local_source_count": 0,
+        "cached_source_count": 0,
+        "query_plan": {
+          "queries": [
+            "南方医科大学珠江医院 地址 位置 院区",
+            "南方医科大学珠江医院 交通 地铁 公交 停车",
+            "南方医科大学珠江医院 官网 就诊指南"
+          ],
+          "subquery_count": 3
+        },
+        "link_maps": 0,
+        "entity_searches": 0,
+        "evidence_review": {
+          "sufficient": true,
+          "source_ids": [
+            "WEB-ca7dc6cb79d5501b422e"
+          ],
+          "missing": []
+        },
+        "retrieval_stop_reason": "coverage_satisfied",
+        "missing_regions": [],
+        "timed_out": false,
+        "search_failures": 0,
+        "retrieval_diagnostics": {
+          "returned_candidates": 12,
+          "rejected_candidates": 0,
+          "duplicate_candidates": 0,
+          "direct_read_attempts": 5,
+          "read_failures": 6,
+          "extracted_sources": 1,
+          "rejected_sources": 0,
+          "read_successes": 1,
+          "browser_read_attempts": 2,
+          "page_errors": {
+            "page_http_error": 3,
+            "text_too_short": 1,
+            "other_read_error": 2
+          },
+          "final_source_count": 1,
+          "stop_reason": "coverage_satisfied"
+        }
+      }
+    }
+  ],
+  "tokens": {
+    "cases_planned": 10,
+    "cases_with_calls": 10,
+    "calls": 14,
+    "known_input_tokens": 30186,
+    "known_output_tokens": 706,
+    "known_total_tokens": 30892,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 10,
+    "mean_tokens_complete_cases": 3089.2,
+    "p50_tokens_complete_cases": 1577.0,
+    "p95_tokens_complete_cases": 9176.4,
+    "by_purpose": {
+      "intent_analysis": {
+        "calls": 8,
+        "known_total_tokens": 12548,
+        "unknown_calls": 0
+      },
+      "hospital_service": {
+        "calls": 2,
+        "known_total_tokens": 7731,
+        "unknown_calls": 0
+      },
+      "hospital_answer_coverage_repair": {
+        "calls": 2,
+        "known_total_tokens": 8102,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 2,
+        "known_total_tokens": 2511,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  },
+  "limits": [
+    "Development cases, not held-out",
+    "Controlled fixtures are not real hospital facts",
+    "Real-web body presence does not validate all addresses, campuses or routes"
+  ]
+}

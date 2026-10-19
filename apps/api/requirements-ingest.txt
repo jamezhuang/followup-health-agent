@@ -1,0 +1,2 @@
+-r requirements-rag.txt
+python-docx==1.2.0

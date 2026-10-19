@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "健康档案第1步模块验收",
+  "minimum_cases": 85,
+  "required_files": [
+    "app/workspace/health_memory.py",
+    "app/workspace/health_memory_integration.py",
+    "app/workspace/models.py",
+    "app/workspace/tools.py",
+    "scripts/apply_health_memory.py",
+    "tests/test_health_memory.py"
+  ],
+  "critical_tests": [
+    "test_candidates_do_not_overwrite_profile",
+    "test_confirm_replaces_and_preserves_version",
+    "test_owner_isolation",
+    "test_api_profile_import_auth_and_version_guard",
+    "test_agent_receives_fresh_context_and_masks_conflict",
+    "test_restore_after_restart",
+    "test_new_revision_retires_30_candidate_and_proposes_28",
+    "test_old_confirmed_age_is_preserved_until_user_confirms_new",
+    "test_model_schema_advertises_only_three_profile_fields",
+    "test_pathology_and_current_symptoms_do_not_become_profile_fields",
+    "test_equal_age_in_two_pieces_becomes_one_candidate",
+    "test_legacy_duplicates_resolve_together_in_one_transaction"
+  ],
+  "reviewed_files": [
+    {
+      "path": "app/workspace/health_memory.py",
+      "version": "4",
+      "sha256": "fd2f477050b019211d526d50aeacab1bc38cb87faf919c34d7e202dea4e94aff"
+    },
+    {
+      "path": "app/workspace/health_memory_integration.py",
+      "version": "3",
+      "sha256": "f62ee63b946884d224a17a293c6a9aeb909710fa0eb511fcba9d308f779277fe"
+    },
+    {
+      "path": "tests/test_health_memory.py",
+      "version": "4",
+      "sha256": "92ef3e25872a23617d8a5082a4ff5c3fafae2840de0ed21f5a5bfb171668d323"
+    }
+  ]
+}

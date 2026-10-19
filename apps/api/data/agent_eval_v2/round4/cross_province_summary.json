@@ -1,0 +1,348 @@
+{
+  "before": {
+    "rows": [
+      {
+        "province": "云南",
+        "hospital": "云南省第一人民医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": true,
+        "matched_urls": [],
+        "review_reference": "https://www.ynpfph.cn/",
+        "elapsed_s": 45.1880000000001,
+        "known_tokens": 48535,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "甘肃",
+        "hospital": "甘肃省人民医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://www.gsyy.cn/info/10341/69841.htm",
+        "elapsed_s": 17.79700000000048,
+        "known_tokens": 9279,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "福建",
+        "hospital": "福建省立医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://fjsl.com.cn/sy.htm",
+        "elapsed_s": 22.063000000000102,
+        "known_tokens": 31674,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "海南",
+        "hospital": "海南省人民医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://phhp.com.cn/",
+        "elapsed_s": 21.14099999999962,
+        "known_tokens": 35730,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "吉林",
+        "hospital": "吉林大学中日联谊医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://www.dayi.org.cn/hospital/2382.html",
+        "elapsed_s": 23.281999999999243,
+        "known_tokens": 17670,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "新疆",
+        "hospital": "新疆医科大学第一附属医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://www.xydyfy.com/",
+        "elapsed_s": 49.59399999999914,
+        "known_tokens": 33748,
+        "unknown_usage_calls": 0
+      }
+    ],
+    "n": 6,
+    "reference_host_body_n": 0,
+    "any_body_n": 6,
+    "known_tokens": 176636,
+    "unknown_usage_calls": 0,
+    "metadata": {
+      "cases": [
+        [
+          "云南",
+          "云南省第一人民医院"
+        ],
+        [
+          "甘肃",
+          "甘肃省人民医院"
+        ],
+        [
+          "福建",
+          "福建省立医院"
+        ],
+        [
+          "海南",
+          "海南省人民医院"
+        ],
+        [
+          "吉林",
+          "吉林大学中日联谊医院"
+        ],
+        [
+          "新疆",
+          "新疆医科大学第一附属医院"
+        ]
+      ],
+      "input_urls": false,
+      "registered_matches": {},
+      "registry_sha": "d180ccb6c8fc69ec749af05193007c725d94a9ce57dd44123f064e19bd662ac1",
+      "source": "2d666a7e2f2db643f6e84270b457ce9d8c1f7a919249dff338565e08df051ae8",
+      "model": "deepseek-flash"
+    },
+    "artifacts": "data\\agent_eval_v2\\round4\\cross-province-1ddbbf345d"
+  },
+  "after": {
+    "rows": [
+      {
+        "province": "云南",
+        "hospital": "云南省第一人民医院",
+        "any_body": true,
+        "reference_host_body": true,
+        "government_body": false,
+        "matched_urls": [
+          "https://www.ynpfph.cn/info/i/21429.html"
+        ],
+        "review_reference": "https://www.ynpfph.cn/",
+        "elapsed_s": 31.67200000000048,
+        "known_tokens": 29083,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "甘肃",
+        "hospital": "甘肃省人民医院",
+        "any_body": true,
+        "reference_host_body": true,
+        "government_body": false,
+        "matched_urls": [
+          "https://www.gsyy.cn/info/10341/69841.htm",
+          "https://www.gsyy.cn/info/4191/43741.htm"
+        ],
+        "review_reference": "https://www.gsyy.cn/info/10341/69841.htm",
+        "elapsed_s": 47.26499999999942,
+        "known_tokens": 33634,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "福建",
+        "hospital": "福建省立医院",
+        "any_body": true,
+        "reference_host_body": true,
+        "government_body": false,
+        "matched_urls": [
+          "https://fjsl.com.cn/"
+        ],
+        "review_reference": "https://fjsl.com.cn/sy.htm",
+        "elapsed_s": 49.46899999999914,
+        "known_tokens": 15077,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "海南",
+        "hospital": "海南省人民医院",
+        "any_body": true,
+        "reference_host_body": true,
+        "government_body": false,
+        "matched_urls": [
+          "https://www.phhp.com.cn/info/1409/7774.htm"
+        ],
+        "review_reference": "https://phhp.com.cn/",
+        "elapsed_s": 46.14099999999962,
+        "known_tokens": 79026,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "吉林",
+        "hospital": "吉林大学中日联谊医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://www.dayi.org.cn/hospital/2382.html",
+        "elapsed_s": 44.1869999999999,
+        "known_tokens": 52806,
+        "unknown_usage_calls": 0
+      },
+      {
+        "province": "新疆",
+        "hospital": "新疆医科大学第一附属医院",
+        "any_body": true,
+        "reference_host_body": false,
+        "government_body": false,
+        "matched_urls": [],
+        "review_reference": "https://www.xydyfy.com/",
+        "elapsed_s": 44.35899999999856,
+        "known_tokens": 19622,
+        "unknown_usage_calls": 0
+      }
+    ],
+    "n": 6,
+    "reference_host_body_n": 4,
+    "any_body_n": 6,
+    "known_tokens": 229248,
+    "unknown_usage_calls": 0,
+    "metadata": {
+      "cases": [
+        [
+          "云南",
+          "云南省第一人民医院"
+        ],
+        [
+          "甘肃",
+          "甘肃省人民医院"
+        ],
+        [
+          "福建",
+          "福建省立医院"
+        ],
+        [
+          "海南",
+          "海南省人民医院"
+        ],
+        [
+          "吉林",
+          "吉林大学中日联谊医院"
+        ],
+        [
+          "新疆",
+          "新疆医科大学第一附属医院"
+        ]
+      ],
+      "input_urls": false,
+      "registered_matches": {},
+      "registry_sha": "d180ccb6c8fc69ec749af05193007c725d94a9ce57dd44123f064e19bd662ac1",
+      "source": "8f0b4207c547bc523d5a718614e0b353fff2e8712637410d96bfaac9b56e6be9",
+      "model": "deepseek-flash"
+    },
+    "artifacts": "data\\agent_eval_v2\\round4\\cross-province-8188fdd39b"
+  },
+  "candidate_replay": [
+    {
+      "hospital": "云南省第一人民医院",
+      "before_ranks": [
+        49
+      ],
+      "after_ranks": [
+        2
+      ]
+    },
+    {
+      "hospital": "甘肃省人民医院",
+      "before_ranks": [
+        21,
+        23
+      ],
+      "after_ranks": [
+        1,
+        2
+      ]
+    },
+    {
+      "hospital": "福建省立医院",
+      "before_ranks": [
+        43
+      ],
+      "after_ranks": [
+        1
+      ]
+    },
+    {
+      "hospital": "海南省人民医院",
+      "before_ranks": [
+        34
+      ],
+      "after_ranks": [
+        2
+      ]
+    },
+    {
+      "hospital": "吉林大学中日联谊医院",
+      "before_ranks": [],
+      "after_ranks": []
+    },
+    {
+      "hospital": "新疆医科大学第一附属医院",
+      "before_ranks": [],
+      "after_ranks": []
+    }
+  ],
+  "offline_regression": {
+    "run_id": "20261019T051409Z-d5f10aaf",
+    "live": false,
+    "source_sha256": "3c4fc626416bd3f0e76a51c70782aa46e488a995cc0fc6125f5bd4200ab8e566",
+    "stages": {
+      "dataset": {
+        "exit_code": 0,
+        "elapsed_s": 0.266,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T051409Z-d5f10aaf\\dataset.log"
+      },
+      "api_contract": {
+        "exit_code": 0,
+        "elapsed_s": 51.796,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T051409Z-d5f10aaf\\api_contract.log",
+        "tests": {
+          "n": 31,
+          "passed": 31,
+          "skipped": 0,
+          "failures": []
+        }
+      },
+      "deterministic_quality": {
+        "exit_code": 0,
+        "elapsed_s": 13.922,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T051409Z-d5f10aaf\\deterministic_quality.log",
+        "tests": {
+          "n": 41,
+          "passed": 41,
+          "skipped": 0,
+          "failures": []
+        }
+      }
+    },
+    "gates": {
+      "dataset_execution": true,
+      "api_contract_execution": true,
+      "api_contract_coverage": true,
+      "deterministic_quality_execution": true,
+      "deterministic_quality_coverage": true
+    },
+    "metrics": {},
+    "limits": [
+      "Isolated ASGI API, not browser UI",
+      "Live E2E uses synthetic fixtures and disables external hospital search",
+      "Semantic judge is same-model auxiliary, not independent clinical validation"
+    ],
+    "artifacts": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T051409Z-d5f10aaf",
+    "live_status": "not_run; offline success does not imply model quality passed",
+    "passed": true
+  },
+  "limits": [
+    "Six development probes, not nationwide validation or a blind holdout",
+    "Domain match means a body from an independently reviewed host, not complete answer correctness",
+    "Jilin reference is secondary because the official site was not independently read",
+    "No test hospital URL supplied to the agent; no six-hospital registry additions",
+    "One live provider configured: bocha; cannot assume other engines were exercised"
+  ]
+}

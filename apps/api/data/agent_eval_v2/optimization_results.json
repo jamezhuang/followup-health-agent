@@ -1,0 +1,105 @@
+{
+  "intent_baseline_adjudicated": {
+    "planned_n": 100,
+    "valid_n": 100,
+    "missing_n": 0,
+    "main_intent_accuracy": 1.0,
+    "route_accuracy": 0.99,
+    "strict_accuracy": 0.94,
+    "route_macro_f1_on_valid": 0.9816849816849816,
+    "confusion": {
+      "daily/general -> daily/general": 10,
+      "daily/general -> daily/medical_education": 1,
+      "daily/medical_education -> daily/medical_education": 19,
+      "daily/hospital -> daily/hospital": 30,
+      "followup/general -> followup/general": 40
+    },
+    "failure_ids": [
+      "I006",
+      "I066",
+      "I069",
+      "I074",
+      "I083",
+      "I090"
+    ]
+  },
+  "intent_optimized": {
+    "planned_n": 100,
+    "valid_n": 100,
+    "missing_n": 0,
+    "main_intent_accuracy": 1.0,
+    "route_accuracy": 0.99,
+    "strict_accuracy": 0.99,
+    "route_macro_f1_on_valid": 0.982373678025852,
+    "confusion": {
+      "daily/general -> daily/general": 11,
+      "daily/medical_education -> daily/medical_education": 18,
+      "daily/medical_education -> daily/general": 1,
+      "daily/hospital -> daily/hospital": 30,
+      "followup/general -> followup/general": 40
+    },
+    "failure_ids": [
+      "I029"
+    ]
+  },
+  "intent_tokens": {
+    "baseline": {
+      "planned_n": 100,
+      "observed_case_n": 96,
+      "calls": 96,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 161266,
+      "known_output_tokens": 7666,
+      "known_total_tokens": 168932,
+      "complete_usage_n": 100,
+      "mean_complete_case_tokens": 1689.32,
+      "p50_complete_case_tokens": 1738.5,
+      "p95_complete_case_tokens": 1820.15,
+      "total_is_complete": true,
+      "shared_embedding_excluded_and_reported_separately": true,
+      "includes_retries": true,
+      "zero_model_call_n": 4
+    },
+    "optimized": {
+      "planned_n": 100,
+      "observed_case_n": 96,
+      "calls": 96,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 175090,
+      "known_output_tokens": 7764,
+      "known_total_tokens": 182854,
+      "complete_usage_n": 100,
+      "mean_complete_case_tokens": 1828.54,
+      "p50_complete_case_tokens": 1885.0,
+      "p95_complete_case_tokens": 1963.15,
+      "total_is_complete": true,
+      "shared_embedding_excluded_and_reported_separately": true,
+      "includes_retries": true,
+      "zero_model_call_n": 4
+    }
+  },
+  "e2e": {
+    "baseline_pass_n": 12,
+    "optimized_pass_n": 14,
+    "n": 16,
+    "remaining_failures": [
+      "E002",
+      "E005"
+    ],
+    "tokens_baseline": {
+      "calls": 61,
+      "known_total_tokens": 123195,
+      "unknown_calls": 0
+    },
+    "tokens_optimized": {
+      "calls": 66,
+      "known_total_tokens": 143516,
+      "unknown_calls": 0
+    }
+  },
+  "limits": [
+    "Development-set iteration, not independent holdout evidence",
+    "Same-model auxiliary judge; network disabled in E2E",
+    "Baseline raw results and original case files preserved"
+  ]
+}

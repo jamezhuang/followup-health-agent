@@ -1,0 +1,44 @@
+.answer.answer {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+  color: inherit;
+}
+
+.answer h1,
+.answer h2,
+.answer h3 {
+  color: #136f63;
+  line-height: 1.45;
+  margin: 1.15em 0 0.55em;
+  font-weight: 700;
+}
+
+.answer h1 { font-size: 1.35em; }
+.answer h2 { font-size: 1.18em; }
+.answer h3 { font-size: 1.05em; }
+.answer > :first-child { margin-top: 0; }
+.answer > :last-child { margin-bottom: 0; }
+.answer p { margin: 0.65em 0; }
+.answer strong { font-weight: 700; }
+.answer ul,
+.answer ol { padding-left: 1.5em; margin: 0.7em 0; }
+.answer li { margin: 0.45em 0; padding-left: 0.15em; }
+.answer li > p { margin: 0.35em 0; }
+.answer blockquote { border-left: 3px solid #b9d8d0; margin: 0.8em 0; padding: 0.3em 0.9em; color: #536d67; background: #f4f9f7; }
+.answer a { color: #136f63; text-decoration: underline; text-underline-offset: 3px; }
+.answer hr { border: 0; border-top: 1px solid #dbe7e3; margin: 1.2em 0; }
+.answer pre { overflow-x: auto; max-width: 100%; padding: 0.8em; background: #f4f7f6; border-radius: 8px; white-space: pre; }
+.answer code { font-size: 0.9em; }
+.tableWrap { overflow-x: auto; max-width: 100%; margin: 0.8em 0; }
+.answer table { border-collapse: collapse; width: 100%; min-width: 320px; font-size: 0.95em; }
+.answer th,
+.answer td { border: 1px solid #dbe7e3; padding: 0.55em 0.7em; text-align: left; vertical-align: top; }
+.answer th { background: #edf5f2; }
+
+@container workspace (max-width: 640px) {
+  .answer h1 { font-size: 1.2em; }
+  .answer h2 { font-size: 1.08em; }
+  .answer ul,
+  .answer ol { padding-left: 1.25em; }
+}

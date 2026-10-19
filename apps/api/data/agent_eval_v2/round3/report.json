@@ -1,0 +1,789 @@
+{
+  "regression": {
+    "run_id": "20261019T044215Z-3689db86",
+    "live": true,
+    "source_sha256": "f71948e3772ef4f7462e587caa10a640ae000bcc67021f88b32ec5564491bf70",
+    "stages": {
+      "dataset": {
+        "exit_code": 0,
+        "elapsed_s": 0.281,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\dataset.log"
+      },
+      "api_contract": {
+        "exit_code": 0,
+        "elapsed_s": 19.532,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\api_contract.log",
+        "tests": {
+          "n": 31,
+          "passed": 31,
+          "skipped": 0,
+          "failures": []
+        }
+      },
+      "deterministic_quality": {
+        "exit_code": 0,
+        "elapsed_s": 7.828,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\deterministic_quality.log",
+        "tests": {
+          "n": 33,
+          "passed": 33,
+          "skipped": 0,
+          "failures": []
+        }
+      },
+      "intent": {
+        "exit_code": 0,
+        "elapsed_s": 71.953,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\intent.log"
+      },
+      "e2e": {
+        "exit_code": 0,
+        "elapsed_s": 110.875,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\e2e.log"
+      },
+      "units": {
+        "exit_code": 0,
+        "elapsed_s": 12.438,
+        "log": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86\\units.log"
+      }
+    },
+    "gates": {
+      "dataset_execution": true,
+      "api_contract_execution": true,
+      "api_contract_coverage": true,
+      "deterministic_quality_execution": true,
+      "deterministic_quality_coverage": true,
+      "intent_execution": true,
+      "intent_all_correct": false,
+      "intent_usage_complete": true,
+      "e2e_execution": true,
+      "e2e_all_correct": false,
+      "e2e_usage_complete": true,
+      "units_execution": true,
+      "unit_comparisons_all_correct": false,
+      "units_usage_complete": true
+    },
+    "metrics": {
+      "intent": {
+        "planned_n": 100,
+        "valid_n": 100,
+        "missing_n": 0,
+        "main_intent_accuracy": 1.0,
+        "route_accuracy": 0.99,
+        "strict_accuracy": 0.99,
+        "route_macro_f1_on_valid": 0.9848931466470154,
+        "confusion": {
+          "daily/general -> daily/general": 11,
+          "daily/medical_education -> daily/medical_education": 19,
+          "daily/hospital -> daily/hospital": 29,
+          "daily/hospital -> daily/general": 1,
+          "followup/general -> followup/general": 40
+        },
+        "failure_ids": [
+          "I047"
+        ]
+      },
+      "intent_usage": {
+        "planned_n": 100,
+        "observed_case_n": 96,
+        "calls": 96,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 146770,
+        "known_output_tokens": 7193,
+        "known_total_tokens": 153963,
+        "complete_usage_n": 100,
+        "mean_complete_case_tokens": 1539.63,
+        "p50_complete_case_tokens": 1580.0,
+        "p95_complete_case_tokens": 1668.0,
+        "total_is_complete": true,
+        "shared_embedding_excluded_and_reported_separately": true,
+        "includes_retries": true,
+        "zero_model_call_n": 4
+      },
+      "e2e": {
+        "planned_n": 16,
+        "completed_n": 16,
+        "strict_pass_n": 15,
+        "strict_pass_rate": 0.9375,
+        "run_latency": {
+          "n": 21,
+          "p50_s": 5.860000000000582,
+          "p95_s": 15.656000000000859
+        },
+        "failure_ids": [
+          "E004"
+        ]
+      },
+      "e2e_usage": {
+        "pipeline": {
+          "calls": 68,
+          "known_total_tokens": 143215,
+          "unknown_usage_calls": 0
+        },
+        "auxiliary_judge": {
+          "calls": 16,
+          "known_total_tokens": 74684,
+          "unknown_usage_calls": 0
+        }
+      },
+      "units": {
+        "passed_n": 3,
+        "n": 4,
+        "tokens_including_auxiliary_judge": {
+          "cases_planned": 4,
+          "cases_with_calls": 8,
+          "calls": 14,
+          "known_input_tokens": 14071,
+          "known_output_tokens": 819,
+          "known_total_tokens": 14890,
+          "unknown_usage_calls": 0,
+          "complete_usage_case_n": 8,
+          "mean_tokens_complete_cases": 1861.25,
+          "p50_tokens_complete_cases": 1493.5,
+          "p95_tokens_complete_cases": 4559.549999999998,
+          "by_purpose": {
+            "report_answer": {
+              "calls": 4,
+              "known_total_tokens": 4431,
+              "unknown_calls": 0
+            },
+            "answer_fact_review": {
+              "calls": 4,
+              "known_total_tokens": 6243,
+              "unknown_calls": 0
+            },
+            "unit_comparison_judge": {
+              "calls": 4,
+              "known_total_tokens": 1325,
+              "unknown_calls": 0
+            },
+            "answer_fact_repair": {
+              "calls": 1,
+              "known_total_tokens": 1342,
+              "unknown_calls": 0
+            },
+            "answer_fact_recheck": {
+              "calls": 1,
+              "known_total_tokens": 1549,
+              "unknown_calls": 0
+            }
+          },
+          "includes_retries_and_failed_attempts": true
+        }
+      }
+    },
+    "limits": [
+      "Isolated ASGI API, not browser UI",
+      "Live E2E uses synthetic fixtures and disables external hospital search",
+      "Semantic judge is same-model auxiliary, not independent clinical validation"
+    ],
+    "artifacts": "D:\\AI问诊系统\\ai-consultation-v2\\apps\\api\\data\\agent_regression\\20261019T044215Z-3689db86",
+    "comparison": {
+      "intent_tokens": {
+        "before": 149986,
+        "after": 153963,
+        "change_ratio": 0.02651580814209331
+      },
+      "e2e_tokens": {
+        "before": 132725,
+        "after": 143215,
+        "change_ratio": 0.07903559992465614
+      },
+      "e2e_p95_s": {
+        "before": 15.281000000000859,
+        "after": 15.656000000000859,
+        "change_ratio": 0.024540278777565483
+      }
+    },
+    "passed": false
+  },
+  "focused_intent": {
+    "n": 8,
+    "passed_n": 8,
+    "rows": [
+      {
+        "goal": "只读爸爸已确认的报告回答，不读取妈妈档案",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "请根据父亲的报告解释结果，不要展示整个档案",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "读取这份报告来回答我的问题，不要归档",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "从我选中的报告里找依据解释这个结果",
+        "expected_operation": "answer",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "answer",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "展示爸爸上次保存的复诊资料",
+        "expected_operation": "retrieve",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "retrieve",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "把已归档的复诊信息调出来给我看",
+        "expected_operation": "retrieve",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "retrieve",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "准备复诊清单，把之前备注的问题加入清单",
+        "expected_operation": "prepare",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "prepare",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      },
+      {
+        "goal": "比较两次报告的结果变化",
+        "expected_operation": "compare",
+        "actual": {
+          "intent": "followup",
+          "consultation_type": "general",
+          "needs_clarification": false,
+          "reason_code": "personal_followup",
+          "operation": "compare",
+          "requested_services": [],
+          "public_care_topic": "",
+          "public_task_plan": null
+        },
+        "passed": true
+      }
+    ]
+  },
+  "controlled_hospital": {
+    "n": 2,
+    "passed_n": 2,
+    "rows": [
+      {
+        "goal": "佛山有哪些公立医院？",
+        "context": {
+          "kind": "directory",
+          "names": [],
+          "region": "佛山",
+          "topics": [
+            "level"
+          ],
+          "department": "",
+          "public_terms": "",
+          "qualifiers": [
+            "公立"
+          ],
+          "care_topic": "",
+          "regions": [
+            "佛山"
+          ],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": [],
+          "listed_names": [
+            "佛山合成甲医院"
+          ]
+        },
+        "source_fixtures": [
+          "FS_PUBLIC"
+        ],
+        "result": {
+          "kind": "chat",
+          "content": "本轮可核实的佛山公立医院资料有限，仅查到以下一家：\n\n### 可以了解的医院\n\n1. **佛山合成甲医院**\n   - **位置**：佛山市合成路1号\n\n这是本次取得的部分资料，不代表佛山只有这一家公立医院，也不构成完整名单。你更关注佛山哪个区，或想看哪类科室的医院？",
+          "claims": [],
+          "questions": [],
+          "gaps": [],
+          "search_queries": [],
+          "intent": "daily",
+          "consultation_type": "hospital",
+          "sources": [
+            {
+              "id": "5d7c36618fb045388d2e03e44aa0f040:1:0:0",
+              "document_id": "5d7c36618fb045388d2e03e44aa0f040",
+              "revision": 1,
+              "title": "佛山合成甲医院",
+              "location": "本地已发布公共资料 · 测试正文",
+              "text": "佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "parent_id": "5d7c36618fb045388d2e03e44aa0f040:1:0",
+              "subject": "",
+              "confirmed": true,
+              "search_text": " 佛山合成甲医院 测试正文 佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "url": "https://fixture.example/FS_PUBLIC",
+              "published_at": "",
+              "kind": "public",
+              "collected_at": "",
+              "source_type": "article",
+              "regions": [],
+              "report_type": null,
+              "followup_date": "",
+              "entered_at": "2026-10-19T04:42:10.123583+00:00",
+              "followup_status": "",
+              "authority": "published_local",
+              "retrieval_origin": "local"
+            }
+          ],
+          "records": [],
+          "rejected_claims": 0,
+          "mode": "live",
+          "response_method": "model",
+          "notice": "",
+          "iterations": 0,
+          "stop_reason": "chat_completed",
+          "answer_review": {
+            "status": "passed"
+          },
+          "plan_validation": [
+            {
+              "status": "rejected",
+              "reason": "missing_plan"
+            }
+          ],
+          "retrieval_diagnostics": {
+            "page_errors": {},
+            "final_source_count": 1,
+            "stop_reason": "partial"
+          },
+          "hospital_context": {
+            "kind": "directory",
+            "names": [],
+            "region": "佛山",
+            "topics": [
+              "level"
+            ],
+            "department": "",
+            "public_terms": "",
+            "qualifiers": [
+              "公立"
+            ],
+            "care_topic": "",
+            "regions": [
+              "佛山"
+            ],
+            "treatment": "",
+            "related_departments": [],
+            "focus_variants": [],
+            "service_categories": [],
+            "tasks": [],
+            "understood_request": "",
+            "original_name": "",
+            "entity_status": "unresolved",
+            "missing_information": [],
+            "listed_names": [
+              "佛山合成甲医院"
+            ]
+          },
+          "answer_policy": {
+            "task": "list",
+            "scope": "city",
+            "minimum": 4,
+            "target_min": 5,
+            "target_max": 8,
+            "explicit_count": null,
+            "diversify_regions": false,
+            "allow_scope_relaxation": false
+          },
+          "directory_answer_count": 1,
+          "directory_answer_below_minimum": true,
+          "search_status": "partial"
+        },
+        "passed": true
+      },
+      {
+        "goal": "改成佛山，仍然只看公立医院",
+        "context": {
+          "kind": "directory",
+          "names": [],
+          "region": "佛山",
+          "topics": [
+            "level"
+          ],
+          "department": "",
+          "public_terms": "",
+          "qualifiers": [
+            "公立"
+          ],
+          "care_topic": "",
+          "regions": [
+            "佛山"
+          ],
+          "treatment": "",
+          "related_departments": [],
+          "focus_variants": [],
+          "service_categories": [],
+          "tasks": [],
+          "understood_request": "",
+          "original_name": "",
+          "entity_status": "unresolved",
+          "missing_information": [],
+          "listed_names": [
+            "佛山合成甲医院"
+          ]
+        },
+        "source_fixtures": [
+          "FS_PUBLIC"
+        ],
+        "result": {
+          "kind": "chat",
+          "content": "按本轮查到的公开资料，佛山能核实的公立医院目前只有这一家，先列出来：\n\n### 可以了解的医院\n\n1. **佛山合成甲医院**\n   - **位置**：佛山市合成路1号\n   - **性质**：公立医院\n\n这次只取得部分资料，未能覆盖佛山全部公立医院，因此不能当作完整名单。如果你能补充想看的区或科室方向，我可以再帮你缩小范围。",
+          "claims": [],
+          "questions": [],
+          "gaps": [],
+          "search_queries": [],
+          "intent": "daily",
+          "consultation_type": "hospital",
+          "sources": [
+            {
+              "id": "5d7c36618fb045388d2e03e44aa0f040:1:0:0",
+              "document_id": "5d7c36618fb045388d2e03e44aa0f040",
+              "revision": 1,
+              "title": "佛山合成甲医院",
+              "location": "本地已发布公共资料 · 测试正文",
+              "text": "佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "parent_id": "5d7c36618fb045388d2e03e44aa0f040:1:0",
+              "subject": "",
+              "confirmed": true,
+              "search_text": " 佛山合成甲医院 测试正文 佛山市合成甲医院为公立医院，地址为佛山市合成路1号。 此为合成技术测试资料，不能用于真实就诊。",
+              "url": "https://fixture.example/FS_PUBLIC",
+              "published_at": "",
+              "kind": "public",
+              "collected_at": "",
+              "source_type": "article",
+              "regions": [],
+              "report_type": null,
+              "followup_date": "",
+              "entered_at": "2026-10-19T04:42:10.123583+00:00",
+              "followup_status": "",
+              "authority": "published_local",
+              "retrieval_origin": "local"
+            }
+          ],
+          "records": [],
+          "rejected_claims": 0,
+          "mode": "live",
+          "response_method": "model",
+          "notice": "",
+          "iterations": 0,
+          "stop_reason": "chat_completed",
+          "answer_review": {
+            "status": "passed"
+          },
+          "plan_validation": [
+            {
+              "status": "rejected",
+              "reason": "missing_plan"
+            }
+          ],
+          "retrieval_diagnostics": {
+            "page_errors": {},
+            "final_source_count": 1,
+            "stop_reason": "partial"
+          },
+          "hospital_context": {
+            "kind": "directory",
+            "names": [],
+            "region": "佛山",
+            "topics": [
+              "level"
+            ],
+            "department": "",
+            "public_terms": "",
+            "qualifiers": [
+              "公立"
+            ],
+            "care_topic": "",
+            "regions": [
+              "佛山"
+            ],
+            "treatment": "",
+            "related_departments": [],
+            "focus_variants": [],
+            "service_categories": [],
+            "tasks": [],
+            "understood_request": "",
+            "original_name": "",
+            "entity_status": "unresolved",
+            "missing_information": [],
+            "listed_names": [
+              "佛山合成甲医院"
+            ]
+          },
+          "answer_policy": {
+            "task": "list",
+            "scope": "city",
+            "minimum": 4,
+            "target_min": 5,
+            "target_max": 8,
+            "explicit_count": null,
+            "diversify_regions": false,
+            "allow_scope_relaxation": false
+          },
+          "directory_answer_count": 1,
+          "directory_answer_below_minimum": true,
+          "search_status": "partial"
+        },
+        "passed": true
+      }
+    ]
+  },
+  "real_web": [
+    {
+      "goal": "佛山市三水区人民医院地址、院区和附近地铁怎么查？",
+      "official_body_retrieved": false,
+      "status": "partial",
+      "stop_reason": "page_budget_exhausted",
+      "sources": [
+        "http://fs.bendibao.com/live/2016125/89615.shtm",
+        "https://www.cndzys.com/hospital_detail/contact/1691.html",
+        "https://www.youlai.cn/yyk/hospmap/2266/",
+        "https://yyk.familydoctor.com.cn/1322/",
+        "https://m.120ask.com/data/yiyuan/4cjtgl8fojm047g7.html"
+      ]
+    },
+    {
+      "goal": "南方医科大学珠江医院地址和交通指南",
+      "official_body_retrieved": true,
+      "status": "ok",
+      "stop_reason": "coverage_satisfied",
+      "sources": [
+        "https://www.zjyy.com.cn/template/hostpital/hostpital_Intro.html?fd_branchId=1"
+      ]
+    }
+  ],
+  "unit_variants": {
+    "n": 12,
+    "passed_n": 12,
+    "failures": []
+  },
+  "focused_tokens": {
+    "cases_planned": 10,
+    "cases_with_calls": 10,
+    "calls": 14,
+    "known_input_tokens": 30186,
+    "known_output_tokens": 706,
+    "known_total_tokens": 30892,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 10,
+    "mean_tokens_complete_cases": 3089.2,
+    "p50_tokens_complete_cases": 1577.0,
+    "p95_tokens_complete_cases": 9176.4,
+    "by_purpose": {
+      "intent_analysis": {
+        "calls": 8,
+        "known_total_tokens": 12548,
+        "unknown_calls": 0
+      },
+      "hospital_service": {
+        "calls": 2,
+        "known_total_tokens": 7731,
+        "unknown_calls": 0
+      },
+      "hospital_answer_coverage_repair": {
+        "calls": 2,
+        "known_total_tokens": 8102,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 2,
+        "known_total_tokens": 2511,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  },
+  "real_web_model_tokens": {
+    "calls": 5,
+    "known_total_tokens": 12607,
+    "unknown_usage_calls": 0
+  },
+  "limits": [
+    "All development data visible",
+    "No independent clinical validation",
+    "Real-web check only tests official body presence, not complete route/campus accuracy",
+    "Focused hospital test exercises retrieval and chat functions, not HTTP endpoints"
+  ],
+  "after_strict_guard": {
+    "variants": {
+      "passed_n": 12,
+      "n": 12
+    },
+    "independent_repeat": {
+      "passed_n": 4,
+      "n": 4
+    },
+    "e2e": {
+      "pass_n": 14,
+      "n": 16,
+      "failure_ids": [
+        "E002",
+        "E005"
+      ]
+    },
+    "e2e_usage": {
+      "pipeline": {
+        "calls": 66,
+        "known_total_tokens": 135497,
+        "unknown_usage_calls": 0
+      },
+      "auxiliary_judge": {
+        "calls": 16,
+        "known_total_tokens": 68039,
+        "unknown_usage_calls": 0
+      }
+    },
+    "official_probe": {
+      "rows": [
+        {
+          "url": "https://www.sshospital.cn/",
+          "result": {
+            "ok": true,
+            "evidence_ready": true,
+            "sources": [
+              {
+                "id": "WEB-2bca0c7bf5a782cced64",
+                "title": "南方医科大学珠江医院三水医院",
+                "institution": "sshospital.cn（来源身份未独立核验；引用为该页面记载）",
+                "url": "https://www.sshospital.cn/",
+                "published_at": null,
+                "collected_at": "2026-10-19",
+                "text": "首页\n医院概况\n医院概况\n领导团队\n医院荣誉\n医疗设备\n新闻动态\n医院新闻\n医院视频\n医生手记\n护理天地\n就医指南\n门诊流程\n住院流程\n体检流程\n乘车路线\n科室设置\n内科\n外科\n妇产儿科\n医技科室\n行政后勤科室\n门急诊\n科研教学\n科教动态\n学术交流\n文档下载\n健康教育\n健康教育\n医院文化\n文体活动\n院务公开\n医院公告\n医保政策\n招标采购\n服务价格\n财务公开\n党群工作\n基层党建\n团员青年\n廉政文化\n人才招聘\n招聘岗位\n招聘公示\n廉政教育动态\n廉政教育动态\n三水区人民医院大塘医院托管提质惠基层，获大塘镇人大肯定！\n【医路有护】两封感谢信，浓浓医保情——珠江医院三水医院医保科...\n清明思良医\n【医路有术】脖子上的“隐形术”：年轻女性的甲状腺手术，为何脖...\n【医路有术】25岁男子骑电动车被撞致膝关节韧带断裂，手术植入...\n医院新闻\n重要公告\n科室动态\n人才招聘\n更多\n三水区人民医院大塘医院托管提质惠基层，获大塘镇人大肯定！\n2026-05-29\n5月25日，根据“助力优化营商环境·人大代表在行动”主题活动安排，大塘镇人大组织区、镇人大代表开展南方医科大学珠江医院三水医院全面托管大塘镇卫生院（三水区人民医院大塘医院）推进情况专题调研。调研组先后实地察看了永平卫生服务站和三水区人民医院大塘医院，详细了解托管后在基层医疗服务能...\n【医路有护】两封感谢信，浓浓医保情——珠江医院三水医院医保科...\n2026-04-16\n清明思良医\n2026-04-16\n【医路有术】脖子上的“隐形术”：年轻女性的甲状腺手术，为何脖...\n2026-04-16\n【医路有术】25岁男子骑电动车被撞致膝关节韧带断裂，手术植入...\n2026-04-16\n更多\n南方医科大学珠江医院三水医院检验试剂耗材及设备市场调研公告\n2026-07-09\n南方医科大学珠江医院三水医院检验试剂耗材及设备市场调研公告根据医院临床诊治需求，拟对“白蛋白检测”、“补体C4检测”、“肌酐检测”等项目所需试剂耗材及设备（详见附件1和附件2）开展市场调研，欢迎符合要求的厂商按要求报名并递交资料。具体如下：一、项目概况  项目名称及需求等内容详见...\n病案服务外包采购项目采购公告\n2026-10-19\n佛山市三水区新城医院采购透析相关用水检测询价公告\n2026-10-15\n佛山市三水区人民医院采购透析相关用水检测询价公告\n2026-10-15\n佛山市三水区人民医院液晶电视机采购项目-采购（比价）结果公告\n2026-10-09\n更多\n佛山市三水区人民医院麻醉科简介\n2018-09-07\n三水区人民医院麻醉科手术室是医院的重要临床业务科室之一，承担全院各手术科室各种手术的临床麻醉、重症监测、急救复苏以及开展疼痛诊疗等工作。高质量的麻醉和术中管理水平为医院各种手术的顺利开展提供了安全保障，极大地推动和保障了全院外科学的进步。麻醉科现有医务人员51名，其中麻醉医师17...\n呼吸与危重症医学科特色医疗服务\n2021-09-01\n儿子献血，母亲输血居然可以直接减免！《直免告知书》了解一下\n2021-01-31\n儿科\n2020-12-12\n输血“可不输就不输”——我院举办三水区《临床输血与细胞凝血模...\n2020-09-19\n更多\n南方医科大学珠江医院三水医院公开招聘胸心外科高层次专业技术人...\n2026-06-02\n南方医科大学珠江医院三水医院公开招聘胸心外科高层次专业技术人员公告  因工作需要，根据《广东省事业单位公开招聘人员办法》（粤府令第301号）等有关规定，南方医科大学珠江医院三水医院（佛山市三水区人民医院）面向社会公开招聘1名胸心外科高层次专业技术人员。有关事项公告如下：一、招聘对...\n南方医科大学珠江医院三水医院2026年第二批合同制工作人员招...\n2026-04-23\n南方医科大学珠江医院三水医院公开招聘高层次卫生专业技术人员公...\n2026-04-23\n南方医科大学珠江医院三水医院2026年上半年招聘合同制工作人...\n2026-04-08\n南方医科大学珠江医院三水医院公开招聘运营绩效部管理人员公告\n2026-03-18\n眼科\n脊柱骨病科\n心血管内科\n呼吸与危重症医学科\n妇科\n产科\n儿科\n肾脏内科\n肿瘤内科\n急诊科\n神经内科\n神经外科\n中医临床科\n中医康复科\n泌尿外科\n重症医学科\n外科\n内科\n妇产儿科\n医技科室\n行政后勤\n普通外科一区、烧伤科、胸心外科\n普通外科二区\n脊柱骨病科\n创伤骨科\n手足整形外科\n关节运动医学科\n重症医学科\n泌尿外科\n神经外科\n口腔科\n眼科\n急诊科\n耳鼻喉科\n麻醉科\n肾内科、风湿免疫科\n内分泌内科\n血液内科\n肿瘤内科、肿瘤介入病房\n感染内科\n神经内科\n消化内科\n呼吸与危重症医学科\n心血管内科\n康复医学科、中医康复科\n中医临床科\n健康管理中心\n妇科\n产科\n儿科\n影像医学科\n病理科\n检验科\n超声科\n内镜中心\n输血科\n药学部\n党政办\n统战群团科\n医务科\n院感科\n科教科\n质控科\n宣传教育科\n护理部\n组织人事科\n财务科\n纪检审计科\n医保科\n服务管理中心\n信息科\n设备科\n总务科\n安全保卫科\n专家介绍\n秦福杰\n主任医师\n专业：\n妇科门诊\n擅长腹腔镜、阴式等微创手术治疗各种妇科疾病。\n详细\n李焕琼\n主任医师\n专业：\n儿科门诊\n儿科主任、新生儿科主任，主任医师，广东医学院兼职教授。在小儿危重急症、小儿神经系统疾病、新生儿疾病诊...\n详细\n胡建军\n主任医师\n专业：\n外科门诊\n主治脑肿瘤、脑外伤、脑中风、癫痫、头痛头昏、肢体麻木、瘫痪失语、记忆减退等神经系统疾病，尤其擅长手术...\n详细\n卢桂尧\n主任医师\n专业：\n外科门诊\n擅长于泌尿系结石、炎症、肿瘤、前列腺增生、前列腺炎及男科病的诊治及泌尿系微创手术等。\n详细\n黄跃清\n主任医师\n专业：\n内科门诊\n擅长诊治高血压、头痛、头晕、抽搐、震颤、失眠、脑中风、四肢神经肌肉疾病等各种神经系统疾病的诊治及各种...\n详细\n谭棠基\n主任医师\n专业：\n外科门诊\n擅长肺、胸膜、气胸、手汗症、胸壁畸形（漏斗胸）、食管、贲门、纵膈、心脏、乳腺、甲状腺疾病的诊治及微创...\n详细\n方长庚\n主任医师\n专业：\n内科门诊\n主持开展急性心肌梗死溶栓技术、脑梗塞早期溶栓技术、呼吸衰竭的优化抢救技术、心脏电生理检测技术、心脏电...\n详细\n邓之驹\n主任医师\n专业：\n内科门诊\n擅长诊治胃肠、肝、胆、胰等消化疾病及糖尿病、甲亢、结肠炎、高血压、风湿病等内科疾病。\n详细\n杨水泉\n主任医师\n专业：\n内科门诊\n擅长诊治脑血管病（中风偏瘫）、各种头痛头晕症、癫痫、脑炎脑膜炎、帕金森氏病、老年痴呆、脊髓肌肉疾病、...\n详细\n廖浩峰\n主任医师\n专业：\n内科门诊\n擅长诊治糖尿病及各种急慢性并发症、甲状腺疾病、骨质疏松症、痛风、高血压病、肥胖症、垂体疾病、肾上腺疾...\n详细\n陈思念\n主任医师\n专业：\n内科门诊\n擅长肾脏病、风湿病、血液净化治疗，擅长诊治急慢性肾病、肾结石、腰痛、糖尿病肾病、尿路感染、风湿性骨关...\n详细\n董俊球\n主任医师\n专业：\n中医临床（疼痛、骨科、针灸）\n擅长运用手法和微创治疗颈椎病、腰腿痛、肩周炎、膝关节骨关节炎、软组织慢性损伤性疼痛、面肌痉挛等疾病。\n详细\n苏蓉卿\n副主任医师\n专业：\n妇科门诊\n熟练处理各种妇产科疾患。近几年专于妇科临床工作，对妇科疾病如：月经病、妇科肿瘤等疾病的诊断与治疗积累...\n详细\n钟斌才\n主任医师\n专业：\n儿科门诊\n主任医师，1997年本科毕业于汕头大学医学院临床医学，学士学位，广东医学院兼职教授。现就读广东医学院...\n详细\n陈全就\n副主任医师\n专业：\n儿科门诊\n副主任医师，广东医学院兼职副教授。1993年毕业于广东医学院临床医学专业。2003年于广州市儿童医院...\n详细\n揭文球\n副主任医师\n专业：\n儿科门诊\n擅长新生儿疾病的诊治及危重症的抢救。熟练掌握各种儿科常见病、多发病及急重症的诊断和治疗，如新生儿重度...\n详细\n唐浩英\n主任医师\n专业：\n眼科门诊\n擅长眼表、泪道、青光眼等手术及眼科激光治疗及各种眼科疾病的诊治\n详细\n曾小茹\n主任医师\n专业：\n内科门诊\n擅长诊治各种心血管疾病，尤其是冠心病、高血压病、急慢性心衰、心律失常、风心病和心肌病的诊治，熟练掌握...\n详细\n姚凡保\n主任医师\n专业：\n内科门诊\n擅长胃肠镜操作及诊断，对各种内镜下治疗如胃肠息肉粘膜切除术、食管支架放置术、食管曲张静脉套扎术、急诊...\n详细\n谢仁岐\n副主任医师\n专业：\n内科门诊\n擅长各种感染性疾病、肝胆疾病、胃肠道病和各种不明原因的发热和晚期肿瘤姑息治疗。​\n详细\n健康教育\n党群工作\n更多\n【健康科普】“莫氏鸡煲”再火，也别乱学煲汤！断肠草vs五指毛桃，认错要人命\n2026-04-16\n近段时间，一道“莫氏鸡煲”在短视频平台风靡，引得不少食客争相打卡。然而，在近日有人因上山自采“五指毛...\n“咳嗽”并非都是病，您知道吗？\n2025-10-17\n【药您知道】药品储存有讲究，别让“好药”变“毒药”\n2025-10-17\n精准“拆弹”，告别多年的头晕头痛困扰！\n2025-10-17\n【健康科普】“孤单的疙瘩”——孤立性纤维性肿瘤\n2025-10-17\n更多\n关于2026年广东省“最美医务工作者”拟推荐候选人的公示\n2026-06-17\n根据省卫生健康委、省委宣传部、省文明办联合开展的2026年广东省“最美医务工作者”宣传选树活动安排部...\n理论动态 | 习近平经济思想是扎根中国、放眼世界、引领未来的...\n2025-08-13\n历史文化丨蒲葵扇\n2025-08-13\n历史文化丨先公后私界限明\n2025-08-12\n理论动态 | 夯实作风建设的文化根基\n2025-08-12\n查询服务\n专家查询\n专家查询\n科室查询\n科室查询\n乘车路线\n乘车路线\n快捷入口\n办公OA\n办公OA\n版权所有：南方医科大学珠江医院三水医院\ncopyright @ 2017-2025 sshospital.cn,Inc. All Rights Reserved\n地址：广东省佛山市三水区西南广海大道西16号\nICP备案：\n粤ICP备07028003号\n公安备案：44060702000024号\n咨询电话：0757-87813080\n急救电话：0757-87837333\n党政办公室：0757-87813210\n医务科：0757-87813211\n护理部：0757-87813213\n纪检监察室：0757-87813226\n医院邮箱：dzb_rmyy@ss.gov.cn",
+                "allowed_departments": [],
+                "kind": "external_excerpt",
+                "score": 0.0
+              }
+            ],
+            "authority": "unverified",
+            "citation_scope": "attributed_public_statement",
+            "requires_attribution": true,
+            "reader": "direct",
+            "cached": false,
+            "document_type": "html",
+            "reader_attempts": [
+              {
+                "reader": "direct",
+                "status": "ok"
+              }
+            ],
+            "browser_diagnostics": {},
+            "content_sha256": "6ebcf307bbfa81555d2735044e5a02b7732a9759b0b704b266843cf609aac282",
+            "hint": "检查医院/医生身份、相关性和覆盖度。quote须在同一原文片段内；回答已有支持的部分，不因名单不完整或来源未独立核验而全部拒答。自述等级、网页科室/医生介绍可按原文归属报告；行政认定、完整名单、实时排班和医生成效不得超出正文证据。"
+          }
+        },
+        {
+          "url": "https://www.sshospital.cn/html/YiYuanGaiKuang/gaikuang/",
+          "result": {
+            "ok": true,
+            "evidence_ready": true,
+            "sources": [
+              {
+                "id": "WEB-bc8a815529640e5213f1",
+                "title": "佛山市三水区人民医院-医院概况",
+                "institution": "sshospital.cn（来源身份未独立核验；引用为该页面记载）",
+                "url": "https://www.sshospital.cn/html/YiYuanGaiKuang/gaikuang/",
+                "published_at": null,
+                "collected_at": "2026-10-19",
+                "text": "首页\n医院概况\n医院概况\n领导团队\n医院荣誉\n医疗设备\n院容院貌\n新闻动态\n医院新闻\n医院视频\n医生手记\n护理天地\n就医指南\n预约挂号\n门诊流程\n住院流程\n体检流程\n检验结果\n检查报告\n乘车路线\n科室设置\n内科\n外科\n妇产儿科\n医技科室\n行政后勤科室\n门诊\n科研教学\n科教动态\n学术交流\n文档下载\n健康教育\n健康教育\n女性保健\n儿童保健\n医院文化\n医院愿景\n医院使命\n医院精神\n院歌\n文化活动\n院务公开\n医院公告\n医保政策\n招标采购\n服务价格\n阳光用药\n行风建设\n财务公开\n受捐公示\n党群工作\n基层党建\n团员青年\n廉洁文化\n人才招聘\n招聘岗位\n招聘公示\n医院概况\n医院概况\n领导团队\n医院荣誉\n医疗设备\n院容院貌\n佛山市三水区人民医院\n>\n医院概况\n>\n医院概况\n三水区人民医院始建于1941年，是国家三级甲等综合医院、国家胸痛中心、国家卒中中心、全国综合医院中医药示范单位、广东医科大学非直属附属医院、粤港澳大湾区专科护士认证项目高级内科实践教育基地、广东省创伤救治科研中心三水创伤救治基地、三水区医疗技术指导中心和全区120急救中心；同时是中山大学、南方医科大学、广州医科大学等多个高等医学院校的教学医院。\n全院占地面积5.13万平方米，房屋建筑面积8.4万平方米，编制病床1200张，设置病床898张，截止\n2020\n年\n4\n月，员工总人数为\n1571\n人，其中在编人员\n625\n人，合同制工作人员\n652\n人，劳务派遣人员\n294\n人。其中高级职称221人，占17.3\n%\n；博士\n3\n人，占\n0.2%\n；硕士\n76\n人，占\n5.9%\n。\n2019年业务收入85,277万元，门急诊人次170.85万人次，出院人数4.18万人。\n医院始终坚持“科技兴院、人才兴院”的办院方针，积极拓展新业务，引进新技术，加强学科内涵建设，提升品牌影响力。。其中，脑病科为广东省中医药局“十三五”重点专科建设项目；眼科为广东省重点培育专科、佛山市“十三五”医学高水平重点专科和三水区医学重点专科，脊柱关节外科为广东医科大学重点学科、佛山市“十三五”医学重点专科和三水区医学重点专科，心血管内科和中西医结合脑血管病科为佛山市“十三五”医学重点专科，急诊科、呼吸内科、妇产科、肾病科和肿瘤介入科为佛山市“十三五”医学特色专科。呼吸内科为广东医科大学重点扶持学科，心脑血管疾病（检验科）为广东医科大学重点扶持实验室。\n2014年12月，我院被批准广州市第一人民医院的协同基地，成为第一批国家级住院医师规范化培训 专业基地，拥有住培专业基地11个。现有\n省杰出青年医学人才\n1名\n，市杰出青年医学人才5\n名\n，市医学骨干人才10\n名，\n区级医学领军人才6\n名\n，区杰出青年医学人才\n及骨干人才20名\n。\n医院在专科建设方面，对接省内外一流学科，打造9个区级名医工作室，柔性引进中山大学附属第一医院、广东省人民医院等12名专家为特聘专家， 积极开展各种新技术、高精尖技术，科研著作等。近年来积极开展急性心肌梗死急诊PCI（“通波仔-放支架”）、心脏永久起搏器植入、带膜支架腔内修复术、颅内动脉瘤栓塞术、全脑血管造影术、血管内治疗（桥接或取栓）、CAS(颈动脉支架血管成形术)、微创腹腔镜、骨科椎间孔镜手术、关节置换、关节镜手术等。\n医院注重医疗设备的升级换代，先后购置了\n美国GE公司数字减影血管造影机（DSA）2台、3.0T和1.5T核磁共振影像系统（MRI）各1台、128排（256层）CT、64排宝石能谱CT以及16排螺旋CT、数字化X射线摄影系统（DR）、、血液透析机、全自动生化分析仪、\n美国GE彩超\n、飞利浦彩超\n、、钬激光、腹腔镜、宫腔镜、电子输尿管肾镜、电子胃肠镜、超声内镜\n等一大批高精尖设备\n，为临床治疗提供了更准确的诊断依据和强有力的技术支持。\n医院注重公益性建设及精神文明建设，先后派出11名专家赴西藏、新疆、四川凉山等地区开展技术帮扶，并对口帮扶郁南两间医院，先后派出9批次超100名医疗专家，带动当地救治、科研能力整体提升。积极开展志愿服务，多途径多形式培树典型和宣传先进，好人好事蔚然成风。医院先后涌现出多名“省三八红旗手”“道德模范”“佛山好人”“佛山好医生”“佛山最美护士”“南粤好医生”“最美军嫂”等典范，多名青年获得省、市、区优秀共青团干部、共青团员、志愿者等称号。医院荣获省巾帼文明岗、佛山市文明单位、佛山志愿V站、好人工作室示范点、新文明实践点称号。\n首　页\n医院简介\n科室设置\n就医指南\n乘车路线\n联系方式\n版权所有：佛山市三水区人民医院\ncopyright @ 2017 sshospital.cn,Inc. All Rights Reserved\n地址：广东省佛山市三水区西南广海大道西16号\nICP备案：\n粤ICP备07028003号\n公安备案：44060702000024号\n咨询电话：0757-87813080\n急救电话：0757-87837333\n党政办公室：0757-87813210\n医务科：0757-87813211\n护理部：0757-87813213\n纪检监察室：0757-87813226",
+                "allowed_departments": [],
+                "kind": "external_excerpt",
+                "score": 0.0
+              }
+            ],
+            "authority": "unverified",
+            "citation_scope": "attributed_public_statement",
+            "requires_attribution": true,
+            "reader": "direct",
+            "cached": false,
+            "document_type": "html",
+            "reader_attempts": [
+              {
+                "reader": "direct",
+                "status": "ok"
+              }
+            ],
+            "browser_diagnostics": {},
+            "content_sha256": "ce08c351db90b89c2c530b6fdac350fe47608af6c382a2c6ffd4633ea15bed60",
+            "hint": "检查医院/医生身份、相关性和覆盖度。quote须在同一原文片段内；回答已有支持的部分，不因名单不完整或来源未独立核验而全部拒答。自述等级、网页科室/医生介绍可按原文归属报告；行政认定、完整名单、实时排班和医生成效不得超出正文证据。"
+          }
+        }
+      ],
+      "limits": [
+        "Manually provided URLs, not automatic discovery",
+        "Does not upgrade production source authority",
+        "No model calls; network/provider costs not measured"
+      ]
+    }
+  }
+}

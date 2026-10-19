@@ -1,0 +1,291 @@
+{
+  "province": "福建",
+  "hospital": "福建省立医院",
+  "goal": "福建省立医院地址和交通指南",
+  "lookup": {
+    "sources": [
+      {
+        "id": "WEB-7caab5c757e66b6261d0",
+        "title": "福建省立医院地址_福建省立医院电话_福建省立医院位置 - 有来医生",
+        "institution": "m.youlai.cn（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://m.youlai.cn/yyk/hospindex/2801/hospmap.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "福建省立医院\n三甲\n综合\n公立医院\n医保定点\n本院\n医院地址\n福建省福州市东街134号\n联系电话\n总机\n：\n0591-87557768\n挂号电话\n：\n0591-968808\n门诊时间\n周一至周日：8:00-12:00；周一至周五：14:30-17:30\n线上挂号时间\n公众号预约，每日15:00放号，可预约两周内号源，上午可预约下午号源\n乘车路线\n（1）地铁：地铁1号线东街口站下车（A口出）；\n（2）公交：五四路口、庆城、仙塔街、旗汛口、闽江饭店站下车；\n（3）自驾：院内停车场、福建东方大厦立体停车场、福建东方大酒店立体停车场、宁德大厦停车场等。\n金山院区\n医院地址\n福建省福州市仓山区金山街道金榕南路516号\n联系电话\n总机\n：\n0591-87557768\n挂号电话\n：\n0591-968808\n门诊电话\n：\n0591-88218888\n乘车路线\n（1）地铁：地铁5号线凤岗里站下车（A口出），地铁5号线浦上大道站下车（A口出），地铁2号线金祥站下车（C口出）；\n（2）公交：金榕南路口、省立医院南院、凤冈路口、凤岗里地铁站、亭头路站下车；\n（3）自驾：院内停车场、亭洲路-道路停车位、仓山万达广场B区停车场、亭头路-道路停车位等。\n极速问诊\n预约挂号",
+        "allowed_departments": [],
+        "kind": "public",
+        "score": 0.0,
+        "authority": "unverified",
+        "document_id": "WEB-7caab5c757e66b6261d0",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "status": "ok",
+    "context": {
+      "kind": "named",
+      "names": [
+        "福建省立医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": []
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "clarification": "",
+    "queries": [
+      "福建省立医院 官方网站"
+    ],
+    "covered_topics": [
+      "address",
+      "transport"
+    ],
+    "missing_topics": [],
+    "exhaustive": false,
+    "missing_hospitals": [],
+    "direct_reads": 3,
+    "browser_reads": 2,
+    "search_rounds": 1,
+    "local_source_count": 0,
+    "cached_source_count": 0,
+    "query_plan": {
+      "queries": [
+        "福建省立医院 官方网站",
+        "福建省立医院 地址 位置 院区",
+        "福建省立医院 交通 地铁 公交 停车",
+        "福建省立医院 官网 就诊指南"
+      ],
+      "subquery_count": 4
+    },
+    "link_maps": 1,
+    "entity_searches": 0,
+    "page_read_log": [
+      {
+        "url": "https://www.11467.com/fuzhou/co/92248.htm",
+        "method": "direct",
+        "ok": false,
+        "error": "page_http_error"
+      },
+      {
+        "url": "https://m.youlai.cn/yyk/hospmap/2801/",
+        "method": "direct",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "url": "https://mip.rxys.com/guahao/1091.html",
+        "method": "direct",
+        "ok": false,
+        "error": "text_too_short"
+      },
+      {
+        "url": "https://mip.rxys.com/guahao/1091.html",
+        "method": "browser",
+        "ok": false,
+        "error": "browser_busy"
+      },
+      {
+        "url": "https://www.11467.com/fuzhou/co/92248.htm",
+        "method": "browser",
+        "ok": false,
+        "error": "browser_http_error"
+      }
+    ],
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-7caab5c757e66b6261d0"
+      ],
+      "missing": []
+    },
+    "retrieval_stop_reason": "coverage_satisfied",
+    "missing_regions": [],
+    "timed_out": false,
+    "search_failures": 0,
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 3,
+      "read_failures": 4,
+      "extracted_sources": 1,
+      "rejected_sources": 0,
+      "read_successes": 1,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "page_http_error": 1,
+        "text_too_short": 1,
+        "other_read_error": 2
+      },
+      "final_source_count": 1,
+      "stop_reason": "coverage_satisfied"
+    }
+  },
+  "answer": {
+    "kind": "chat",
+    "content": "根据第三方目录记载，福建省立医院有本部和金山院区，地址和交通信息如下（来源身份未独立核验，建议就诊前再确认）：\n\n### 福建省立医院（本部）\n- **地址**：福建省福州市东街134号\n- **地铁**：1号线东街口站下车，A口出\n- **公交**：五四路口、庆城、仙塔街、旗汛口、闽江饭店站下车\n- **自驾**：院内停车场，或福建东方大厦、福建东方大酒店、宁德大厦等周边停车场\n\n### 金山院区\n- **地址**：福建省福州市仓山区金山街道金榕南路516号\n- **地铁**：5号线凤岗里站A口、浦上大道站A口，或2号线金祥站C口出\n- **公交**：金榕南路口、省立医院南院、凤冈路口、凤岗里地铁站、亭头路站下车\n- **自驾**：院内停车场，或亭洲路道路停车位、仓山万达广场B区停车场、亭头路道路停车位等\n\n两个院区总机均为 0591-87557768，挂号电话 0591-968808；金山院区另有门诊电话 0591-88218888。以上公交、停车信息来自目录记载，实际线路和车位情况可能变化，出发前可再核实。",
+    "claims": [],
+    "questions": [],
+    "gaps": [],
+    "search_queries": [
+      "福建省立医院 官方网站"
+    ],
+    "intent": "daily",
+    "consultation_type": "hospital",
+    "sources": [
+      {
+        "id": "WEB-7caab5c757e66b6261d0",
+        "title": "福建省立医院地址_福建省立医院电话_福建省立医院位置 - 有来医生",
+        "institution": "m.youlai.cn（来源身份未独立核验；引用为该页面记载）",
+        "url": "https://m.youlai.cn/yyk/hospindex/2801/hospmap.html",
+        "published_at": null,
+        "collected_at": "2026-10-19",
+        "text": "福建省立医院\n三甲\n综合\n公立医院\n医保定点\n本院\n医院地址\n福建省福州市东街134号\n联系电话\n总机\n：\n0591-87557768\n挂号电话\n：\n0591-968808\n门诊时间\n周一至周日：8:00-12:00；周一至周五：14:30-17:30\n线上挂号时间\n公众号预约，每日15:00放号，可预约两周内号源，上午可预约下午号源\n乘车路线\n（1）地铁：地铁1号线东街口站下车（A口出）；\n（2）公交：五四路口、庆城、仙塔街、旗汛口、闽江饭店站下车；\n（3）自驾：院内停车场、福建东方大厦立体停车场、福建东方大酒店立体停车场、宁德大厦停车场等。\n金山院区\n医院地址\n福建省福州市仓山区金山街道金榕南路516号\n联系电话\n总机\n：\n0591-87557768\n挂号电话\n：\n0591-968808\n门诊电话\n：\n0591-88218888\n乘车路线\n（1）地铁：地铁5号线凤岗里站下车（A口出），地铁5号线浦上大道站下车（A口出），地铁2号线金祥站下车（C口出）；\n（2）公交：金榕南路口、省立医院南院、凤冈路口、凤岗里地铁站、亭头路站下车；\n（3）自驾：院内停车场、亭洲路-道路停车位、仓山万达广场B区停车场、亭头路-道路停车位等。\n极速问诊\n预约挂号",
+        "allowed_departments": [],
+        "kind": "public",
+        "authority": "unverified",
+        "document_id": "WEB-7caab5c757e66b6261d0",
+        "location": "公开网页正文（来源身份未独立核验）"
+      }
+    ],
+    "records": [],
+    "rejected_claims": 0,
+    "mode": "live",
+    "response_method": "model",
+    "notice": "",
+    "iterations": 0,
+    "stop_reason": "chat_completed",
+    "answer_review": {
+      "status": "passed"
+    },
+    "query_plan": {
+      "queries": [
+        "福建省立医院 官方网站",
+        "福建省立医院 地址 位置 院区",
+        "福建省立医院 交通 地铁 公交 停车",
+        "福建省立医院 官网 就诊指南"
+      ],
+      "subquery_count": 4
+    },
+    "evidence_review": {
+      "sufficient": true,
+      "source_ids": [
+        "WEB-7caab5c757e66b6261d0"
+      ],
+      "missing": []
+    },
+    "plan_validation": [
+      {
+        "status": "rejected",
+        "reason": "missing_plan"
+      }
+    ],
+    "retrieval_diagnostics": {
+      "returned_candidates": 12,
+      "rejected_candidates": 0,
+      "duplicate_candidates": 0,
+      "direct_read_attempts": 3,
+      "read_failures": 4,
+      "extracted_sources": 1,
+      "rejected_sources": 0,
+      "read_successes": 1,
+      "browser_read_attempts": 2,
+      "page_errors": {
+        "page_http_error": 1,
+        "text_too_short": 1,
+        "other_read_error": 2
+      },
+      "final_source_count": 1,
+      "stop_reason": "coverage_satisfied"
+    },
+    "hospital_context": {
+      "kind": "named",
+      "names": [
+        "福建省立医院"
+      ],
+      "region": "",
+      "topics": [
+        "address",
+        "transport"
+      ],
+      "department": "",
+      "public_terms": "地址和交通指南",
+      "qualifiers": [],
+      "care_topic": "",
+      "regions": [],
+      "treatment": "",
+      "related_departments": [],
+      "focus_variants": [],
+      "service_categories": [
+        "before_visit"
+      ],
+      "tasks": [],
+      "understood_request": "",
+      "original_name": "",
+      "entity_status": "unresolved",
+      "missing_information": []
+    },
+    "search_status": "ok"
+  },
+  "elapsed_s": 18.65600000000086,
+  "source_count": 1,
+  "official_status": "requires_independent_source_review",
+  "tokens": {
+    "cases_planned": 1,
+    "cases_with_calls": 1,
+    "calls": 4,
+    "known_input_tokens": 8401,
+    "known_output_tokens": 402,
+    "known_total_tokens": 8803,
+    "unknown_usage_calls": 0,
+    "complete_usage_case_n": 1,
+    "mean_tokens_complete_cases": 8803,
+    "p50_tokens_complete_cases": 8803.0,
+    "p95_tokens_complete_cases": 8803.0,
+    "by_purpose": {
+      "hospital_query_rewrite": {
+        "calls": 1,
+        "known_total_tokens": 1104,
+        "unknown_calls": 0
+      },
+      "evidence_sufficiency": {
+        "calls": 1,
+        "known_total_tokens": 1571,
+        "unknown_calls": 0
+      },
+      "hospital_service": {
+        "calls": 1,
+        "known_total_tokens": 4247,
+        "unknown_calls": 0
+      },
+      "answer_fact_review": {
+        "calls": 1,
+        "known_total_tokens": 1881,
+        "unknown_calls": 0
+      }
+    },
+    "includes_retries_and_failed_attempts": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "method":"assistant qualitative review, not blinded and not independent; no additional model-judge API calls",
+  "scope":"synthetic evidence consistency and instruction following; no clinical validation or end-to-end accuracy claim",
+  "decision":"do_not_promote",
+  "pairs":[
+    {"id":"P01","comparison":"tie","A":"直接回答不能随便吃，未被膳食资料带偏。","B":"同样直接且相关，但比A稍长，没有明确新增收益。"},
+    {"id":"P02","comparison":"tie_with_shared_gap","A":"覆盖两院区、地址及已知交通，不编造北院区交通；未显式纠正错别字，未询问出发地。","B":"显式纠正医院名称，覆盖主要事实；仍未询问出发地。两组均提示合成资料不可用于真实出行。","fixture_limit":"合成出行信息不能实际导航，要求追问真实出发地的用例设计存在张力；不把该缺项直接解释为真实交通能力失败。"},
+    {"id":"P03","comparison":"B_improves_provenance","A":"地址选对乙省，但把合成通知称为公开通知，未保留合成来源限定。","B":"地址正确，并明确来自合成通知。"},
+    {"id":"P04","comparison":"tie_with_shared_gap","A":"给出已知地址和公交站，没有由节选推断院区总数；未说明合成信息，不够明确地追问出发地。","B":"给出可答部分，说明未知出发地影响完整路线；仍未保留合成来源限定，也未直接追问。"},
+    {"id":"P05","comparison":"B_more_concise_precision_tradeoff","A":"正确统一单位，给出80.3的中间计算，保留测量条件限制；后文取整为80，存在表达精度变化。","B":"统一单位并保留条件限制，更短，但只给约120/80，未显示80.3的中间精度；不是更高计算准确率的证据。"},
+    {"id":"P06","comparison":"B_more_focused","A":"先说明不能直接比较，随后给两种假设单位的分支；没有将假设断言为事实，但解释偏长。","B":"集中说明先确认单位和测量条件，避免不必要的假设分支；输出更聚焦。"},
+    {"id":"P07","comparison":"B_more_compact_not_clear_quality_gain","A":"覆盖血压记录、用药、旧报告、头晕备注、医生问题及建议，但较长。","B":"更紧凑地组织三类清单，区分待补充和待整理；增加医保卡等一般建议，未冒充患者已确认事实。两组都没有直接下诊断或指示自行改药。"},
+    {"id":"P08","comparison":"tie_with_shared_gap","A":"正确选择现行官方公告16:30，拒绝以个人分享覆盖；未说明这是合成测试信息。","B":"同样正确处理冲突，更短，但也未保留合成来源限定。"}
+  ],
+  "shared_failure":"合成资料限定在P04、P08两组均遗漏；P03仅A遗漏。模型未在所有医院用例中稳定遵循共同的测试来源限定。",
+  "next_action":"只在开发样例上压缩B重复指令，明确来源限定和单位精度；不扩大测试集、不自动重跑、不替换生产提示词。"
+}

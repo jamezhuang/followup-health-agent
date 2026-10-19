@@ -1,0 +1,193 @@
+{
+  "scope": "isolated deterministic injections; only checkpoint component cost uses live model; not production reliability or clinical evaluation",
+  "groups": {
+    "permissions": {
+      "passed": 31,
+      "scenarios": 31,
+      "rows": [
+        {
+          "id": "anonymous-records",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-documents",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-conversation",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-run",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_document",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_record",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-delete_subject",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-cancel_run",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-dashboard",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-trace",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-knowledge",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "anonymous-inspections",
+          "passed": true,
+          "status": 401,
+          "expected": 401
+        },
+        {
+          "id": "other-records",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-documents",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-conversation",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-run",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_document",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_record",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-delete_subject",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-cancel_run",
+          "passed": true,
+          "status": 404,
+          "expected": 404
+        },
+        {
+          "id": "other-dashboard",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-trace",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-knowledge",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "other-inspections",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-dashboard",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-trace",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-knowledge",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "owner-inspections",
+          "passed": true,
+          "status": 403,
+          "expected": 403
+        },
+        {
+          "id": "same_owner_wrong_subject_attachment",
+          "passed": true,
+          "status": 404
+        },
+        {
+          "id": "authorized_positive_control",
+          "passed": true
+        },
+        {
+          "id": "unauthorized_mutations_left_data_intact",
+          "passed": true
+        }
+      ],
+      "scope": "HTTP ownership/admin/subject matrix; includes authorized control; not all endpoints or prompt-injection proof"
+    }
+  }
+}

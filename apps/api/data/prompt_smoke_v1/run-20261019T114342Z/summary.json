@@ -1,0 +1,24 @@
+{
+  "A": {
+    "generations": 8,
+    "successful_generations": 8,
+    "http_attempts": 8,
+    "unknown_usage_calls": 0,
+    "input_tokens": 15844,
+    "output_tokens": 1106,
+    "total_tokens": 16950,
+    "mean_wall_ms": 2164,
+    "p50_wall_ms": 2180.0
+  },
+  "B": {
+    "generations": 8,
+    "successful_generations": 8,
+    "http_attempts": 8,
+    "unknown_usage_calls": 0,
+    "input_tokens": 17556,
+    "output_tokens": 906,
+    "total_tokens": 18462,
+    "mean_wall_ms": 2504,
+    "p50_wall_ms": 2219.0
+  }
+}
