@@ -66,9 +66,8 @@ flowchart TD
 | 检索对照 | BM25证据组R@3 83.3%→混合检索加模型重排99.4% | 55条有答案合成题，非真实医院准确率 |
 | 检查点成本 | 模型请求5→3，总Token195→115 | 单次三阶段组件微基准，非普遍节省率 |
 | 工程验收 | 60项定向检查、47项相关回归通过 | 存在重叠，非107个独立场景或生产可靠率 |
-| 真实资料提示词冒烟 | 优化版输出Token减少17.5%，但总Token增加8.2% | 未证实整体更优，未替换生产提示词 |
 
-完整口径见[检索报告](apps/api/data/agent_eval_v2/EXPERIMENT_REPORT.md)、[优化复测](apps/api/data/agent_eval_v2/OPTIMIZATION_ROUND2_REPORT.md)、[五项工程量化](docs/reliability-quantification-2026-10-19.md)及[提示词冒烟](docs/prompt-smoke-real-results-2026-10-19.md)。实验记录保留失败和无收益策略，不将模型裁判分数当临床验证。
+实验方法、样本范围与完整结果见[检索报告](apps/api/data/agent_eval_v2/EXPERIMENT_REPORT.md)、[优化复测](apps/api/data/agent_eval_v2/OPTIMIZATION_ROUND2_REPORT.md)及[五项工程量化](docs/reliability-quantification-2026-10-19.md)。以上为固定测试场景下的结果，不代表生产环境总体准确率或临床验证。
 
 ## 文档与验证
 
